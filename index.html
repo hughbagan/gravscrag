@@ -138,7 +138,7 @@ Everybody is out doing the day&#39;s work, which leaves the cavernous longhouse 
 &lt;&lt;set $SvenAccept to false&gt;&gt;
 &lt;&lt;set $GroomingOption to false&gt;&gt;
 &lt;&lt;set $CageOption to false&gt;&gt;
-&lt;&lt;set $BlessOption to false&gt;&gt;
+&lt;&lt;set $SacrificeOption to false&gt;&gt;
 &lt;&lt;set $GoatsFixed to false&gt;&gt;
 &lt;&lt;set $SvenVisit to false&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Main" tags="" position="680,20" size="200,100">We could put a title screen here.
 [[Start Game|SvenWeekDay1Intro]]</tw-passagedata><tw-passagedata pid="5" name="SvenIntro" tags="" position="21,251" size="100,100">Sven: Bjork bjork!
@@ -170,13 +170,13 @@ The sound of clashing steel and boisterous warriors fills these halls. Trophies 
 “Hey there Chief! Haha, come to get involved in our festivities?”
 [[Yes]]
 [[No]]
-&lt;&lt;if $SvenIssue is true&gt;&gt;[[I need your advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SvenWeekDocks" tags="" position="520,608" size="200,100">[Background of Docks]
+&lt;&lt;if $SvenIssue is true and $KillOption is false&gt;&gt;[[I need your advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SvenWeekDocks" tags="" position="520,608" size="200,100">[Background of Docks]
 The sails of ships float in the distance as busy fishers drag nets of their freshest pulls to and from their boats. The air is salty, and the wind blows softly through your hair. The yields are looking good this year.
 [Overlay Svika]
 “Oh? Chief? What are you doing here? It’s a pleasure to see’ya.”
 [[Hoping you could show me around the boats.]]
 [[Just checking in.]]
-&lt;&lt;if $SvenIssue is true&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="SvenWeekPastures" tags="" position="700,796" size="200,100">[Background of Pastures]
+&lt;&lt;if $SvenIssue is true and $FishOilOption is false&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="SvenWeekPastures" tags="" position="700,796" size="200,100">[Background of Pastures]
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators.
 [Overlay Sven]
 &lt;&lt;if $SvenIssue is false&gt;&gt;“Hiya Chief! I’m glad you came by…”
@@ -185,20 +185,20 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 &lt;&lt;else&gt;&gt;“Welcome back, Chief!” 		/* SvenIssue is true */
 [[How are the goats?]]
 [[Just stopping by to say hello.]]
-&lt;&lt;if $SvenAccept is true&gt;&gt;[[How do you think we should help the goats?]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $SvenAccept is true and $GroomOption is false&gt;&gt;[[How do you think we should help the goats?]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SvenWeekWorkshop" tags="" position="1008,566" size="200,100">[Background of Workshop]
 The sound of sawing and hammering reverberates through the heavy wood of the workshop as you enter it. The smell of freshly cut wood hangs in the air as the carpenters work. You hear the clank of metal against metal as nails are forged, and you spot a couple wooden cages in the corner. They seem large enough for a small creature.
 [Overlay Toldjr]
 “Ah, chief, good to see you.”
 [[What are you working on today?]]
 [[Good to see you too.]]
-&lt;&lt;if $SvenIssue is true&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="SvenWeekTemple" tags="" position="1363,564" size="200,100">[Background of Temple]
+&lt;&lt;if $SvenIssue is true and $CageOption is false&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="SvenWeekTemple" tags="" position="1363,564" size="200,100">[Background of Temple]
 The temple is eerily silent. A few flames flicker from long burning candles on the altar. The idols of the gods stand tall and proud. You approach the idols. Smoke billows off burning incense, filling the temple with a pleasant mist.
 [Overlay Clurice]
 “Chief. May the gods bless you.’
 [[Have the gods spoken?]]
 [[May they bless you as well.]]
-&lt;&lt;if $SvenIssue is true&gt;&gt;[[I am in need of spiritual guidance.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SvenWeekLonghouse" tags="" position="1716,564" size="200,100">[Background of Longhouse]
+&lt;&lt;if $SvenIssue is true and $SacrificeOption is false&gt;&gt;[[I am in need of spiritual guidance.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SvenWeekLonghouse" tags="" position="1716,564" size="200,100">[Background of Longhouse]
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 &lt;&lt;if $Time is not 5&gt;&gt;[[Return to Town]]&lt;&lt;/if&gt;&gt;
 [[Sleep]]</tw-passagedata><tw-passagedata pid="16" name="Yes" tags="" position="114,514" size="100,100">“That’s the spirit!”
@@ -218,7 +218,7 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 &lt;&lt;if $FishOilOption is true&gt;&gt;[[Administer fish oil]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $GroomingOption is true&gt;&gt;[[Groom the goats]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $CageOption is true&gt;&gt;[[Cage the goats]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $BlessOption is true&gt;&gt;[[Sacrifice a goat]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $SacrificeOption is true&gt;&gt;[[Sacrifice a goat]]&lt;&lt;/if&gt;&gt;
 [[Observe the goats]]</tw-passagedata><tw-passagedata pid="21" name="I’m looking for some advice." tags="" position="479,790" size="100,100">“What kind of advice?”
 …
 “That’s… Definitely odd. I wonder… Here, try this!”
@@ -277,7 +277,7 @@ Clurice hands you a sacrificial dagger.
 “Prepare one of these goats for sacrifice, I shall perform the rest of the ritual.”
 You leave the temple with the dagger’s handle in the palm of your hand. You ponder Clurice’s fervor. Is this what the gods want?
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $BlessOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Sleep" tags="" position="1856,696" size="100,100">The day has been long. It is time to sleep. May the gods stop the nightmares…
+&lt;&lt;set $SacrificeOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Sleep" tags="" position="1856,696" size="100,100">The day has been long. It is time to sleep. May the gods stop the nightmares…
 [[Next Day]] /* TODO: Instead, increment the $Day variable here, maybe include a passage in between of starting the new day or something */</tw-passagedata><tw-passagedata pid="37" name="Return to Town" tags="" position="1691,696" size="100,100">There is still much to do today. You leave the comfort of your home and return to your duties in the village.
 [[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="38" name="Next Day" tags="" position="2339,721" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
