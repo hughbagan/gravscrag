@@ -218,7 +218,7 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 &lt;&lt;if $FishOilOption is true&gt;&gt;[[Administer fish oil]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $GroomingOption is true&gt;&gt;[[Groom the goats]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $CageOption is true&gt;&gt;[[Cage the goats]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $BlessOption is true&gt;&gt;[[Bless the goats]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $BlessOption is true&gt;&gt;[[Sacrifice a goat]]&lt;&lt;/if&gt;&gt;
 [[Observe the goats]]</tw-passagedata><tw-passagedata pid="21" name="I’m looking for some advice." tags="" position="479,790" size="100,100">“What kind of advice?”
 …
 “That’s… Definitely odd. I wonder… Here, try this!”
@@ -282,23 +282,23 @@ You leave the temple with the dagger’s handle in the palm of your hand. You po
 [[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="38" name="Next Day" tags="" position="2339,721" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
 
-&lt;&lt;if $Day is 2&gt;&gt;[Background of Longhouse]
+&lt;&lt;if $Day is 2 and $GoatsFixed is false&gt;&gt;[Background of Longhouse]
 Tirsdag, 2nd of (Fitting Month?)
 You awake from a calm, dark sleep. Not a single dream infected your mind. The sun creeps in.
 It’s time to attend to your duties.
 [[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $Day is 3&gt;&gt;[Background of Longhouse]
+&lt;&lt;if $Day is 3 and $GoatsFixed is false&gt;&gt;[Background of Longhouse]
 Onsdag, 3rd of (Fitting Month?)
 You awaken in cold sweat. You can’t remember the events of your dreams, just the heavy feeling in your chest. You hear a knocking from your door.
 [[Answer the door|AnswerDoor3]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $Day is 4&gt;&gt;[Background of Longhouse]
+&lt;&lt;if $Day is 4 and $GoatsFixed is false&gt;&gt;[Background of Longhouse]
 Torsday, 4th of (Fitting Month?)
 You jolt awake in your bed, your eyes wide as the nightmares fade from your mind. You’re safe here. You’re safe…
 [[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $Day is 5&gt;&gt;[Background of Longhouse]
+&lt;&lt;if $Day is 5 and $GoatsFixed is false&gt;&gt;[Background of Longhouse]
 Fredag, 5th of (Fitting Month?)
 The ceiling seems to spin as you lay wide awake in your bed. It was not easy getting sleep last night, and waking up has been even harder…
 &lt;&lt;if $SvenVisit is false or $GoatsFixed is false&gt;&gt;A knock reverberates from your door.
@@ -306,14 +306,14 @@ The ceiling seems to spin as you lay wide awake in your bed. It was not easy get
 &lt;&lt;else&gt;&gt;Maybe work will prove a worthy distraction.
 [[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $Day is 6&gt;&gt;[Background of Longhouse]
+&lt;&lt;if $Day is 6 and $GoatsFixed is false&gt;&gt;[Background of Longhouse]
 Lørdag, 6th of (Fitting Month?)
 You blink awake with your face pressed against the wooden floor of your longhouse. You’re half hanging out of bed with an arm pinned between you and the bed. There are certainly better ways to wake up…
 [[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $Day is 7&gt;&gt;[Background of Longhouse]
+&lt;&lt;if $Day is 7 or $GoatsFixed is true&gt;&gt;[Background of Longhouse]
 Søndag, 7th of (Fitting Month?)
-&lt;&lt;if $GoatsFixed is true&gt;&gt; You awake from a peaceful slumber. You smile to yourself. Not a single nightmare. The gods must be pleased.
+&lt;&lt;if $GoatsFixed is true&gt;&gt; &lt;&lt;if $Day is not 7&gt;&gt;The rest of the week passed without incident. &lt;&lt;/if&gt;&gt;You awake from a peaceful slumber&lt;&lt;if $Day is not 7&gt;&gt; on the 7th day&lt;&lt;/if&gt;&gt;. You smile to yourself. Not a single nightmare. The gods must be pleased.
 You arrive at the pasture to check up on Sven.
 With the goats gone you find Sven with his crook.
 Chickens are harder to herd, but it seems Sven has put himself up to the challenge.
@@ -334,7 +334,7 @@ After the long day of feeding goats fish oil you walk home. As the sun sets you 
 You return home after a long day of grooming. Hopefully you have helped them.
 [[Next Day]]</tw-passagedata><tw-passagedata pid="42" name="Cage the goats" tags="" position="2411,576" size="100,100">You have Toldjr help you craft and bring as many cages as you can to the pastures. You herd the goats into cages for the whole day. These goats seem more slippery than normal. You watch as the goats headbutt and chew on their cages with unnatural flexibility. The sun is on the horizon
 and threatening to set once the last goat has been caged, but you hear the bleat of a goat behind you. One of the goats has chewed through their cage. Another breaks its way out, and soon all your work has been thrown away as the goats escape and return to their pasture. The day has become too dark to continue… You return home and get ready for the next day.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="43" name="Bless the goats" tags="" position="2561,576" size="100,100">You have brought the dagger with you. You remember the words and the gods to honor this sacrifice to. You have one of the shepherds prepare their finest goat. It is rather thin, like the rest of the goats. This will have to do. You take your dagger and draw blood from the now bleating
+[[Next Day]]</tw-passagedata><tw-passagedata pid="43" name="Sacrifice a goat" tags="" position="2561,576" size="100,100">You have brought the dagger with you. You remember the words and the gods to honor this sacrifice to. You have one of the shepherds prepare their finest goat. It is rather thin, like the rest of the goats. This will have to do. You take your dagger and draw blood from the now bleating
 goat. You perform the sacrifice…
 Clurice arrives with cloths and cups. She fills the cup with the blood of the goat and dips her fingers in it, flicking the blood onto the other goats as she chants prayers to the gods. Prayers for a blessing. A cloth is laid over the dead goat’s eyes, and Clurice follows through with the ritual for each other goat…
 The day ends with the final goat being blessed. May the gods allow things to return to normal. It is time to return home…
