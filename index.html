@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="textadventure350" startnode="4" creator="Twine" creator-version="2.3.4" ifid="9B930968-717C-4D53-ADC5-243791B37D15" zoom="0.6" format="SugarCube" format-version="2.29.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#story {
+	<tw-storydata name="textadventure350" startnode="2" creator="Twine" creator-version="2.3.4" ifid="9B930968-717C-4D53-ADC5-243791B37D15" zoom="0.6" format="SugarCube" format-version="2.29.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#story {
   margin-left: 0; /* 20em by default */
   margin-right: 0;
 }
@@ -111,16 +111,16 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 if (!Config.debug) {
 	UIBar.hide();
 }
-</script><tw-passagedata pid="1" name="IntroOutside" tags="" position="21,8" size="100,100">&lt;img src=&quot;images/village.jpg&quot; alt=&quot;A village of thatch and timber buildings&quot; width=&quot;100%&quot; height=&quot;100%&quot;/&gt;
-&lt;&lt;audio testsong play loop&gt;&gt;
-It&#39;s a brisk day in the village.
-
-[[Go to the Longhouse|Longhouse1]]</tw-passagedata><tw-passagedata pid="2" name="Longhouse1" tags="" position="18,134" size="100,100">&lt;img src=&quot;images/longhouse.jpg&quot; alt=&quot;Inside the longhouse. The hearth is always burning.&quot; width=&quot;100%&quot;/&gt;
-Everybody is out doing the day&#39;s work, which leaves the cavernous longhouse empty.
-
-[[Go to the pasture|SvenIntro]]</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="399,43" size="200,100">/* StoryInit is a special passage that Twine runs before the game starts. */
+</script><tw-passagedata pid="1" name="StoryInit" tags="" position="302.33333333333337,199.66666666666666" size="200,200">/* StoryInit is a special passage that Twine runs before the game starts. */
 /* Cache audio to get it ready for playing */
-&lt;&lt;cacheaudio &quot;testsong&quot; &quot;audio/test1.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FirstDream&quot; 		&quot;audio/FirstDream.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FirstDreamDeeper&quot; &quot;audio/FirstDreamDeeper.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;Pasture&quot; 			&quot;audio/Pasture.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;PastureDead&quot; 		&quot;audio/Pasture_dead.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;Temple&quot; 			&quot;audio/Temple.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;TempleDead&quot; 		&quot;audio/Temple_dead.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;TownMap&quot; 			&quot;audio/TownMap.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;TownMapNoChime&quot; 	&quot;audio/TownMap_noChime.mp3&quot;&gt;&gt;
 
 /* General variables */
 &lt;&lt;set $Time to 0&gt;&gt;
@@ -141,25 +141,17 @@ Everybody is out doing the day&#39;s work, which leaves the cavernous longhouse 
 &lt;&lt;set $CageOption to false&gt;&gt;
 &lt;&lt;set $SacrificeOption to false&gt;&gt;
 &lt;&lt;set $GoatsFixed to false&gt;&gt;
-&lt;&lt;set $SvenVisit to false&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Main" tags="" position="680,20" size="200,100">&lt;img src=&quot;images/Prototype_title.png&quot; alt=&quot;Title of the game&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenVisit to false&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Main" tags="" position="671.6666666666667,43.33333333333334" size="200,100">&lt;img src=&quot;images/Prototype_title.png&quot; alt=&quot;Title of the game&quot; width=&quot;100%&quot;/&gt;
 @@.center;
 [[Start Game|SvenWeekDream]]
-@@</tw-passagedata><tw-passagedata pid="5" name="SvenIntro" tags="" position="21,251" size="100,100">Sven: Bjork bjork!
-
-&quot;Bjork bjork!&quot; says Sven.
-
-Sven, speaking softly: &quot;Bjork bjork!&quot;
-
-[[Hug Sven|SvenHug]]&quot;I love you too, Sven&quot;
-
-[[Punch Sven|SvenPunch]]</tw-passagedata><tw-passagedata pid="6" name="SvenHug" tags="" position="150,224" size="100,100">&quot;I love you too, Sven&quot;</tw-passagedata><tw-passagedata pid="7" name="SvenPunch" tags="" position="32,371" size="100,100">Get rekt Sven</tw-passagedata><tw-passagedata pid="8" name="SvenWeekDay1Intro" tags="" position="669,252" size="200,100">Mondag, 1st of Gormánuður
+@@</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="679,305.3333333333333" size="200,100">Mondag, 1st of Gormánuður
 The previous night’s dream haunts you still, but you have chiefly duties to attend to.
 &lt;img src=&quot;images/LonghouseSvenGoat.PNG&quot; alt=&quot;Sven is holding his crook in one hand, and a baby goat in the other.&quot; width=&quot;100%&quot;/&gt;
 “Hey chief! Rise and shine! I was just passing by; hope you have a good day.”
 
 Last night… it was just a dream, right?
 
-[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="9" name="SvenWeekTownMap" tags="" position="667,373" size="200,200">&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="4" name="SvenWeekTownMap" tags="" position="677,434.66666666666663" size="200,200">&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;&lt;audio TownMapNoChime play loop&gt;&gt;
 Day $Day of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $Time is not 5&gt;&gt;[[Go to the Barracks|SvenWeekBarracks]]
@@ -168,18 +160,18 @@ It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt
 [[Go to the Workshop|SvenWeekWorkshop]]
 [[Go to the Temple|SvenWeekTemple]]&lt;&lt;/if&gt;&gt;
 [[Go back to the Longhouse|SvenWeekLonghouse]]
-&lt;&lt;if $Time is not 5&gt;&gt;&lt;&lt;if $SvenIssue is true&gt;&gt;&lt;&lt;if $Day is 2 or $Day is 4 or $Day is 6&gt;&gt;[[Attend to Sven&#39;s Problem|SvenWeekProblem]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="SvenWeekBarracks" tags="" position="248,555" size="200,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $Time is not 5&gt;&gt;&lt;&lt;if $SvenIssue is true&gt;&gt;&lt;&lt;if $Day is 2 or $Day is 4 or $Day is 6&gt;&gt;[[Attend to Sven&#39;s Problem|SvenWeekProblem]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="SvenWeekBarracks" tags="" position="246.33333333333334,613.3333333333334" size="200,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 The sound of clashing steel and boisterous warriors fills these halls. Trophies hang from the walls among battle prizes. The smell of mead and sweat fills the barracks.
 “Hey there Chief! Haha, come to get involved in our festivities?”
 [[Yes]]
 [[No]]
-&lt;&lt;if $SvenIssue is true and $KillOption is false&gt;&gt;[[I need your advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SvenWeekDocks" tags="" position="520,608" size="200,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $KillOption is false&gt;&gt;[[I need your advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="SvenWeekDocks" tags="" position="518.3333333333334,666.3333333333334" size="200,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 The sails of ships float in the distance as busy fishers drag nets of their freshest pulls to and from their boats. The air is salty, and the wind blows softly through your hair. The yields are looking good this year.
 
 “Oh? Chief? What are you doing here? It’s a pleasure to see’ya.”
 [[Hoping you could show me around the boats.]]
 [[Just checking in.]]
-&lt;&lt;if $SvenIssue is true and $FishOilOption is false&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="SvenWeekPastures" tags="" position="700,796" size="200,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $FishOilOption is false&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SvenWeekPastures" tags="" position="698.3333333333334,854.3333333333334" size="200,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators.
 
 &lt;&lt;if $SvenIssue is false&gt;&gt;“Hiya Chief! I’m glad you came by…”
@@ -189,41 +181,41 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 [[How are the goats?]]
 [[Just stopping by to say hello.]]
 &lt;&lt;if $SvenAccept is true and $GroomingOption is false&gt;&gt;[[How do you think we should help the goats?]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SvenWeekWorkshop" tags="" position="1008,566" size="200,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="SvenWeekWorkshop" tags="" position="1006.3333333333334,624.3333333333334" size="200,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 The sound of sawing and hammering reverberates through the heavy wood of the workshop as you enter it. The smell of freshly cut wood hangs in the air as the carpenters work. You hear the clank of metal against metal as nails are forged, and you spot a couple wooden cages in the corner. They seem large enough for a small creature.
 
 “Ah, chief, good to see you.”
 [[What are you working on today?]]
 [[Good to see you too.]]
-&lt;&lt;if $SvenIssue is true and $CageOption is false&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="SvenWeekTemple" tags="" position="1363,564" size="200,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $CageOption is false&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="SvenWeekTemple" tags="" position="1361.3333333333333,622.3333333333334" size="200,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 The temple is eerily silent. A few flames flicker from long burning candles on the altar. The idols of the gods stand tall and proud. You approach the idols. Smoke billows off burning incense, filling the temple with a pleasant mist.
 
 “Chief. May the gods bless you.’
 [[Have the gods spoken?]]
 [[May they bless you as well.]]
-&lt;&lt;if $SvenIssue is true and $SacrificeOption is false&gt;&gt;[[I am in need of spiritual guidance.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SvenWeekLonghouse" tags="" position="1716,564" size="200,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $SacrificeOption is false&gt;&gt;[[I am in need of spiritual guidance.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="SvenWeekLonghouse" tags="" position="1714.3333333333333,622.3333333333334" size="200,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 &lt;&lt;if $Time is not 5&gt;&gt;[[Return to Town]]&lt;&lt;/if&gt;&gt;
-[[Sleep]]</tw-passagedata><tw-passagedata pid="16" name="Yes" tags="" position="114,514" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+[[Sleep]]</tw-passagedata><tw-passagedata pid="11" name="Yes" tags="" position="112.33333333333333,572.3333333333334" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 “That’s the spirit!”
 You fill your mug with mead and partake in the revelry with the rest of the warriors. In exchanging war stories you find the respect and admiration of the younger warriors.
 
-[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="17" name="No" tags="" position="116,651" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="12" name="No" tags="" position="114.33333333333333,709.3333333333334" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 “Come now, that’s no fun.”
 You leave the warriors to their revelry. The sound of their cheers fills the air behind you as you leave the barracks.
 
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="18" name="Hoping you could show me around the boats." tags="" position="361,680" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="13" name="Hoping you could show me around the boats." tags="" position="359.3333333333333,738.3333333333334" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “Oh? Why, sure!”
 You spend the rest of the day watching as Svika trains the young fishers. You go out on the water and watch as they draw in nets of fresh fish. Before you know it the sun begins to set over the calm waters…
 
-[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="19" name="Just checking in." tags="" position="363,788" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="14" name="Just checking in." tags="" position="361.3333333333333,846.3333333333334" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “Huh. Well, thanks for dropping by.”
 You leave the salty smell of the docks and return to the heart of the town.
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="20" name="SvenWeekProblem" tags="" position="2301,433" size="200,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="15" name="SvenWeekProblem" tags="" position="2299.3333333333335,491.3333333333333" size="200,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators. It is time to deal with these goats.
 &lt;&lt;if $KillOption is true&gt;&gt;[[Kill the goats]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $FishOilOption is true&gt;&gt;[[Administer fish oil]]&lt;&lt;/if&gt;&gt;
@@ -231,7 +223,7 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 &lt;&lt;if $CageOption is true&gt;&gt;[[Cage the goats]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $SacrificeOption is true&gt;&gt;[[Sacrifice a goat]]&lt;&lt;/if&gt;&gt;
 [[Observe the goats]]
-</tw-passagedata><tw-passagedata pid="21" name="I’m looking for some advice." tags="" position="479,790" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="16" name="I’m looking for some advice." tags="" position="477.3333333333333,848.3333333333334" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “What kind of advice?”
 …
 “That’s… Definitely odd. I wonder… Here, try this!”
@@ -240,51 +232,51 @@ Svika gives you a bottle of fish oil.
 You consider Svika’s advice before returning to the village.
 
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $FishOilOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Why is that?" tags="" position="490,958" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $FishOilOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Why is that?" tags="" position="488.3333333333333,1016.3333333333334" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Well you see… The goats have been acting strangely today. They’ve hardly eaten a dang thing! I’m scared they’re gonna go and starve themselves…”
 [[I see...]]
-&lt;&lt;set $SvenIssue to true&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="I see..." tags="" position="483,1103" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenIssue to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="I see..." tags="" position="481.3333333333333,1161.3333333333333" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Do you think you could help, chief?”
 [[I’ll see what I can do.]]
-[[No.]]</tw-passagedata><tw-passagedata pid="24" name="I’ll see what I can do." tags="" position="599,1251" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+[[No.]]</tw-passagedata><tw-passagedata pid="19" name="I’ll see what I can do." tags="" position="597.3333333333334,1309.3333333333333" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Thank you so much, chief! If there is anything I can do, let me know!”
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $SvenAccept to true&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="No." tags="" position="735,1250" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenAccept to true&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="No." tags="" position="733.3333333333334,1308.3333333333333" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Oh, alright… I am sure I can figure something out.”
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $SvenAccept to false&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="How are the goats?" tags="" position="635,951" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenAccept to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="How are the goats?" tags="" position="633.3333333333334,1009.3333333333334" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Still acting strangely. I can’t seem to understand why…”
 &lt;&lt;if $Day is 1&gt;&gt;“They’re still not eating a darned thing!”&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 3&gt;&gt;“They still haven’t grazed, but some of the other shepherds said they saw a mouse’s tail from one’s mouth. We even found bloody bones nearby some of the goats…”&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 5&gt;&gt;“The goats have gotten quite aggressive! We can hardly stop them from chewing on near everything around them. I thought they liked my cloak before, but now I have to rip it away from them nearly every time I’m nearby!”&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $SvenAccept is false&gt;&gt;“Are you sure you can’t help?”
 [[Yes.|No.]] /* Sends to &quot;No&quot; */
 [[I’ll see what I can do.]]
 &lt;&lt;else&gt;&gt;[[Town Map|SvenWeekTownMap]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Just stopping by to say hello." tags="" position="765,946" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Just stopping by to say hello." tags="" position="763.3333333333334,1004.3333333333334" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Hello, chief!”
 You leave behind the vast pastures and return to the village.
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="How do you think we should help the goats?" tags="" position="913,919" size="100,200">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="How do you think we should help the goats?" tags="" position="911.3333333333334,977.3333333333334" size="100,200">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “I think they’re just feeling a bit off today.”
 “We should groom them. That always helps them feel better.” Sven grins widely.
 You consider grooming the goats. Maybe they are just feeling off?
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $GroomingOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="I need your advice." tags="" position="126,779" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $GroomingOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="I need your advice." tags="" position="124.33333333333333,837.3333333333334" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 “Oh? What problems are ye having?”
 …
 “Sven’s goats are acting strange? Huh. Well you know, we could always kill them and string their horns as decorations around the place! Haha!”
 You consider Thordor’s advice. Would killing these goats be the right thing to do?
 
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $KillOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="What are you working on today?" tags="" position="933,716" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $KillOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="What are you working on today?" tags="" position="931.3333333333334,774.3333333333334" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 Toldjr smiles and waves you to follow him.
 “Plenty, Chief. Take a look at these…”
 Toldjr leads you around the workshop. Amongst the various projects are plans for more longhouses, cages, and various useful items. The workers hold themselves with pride for their good, hard work.
-[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="31" name="Good to see you too." tags="" position="1050,716" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="26" name="Good to see you too." tags="" position="1048.3333333333333,774.3333333333334" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 Toldjr gives you a nod before returning to his work. You leave the hard-working echoes of the workshop and return to the town’s center.
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="32" name="I need some advice." tags="" position="1161,715" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="27" name="I need some advice." tags="" position="1159.3333333333333,773.3333333333334" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 “What kind of advice are we talking about?”
 …
 “Huh. I wonder…”
@@ -293,16 +285,16 @@ Toldjr gives you a nod before returning to his work. You leave the hard-working 
 Toldjr gives you some wooden cages.
 You ponder Toldjr’s logic before returning to the village. Is this a smart course of action?
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $CageOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Have the gods spoken?" tags="" position="1304,699" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $CageOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Have the gods spoken?" tags="" position="1302.3333333333333,757.3333333333334" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 “Yes, as they always do.”
 Clurice guides you through her visions before performing a ritual to bless you. You learn of a giant being with antlers seeking refuge.
 “They gods are content with your rulership, Chief.”
 She smiles upon you and leads you in prayer before sending you back to the village with an invigorated mind.
-[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="34" name="May they bless you as well." tags="" position="1418,698" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="29" name="May they bless you as well." tags="" position="1416.3333333333333,756.3333333333334" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 Clurice nods her head as you take your leave from the temple. The cold, fresh air softly numbs the scent of incense as you return to the village.
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="35" name="I am in need of spiritual guidance." tags="" position="1531,701" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="30" name="I am in need of spiritual guidance." tags="" position="1529.3333333333333,759.3333333333334" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 “What else would I be here for?”
 …
 “These animals sound quite disturbed. Perhaps the gods wish for you to bless them in their name. A sacrifice should subdue them, should we bless them with a ritual of the gods.”
@@ -310,13 +302,13 @@ Clurice hands you a sacrificial dagger.
 “Prepare one of these goats for sacrifice, I shall perform the rest of the ritual.”
 You leave the temple with the dagger’s handle in the palm of your hand. You ponder Clurice’s fervor. Is this what the gods want?
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;set $SacrificeOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Sleep" tags="" position="1856,696" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SacrificeOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Sleep" tags="" position="1854.3333333333333,754.3333333333334" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 The day has been long. It is time to sleep. May the gods stop the nightmares…
-[[Next Day]] /* TODO: Instead, increment the $Day variable here, maybe include a passage in between of starting the new day or something */</tw-passagedata><tw-passagedata pid="37" name="Return to Town" tags="" position="1691,696" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]] /* TODO: Instead, increment the $Day variable here, maybe include a passage in between of starting the new day or something */</tw-passagedata><tw-passagedata pid="32" name="Return to Town" tags="" position="1689.3333333333333,754.3333333333334" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 There is still much to do today. You leave the comfort of your home and return to your duties in the village.
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="38" name="Next Day" tags="" position="2339,721" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="33" name="Next Day" tags="" position="2337.3333333333335,779.3333333333334" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
 
 &lt;&lt;if $Day is 2 and $GoatsFixed is false&gt;&gt;
@@ -361,30 +353,30 @@ A herd of goats with bloody beards.
 On the ground only bones and scraps of what was once a face. You’d recognize this body anywhere.
 Sven.
 [[Game Over]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Kill the goats" tags="" position="2019,581" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Kill the goats" tags="" position="2017.3333333333333,639.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You brought your axe with you, the same one your father once wielded. One by one you butcher the goats. The shepherds hold them still as you cleave their heads from their necks. They are prepared and salted for future feasts, and their horns are turned into cups and decorations.
 Sven watches you from afar with a frown. He turns away halfway through and leaves the pastures.
 By the time you have slaughtered each goat the sun has set. Only time will tell if you chose the right course of action.
 [[Next Day]]
-&lt;&lt;set $GoatsFixed to true&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Administer fish oil" tags="" position="2138,584" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $GoatsFixed to true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Administer fish oil" tags="" position="2136.3333333333335,642.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You bring a spoon and your bottle of fish oil you received from Svika. You have Sven help you feed each goat a spoonful of fish oil. The goats greedily slurp up the contents. They try to take the spoon each time. You are bitten a few times in the process, but you manage to keep the spoon.
 After the long day of feeding goats fish oil you walk home. As the sun sets you wonder if fish oil really is a cure to their strange affliction…
-[[Next Day]]</tw-passagedata><tw-passagedata pid="41" name="Groom the goats" tags="" position="2283,576" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]</tw-passagedata><tw-passagedata pid="36" name="Groom the goats" tags="" position="2281.3333333333335,634.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You spend the day brushing the goats and ensuring their quality of life is as good as it can be. They don’t seem to eat, but you start to understand why Sven likes being around the goats so much. Grooming them is kind of fun…
 You return home after a long day of grooming. Hopefully you have helped them.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="42" name="Cage the goats" tags="" position="2411,576" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]</tw-passagedata><tw-passagedata pid="37" name="Cage the goats" tags="" position="2409.3333333333335,634.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You have Toldjr help you craft and bring as many cages as you can to the pastures. You herd the goats into cages for the whole day. These goats seem more slippery than normal. You watch as the goats headbutt and chew on their cages with unnatural flexibility. The sun is on the horizon
 and threatening to set once the last goat has been caged, but you hear the bleat of a goat behind you. One of the goats has chewed through their cage. Another breaks its way out, and soon all your work has been thrown away as the goats escape and return to their pasture. The day has become too dark to continue… You return home and get ready for the next day.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="43" name="Sacrifice a goat" tags="" position="2561,576" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]</tw-passagedata><tw-passagedata pid="38" name="Sacrifice a goat" tags="" position="2559.3333333333335,634.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You have brought the dagger with you. You remember the words and the gods to honor this sacrifice to. You have one of the shepherds prepare their finest goat. It is rather thin, like the rest of the goats. This will have to do. You take your dagger and draw blood from the now bleating
 goat. You perform the sacrifice…
 Clurice arrives with cloths and cups. She fills the cup with the blood of the goat and dips her fingers in it, flicking the blood onto the other goats as she chants prayers to the gods. Prayers for a blessing. A cloth is laid over the dead goat’s eyes, and Clurice follows through with the ritual for each other goat…
 The day ends with the final goat being blessed. May the gods allow things to return to normal. It is time to return home…
-[[Next Day]]</tw-passagedata><tw-passagedata pid="44" name="Observe the goats" tags="" position="2711,576" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]</tw-passagedata><tw-passagedata pid="39" name="Observe the goats" tags="" position="2709.3333333333335,634.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You spend the day watching over the goats alongside Sven.
 &lt;&lt;if $Day is 2&gt;&gt;The goats mostly keep to themselves, rarely moving. They seem to watch their shepherds’ every movement. Their heads slowly turn to watch as you walk by them. The pastures are covered in an eerie, uncomfortable silence.&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 4&gt;&gt;The goats move with unnatural agility, sudden dashing sprints before returning to their docile nature. You watch as some of these goats corner small animals, leaving nothing behind but a small puddle of blood where the creatures once stood. The goats refrain from eating the growing grass, and you find bones occasionally scattered across the field.&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 6&gt;&gt;You find yourself having to dodge out of the way of more aggressive goats. They butt their heads up against each other. Their bleating has the undertone of a threat, echoing through the pastures. You aid a few shepherds whose goats have dragged them to the ground, chewing and pulling on their cloaks and clothes, and who had sustained bites from the aggressive horned creatures.&lt;&lt;/if&gt;&gt;
 The sun begins to set on the horizon after a long day of observing the goats.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="45" name="AnswerDoor3" tags="" position="2114,871" size="100,100">&lt;&lt;if $GoatsFixed is true&gt;&gt;
+[[Next Day]]</tw-passagedata><tw-passagedata pid="40" name="AnswerDoor3" tags="" position="2112.3333333333335,929.3333333333334" size="100,100">&lt;&lt;if $GoatsFixed is true&gt;&gt;
 &lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief. I’m not sure what to do now, with the goats all dead. I really like goats…”
 Sven pauses for a long moment before returning to look at you.
@@ -404,7 +396,7 @@ Sven tries to force his smile back on.
 
 Odd…
 Well, it’s time to get on with the rest of your day.
-[[Town Map|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="AnswerDoor5" tags="" position="2264,871" size="100,100">&lt;&lt;if $SvenVisit is false and $GoatsFixed is true&gt;&gt;
+[[Town Map|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="AnswerDoor5" tags="" position="2262.3333333333335,929.3333333333334" size="100,100">&lt;&lt;if $SvenVisit is false and $GoatsFixed is true&gt;&gt;
 &lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief. I’m not sure what to do now, with the goats all dead. I really like goats…”
 Sven pauses for a long moment before returning to look at you.
@@ -424,9 +416,9 @@ Sven takes a step back.
 
 Things seem to be getting worse…
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Congratulations! Game Over" tags="" position="2414,871" size="100,100">End of Sven&#39;s week</tw-passagedata><tw-passagedata pid="48" name="Game Over" tags="" position="2564,871" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2412.3333333333335,929.3333333333334" size="100,100">End of Sven&#39;s week</tw-passagedata><tw-passagedata pid="43" name="Game Over" tags="" position="2562.3333333333335,929.3333333333334" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 
-End of Sven&#39;s Week</tw-passagedata><tw-passagedata pid="49" name="SvenWeekDream" tags="" position="676,140" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
+End of Sven&#39;s Week</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="677.6666666666667,175" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
 @@.center;
 I COME WITH GRACE
 I TAKE THEIR PLACE
