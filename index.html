@@ -121,6 +121,14 @@ if (!Config.debug) {
 &lt;&lt;cacheaudio &quot;TempleDead&quot; 		&quot;audio/Temple_dead.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;TownMap&quot; 			&quot;audio/TownMap.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;TownMapNoChime&quot; 	&quot;audio/TownMap_noChime.mp3&quot;&gt;&gt;
+&lt;&lt;createaudiogroup &quot;:town&quot;&gt;&gt;
+	&lt;&lt;track &quot;TownMapNoChime&quot;&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt;
+
+/*
+Example: Stop playback of playing tracks except those in the &quot;:town&quot; group
+&lt;&lt;audio &quot;:playing:not(:town)&quot; stop&gt;&gt;
+*/
 
 /* General variables */
 &lt;&lt;set $Time to 0&gt;&gt;
@@ -128,8 +136,8 @@ if (!Config.debug) {
 &lt;&lt;set $Week to &quot;Sven&quot;&gt;&gt; 	/* We may or may not need this var */
 
 /* Sven Week variables */
-&lt;&lt;set $EarlyMorningText to &quot;early morning. &quot; + either(&quot;You can hear the roosters crowing from the stables.&quot;,&quot;The fishers are heading out in their boats&quot;)&gt;&gt;
-&lt;&lt;set $LateMorningText to &quot;late morning. &quot; + either(&quot;People are out and about, performing their daily tasks.&quot;,&quot;The birds are starting to come in to town, flitting from place to place and chirping&quot;)&gt;&gt;
+&lt;&lt;set $EarlyMorningText to &quot;early morning. &quot; + either(&quot;You can hear the roosters crowing from the stables.&quot;,&quot;The fishers are heading out in their boats.&quot;)&gt;&gt;
+&lt;&lt;set $LateMorningText to &quot;late morning. &quot; + either(&quot;People are out and about, performing their daily tasks.&quot;,&quot;The birds are starting to come in to town, flitting from place to place and chirping.&quot;)&gt;&gt;
 &lt;&lt;set $NoonText to &quot;noon. &quot; + either(&quot;You can smell cookfires going.&quot;,&quot;There are children playing in the main courtyard.&quot;)&gt;&gt;
 &lt;&lt;set $AfternoonText to &quot;afternoon. &quot; + either(&quot;The fishers have come in with their hauls, and the smell if overpowering.&quot;,&quot;You see some people are making their way to the temple to make offerings.&quot;)&gt;&gt;
 &lt;&lt;set $EveningText to &quot;evening. &quot; + either(&quot;People are making their way to their homes after a long day of work.&quot;,&quot;You can hear the warriors yelling boisterously from the barracks.&quot;)+ &quot; Night will soon be here, and you should get some rest.&quot;&gt;&gt;
@@ -151,7 +159,8 @@ The previous night’s dream haunts you still, but you have chiefly duties to at
 
 Last night… it was just a dream, right?
 
-[[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="4" name="SvenWeekTownMap" tags="" position="677,434.66666666666663" size="200,200">&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;&lt;audio TownMapNoChime play loop&gt;&gt;
+[[Town Map|SvenWeekTownMap]]
+&lt;&lt;audio &quot;:playing&quot; volume 0.20&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="SvenWeekTownMap" tags="" position="677,434.66666666666663" size="200,200">&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;&lt;audio &quot;:playing:not(:town)&quot; stop&gt;&gt;&lt;&lt;audio TownMapNoChime loop play&gt;&gt;
 Day $Day of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $Time is not 5&gt;&gt;[[Go to the Barracks|SvenWeekBarracks]]
@@ -171,7 +180,7 @@ The sails of ships float in the distance as busy fishers drag nets of their fres
 “Oh? Chief? What are you doing here? It’s a pleasure to see’ya.”
 [[Hoping you could show me around the boats.]]
 [[Just checking in.]]
-&lt;&lt;if $SvenIssue is true and $FishOilOption is false&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SvenWeekPastures" tags="" position="698.3333333333334,854.3333333333334" size="200,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $FishOilOption is false&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SvenWeekPastures" tags="" position="698.3333333333334,854.3333333333334" size="200,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;&lt;&lt;audio Pasture loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators.
 
 &lt;&lt;if $SvenIssue is false&gt;&gt;“Hiya Chief! I’m glad you came by…”
@@ -187,7 +196,7 @@ The sound of sawing and hammering reverberates through the heavy wood of the wor
 “Ah, chief, good to see you.”
 [[What are you working on today?]]
 [[Good to see you too.]]
-&lt;&lt;if $SvenIssue is true and $CageOption is false&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="SvenWeekTemple" tags="" position="1361.3333333333333,622.3333333333334" size="200,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $CageOption is false&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="SvenWeekTemple" tags="" position="1361.3333333333333,622.3333333333334" size="200,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;&lt;&lt;audio Temple loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
 The temple is eerily silent. A few flames flicker from long burning candles on the altar. The idols of the gods stand tall and proud. You approach the idols. Smoke billows off burning incense, filling the temple with a pleasant mist.
 
 “Chief. May the gods bless you.’
@@ -215,7 +224,7 @@ You spend the rest of the day watching as Svika trains the young fishers. You go
 You leave the salty smell of the docks and return to the heart of the town.
 [[Town Map|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="15" name="SvenWeekProblem" tags="" position="2299.3333333333335,491.3333333333333" size="200,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="15" name="SvenWeekProblem" tags="" position="2299.3333333333335,491.3333333333333" size="200,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;&lt;&lt;audio PastureDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators. It is time to deal with these goats.
 &lt;&lt;if $KillOption is true&gt;&gt;[[Kill the goats]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $FishOilOption is true&gt;&gt;[[Administer fish oil]]&lt;&lt;/if&gt;&gt;
@@ -304,13 +313,13 @@ You leave the temple with the dagger’s handle in the palm of your hand. You po
 [[Town Map|SvenWeekTownMap]]
 &lt;&lt;set $SacrificeOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Sleep" tags="" position="1854.3333333333333,754.3333333333334" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 The day has been long. It is time to sleep. May the gods stop the nightmares…
-[[Next Day]] /* TODO: Instead, increment the $Day variable here, maybe include a passage in between of starting the new day or something */</tw-passagedata><tw-passagedata pid="32" name="Return to Town" tags="" position="1689.3333333333333,754.3333333333334" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]</tw-passagedata><tw-passagedata pid="32" name="Return to Town" tags="" position="1689.3333333333333,754.3333333333334" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 There is still much to do today. You leave the comfort of your home and return to your duties in the village.
 [[Town Map|SvenWeekTownMap]]
 
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="33" name="Next Day" tags="" position="2337.3333333333335,779.3333333333334" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
-
+&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
 &lt;&lt;if $Day is 2 and $GoatsFixed is false&gt;&gt;
 Tirsdag, 2nd of (Fitting Month?)
 You awake from a calm, dark sleep. Not a single dream infected your mind. The sun creeps in.
@@ -352,7 +361,7 @@ You arrive at the rolling hills.
 A herd of goats with bloody beards.
 On the ground only bones and scraps of what was once a face. You’d recognize this body anywhere.
 Sven.
-[[Game Over]]&lt;&lt;/if&gt;&gt;
+[[Game Over]]&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 1.00&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Kill the goats" tags="" position="2017.3333333333333,639.3333333333334" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You brought your axe with you, the same one your father once wielded. One by one you butcher the goats. The shepherds hold them still as you cleave their heads from their necks. They are prepared and salted for future feasts, and their horns are turned into cups and decorations.
 Sven watches you from afar with a frown. He turns away halfway through and leaves the pastures.
@@ -396,7 +405,8 @@ Sven tries to force his smile back on.
 
 Odd…
 Well, it’s time to get on with the rest of your day.
-[[Town Map|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="AnswerDoor5" tags="" position="2262.3333333333335,929.3333333333334" size="100,100">&lt;&lt;if $SvenVisit is false and $GoatsFixed is true&gt;&gt;
+[[Town Map|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;audio FirstDream loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="AnswerDoor5" tags="" position="2262.3333333333335,929.3333333333334" size="100,100">&lt;&lt;if $SvenVisit is false and $GoatsFixed is true&gt;&gt;
 &lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief. I’m not sure what to do now, with the goats all dead. I really like goats…”
 Sven pauses for a long moment before returning to look at you.
@@ -416,9 +426,12 @@ Sven takes a step back.
 
 Things seem to be getting worse…
 [[Town Map|SvenWeekTownMap]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2412.3333333333335,929.3333333333334" size="100,100">End of Sven&#39;s week</tw-passagedata><tw-passagedata pid="43" name="Game Over" tags="" position="2562.3333333333335,929.3333333333334" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2412.3333333333335,929.3333333333334" size="100,100">End of Sven&#39;s week
+&lt;&lt;audio TempleDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Game Over" tags="" position="2562.3333333333335,929.3333333333334" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 
 End of Sven&#39;s Week</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="677.6666666666667,175" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;audio FirstDreamDeeper play loop&gt;&gt;
 @@.center;
 I COME WITH GRACE
 I TAKE THEIR PLACE
