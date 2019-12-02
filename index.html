@@ -100,15 +100,35 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="textadventure350" startnode="2" creator="Twine" creator-version="2.3.4" ifid="9B930968-717C-4D53-ADC5-243791B37D15" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#story {
+	<tw-storydata name="textadventure350" startnode="2" creator="Twine" creator-version="2.3.4" ifid="9B930968-717C-4D53-ADC5-243791B37D15" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
+  font-family: 'Comic';
+  src: url('fonts/dpcomic-crowned.ttf');
+}
+@font-face {
+  font-family: 'Baskerville';
+  src: url('fonts/LibreBaskerville-Regular.ttf');
+}
+body, tw-story {
+  font-family: 'Baskerville', serif;
+  font-size: 18px;
+}
+#story {
   margin-left: 0; /* 20em by default */
   margin-right: 0;
 }
 .center {
   text-align: center;
 }
-
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Only show the UIBar in debug mode
+a {
+  font-weight: normal;
+  text-decoration: none;
+  color: rgb(255, 0, 144);
+}
+a:hover {
+  font-weight: bold;
+  text-decoration:none;
+  color: rgb(255, 0, 90);
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Only show the UIBar in debug mode
 if (!Config.debug) {
 	UIBar.hide();
 }
