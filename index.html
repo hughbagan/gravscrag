@@ -128,10 +128,12 @@ a:hover {
   font-weight: bold;
   text-decoration:none;
   color: rgb(255, 0, 90);
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Only show the UIBar in debug mode
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Only show the UIBar in debug mode
 if (!Config.debug) {
 	UIBar.hide();
 }
+
 
 </script><tw-passagedata pid="1" name="StoryInit" tags="" position="302,199" size="200,200">/* StoryInit is a special passage that Twine runs before the game starts. */
 /* Cache audio to get it ready for playing */
@@ -205,7 +207,7 @@ Example: Stop playback of playing tracks except those in the &quot;:town&quot; g
 
 &lt;&lt;set $AlliesCount to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Main" tags="" position="671,43" size="200,100">&lt;img src=&quot;images/Prototype_title.png&quot; alt=&quot;Title of the game&quot; width=&quot;100%&quot;/&gt;
 @@.center;
-[[Start Game|SvenWeekDream]]
+[[Start Game|Week 2 Dream Sequence]]
 @@</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="679,305" size="200,100">Mondag, 1st of Gormánuður
 The previous night’s dream haunts you still, but you have chiefly duties to attend to.
 &lt;img src=&quot;images/LonghouseSvenGoat.PNG&quot; alt=&quot;Sven is holding his crook in one hand, and a baby goat in the other.&quot; width=&quot;100%&quot;/&gt;
@@ -481,7 +483,7 @@ Sven takes a step back.
 Things seem to be getting worse…
 [[Town Map|SvenWeekTownMap]]
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2437,932.3333333333334" size="100,100">End of Sven&#39;s week
+&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2437,932" size="100,100">End of Sven&#39;s week
 &lt;&lt;audio TempleDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SvenDeath" tags="" position="2562,929" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 
 [[.........|Week1Transition]]</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="677,175" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
@@ -515,9 +517,9 @@ BE TOGETHER
 @@</tw-passagedata><tw-passagedata pid="46" name="W2 Next Day" tags="" position="2761,1914" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
+&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;if $Day is 1&gt;&gt;
-[Background of Longhouse]
 Mondag, 8th of Gormánuður
 Gravity begins to sway you back and forth as your eyes blink awake and you realize you are on your feet, gripping your battle axe, facing the door.
 You place your battleaxe back where it belongs.
@@ -527,43 +529,36 @@ You hear a hammering knock against your longhouse door.
 
 &lt;&lt;elseif $Day is 2&gt;&gt;
 Day 2
-[Background of Longhouse]
 Tirsdag, 9th of Gormánuður
 You awake in the freezing cold snow just outside of your longhouse. You’re covered in furs taken from inside your home, and a bloody axe sits with its sharp edge driven into the snow.
 [[Head into Town|W2 Town Map]]
 
 &lt;&lt;elseif $Day is 3&gt;&gt;
 Day 3
-[Background of Longhouse]
 Onsdag, 10th of Gormánuður
 You jump awake just before you hear a sudden thump against the wall. You notice you’re on your feet, and an axe is now lodged into the wall of your longhouse. Your eyes threaten to close once more, but you shake yourself awake…
 [[Head into Town|W2 Town Map]]
 
 &lt;&lt;elseif $Day is 4&gt;&gt;
 Day 4
-[Background of Longhouse]
 Torsday. 11th of Gormánuður
 You awake backwards on your bed, your head hanging off its end, looking straight at the battleaxe across the room. But for a moment you swore it was on fire…
 [[Head into Town|W2 Town Map]]
 
 &lt;&lt;elseif $Day is 5&gt;&gt;
 Day 5
-[Background of Longhouse]
 Fredag, 12th of Gormánuður
 You feel the touch of wood in your hands, and then a sudden, surprising warmth. It runs over your body, throwing you awake, sweating in a panic. Everything seems normal, and the warmth quickly begins to fade…
 [[Head into Town|W2 Town Map]]
 
 &lt;&lt;elseif $Day is 6&gt;&gt;
 Day 6
-[Background of Longhouse]
 Lørdag, 13th of Gormánuður
 You begins to toss and turn as though waves shook you on the deck of a longboat… You awake feeling seasick, but you have to keep going. Everyone depends on you…
 [[Head into Town|W2 Town Map]]
 
-
 &lt;&lt;elseif $Day is 7&gt;&gt;
 Day 7
-[Background of Longhouse]
 Søndag, 14th of Gormánuður
 &lt;&lt;if $PristineSvikaKilled is true&gt;&gt;
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. As you arrive you see the dishevelled Svika sitting with Thordor near the cages. Nearby is the pristine Svika’s body, but it looks odd. It seems to be made of fishy flesh and eels spilled out of where its head was cut off by Thordor’s axe. At least you can rest well knowing that the real Svika is safe…
@@ -983,7 +978,7 @@ You quickly escape the Edifice before it collapses as flames rip it and sunder i
 [[Conclusion|Game Conclusion]]
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="112" name="Game Conclusion" tags="" position="1080,3700" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="113" name="W2 Wait for Thordor" tags="" position="552,1617" size="100,100">You spend the day interacting with the people of you village, and before you know it, it is evening and you see the warriors boats coming into bay.
-[[Greet Returning Thordor at the Docks|W2 Docks]] &lt;&lt;set $Time to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Week1Transition" tags="" position="2355.3333333333335,1144" size="100,100">Day lapses into evening. Evening lapses into night...
+[[Greet Returning Thordor at the Docks|W2 Docks]] &lt;&lt;set $Time to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Week1Transition" tags="" position="2355,1144" size="100,100">Day lapses into evening. Evening lapses into night...
 
 [[.........|Week 2 Dream Sequence]] </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
