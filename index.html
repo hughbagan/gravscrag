@@ -129,10 +129,12 @@ a:hover {
   text-decoration:none;
   color: rgb(255, 0, 90);
 }
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// Only show the UIBar in debug mode
 if (!Config.debug) {
 	UIBar.hide();
 }
+
 
 
 </script><tw-passagedata pid="1" name="StoryInit" tags="" position="302,199" size="200,200">/* StoryInit is a special passage that Twine runs before the game starts. */
@@ -145,15 +147,22 @@ if (!Config.debug) {
 &lt;&lt;cacheaudio &quot;TempleDead&quot; 		&quot;audio/Temple_dead.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;TownMap&quot; 			&quot;audio/TownMap.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;TownMapNoChime&quot; 	&quot;audio/TownMap_noChime.mp3&quot;&gt;&gt;
-&lt;&lt;createaudiogroup &quot;:town&quot;&gt;&gt;
-	&lt;&lt;track &quot;TownMapNoChime&quot;&gt;&gt;
-&lt;&lt;/createaudiogroup&gt;&gt;
 &lt;&lt;cacheaudio &quot;Barracks&quot;			&quot;audio/Barracks.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;BarracksDead&quot;		&quot;audio/Barracks_dead.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;Docks&quot;			&quot;audio/Docks.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;DocksDead&quot;		&quot;audio/Docks_dead.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;Edifice&quot;			&quot;audio/Edifice.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;Workshop&quot;			&quot;audio/Workshop.mp3&quot;&gt;&gt;
+
+&lt;&lt;createaudiogroup &quot;:town&quot;&gt;&gt;
+	&lt;&lt;track &quot;TownMapNoChime&quot;&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt;
+&lt;&lt;createaudiogroup &quot;:town2&quot;&gt;&gt;
+	&lt;&lt;track &quot;BarracksDead&quot;&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt;
+&lt;&lt;createaudiogroup &quot;:docksdead&quot;&gt;&gt;
+	&lt;&lt;track &quot;DocksDead&quot;&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt;
 
 /*
 Example: Stop playback of playing tracks except those in the &quot;:town&quot; group
@@ -513,6 +522,7 @@ BE TOGETHER
 /* General variables */
 &lt;&lt;set $Time to 0&gt;&gt;
 &lt;&lt;set $Day to 0&gt;&gt;
+&lt;&lt;audio DocksDead play loop&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;\
 &lt;img src=&quot;images/Week2/SecondDream_small.png&quot; alt=&quot;A terrible creature -- half human, half fish -- kneels over a body of water. Its fur cloak cannot hide its scaly body. Blood drips from its huge hideous jaws. Reflected in the water is Svika, with Thordor standing beside her.&quot; width=&quot;100%&quot;/&gt;\
 @@.center;
@@ -523,6 +533,9 @@ BE TOGETHER
 @@</tw-passagedata><tw-passagedata pid="46" name="W2 Next Day" tags="" position="2761,1914" size="100,100">&lt;&lt;nobr&gt;&gt;\
 &lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
+&lt;&lt;audio &quot;:playing:not(:docksdead)&quot; fadeout&gt;&gt;
+&lt;&lt;audio DocksDead loop play&gt;&gt;
+&lt;&lt;audio DocksDead fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;\
 &lt;&lt;if $Day is 1&gt;&gt;\
 Mondag, 8th of Gormánuður
@@ -531,6 +544,7 @@ You place your battleaxe back where it belongs.
 You hear a hammering knock against your longhouse door.
 [[Answer the door|W2 Answer Door D1]]
 /* [[Go back to sleep|W2 Go Back To Sleep]] &lt;- This option sucks */
+&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 \
 &lt;&lt;elseif $Day is 2&gt;&gt;\
 Day 2
@@ -582,6 +596,7 @@ You awaken with a hint of ocean air hitting your nostrils. You walk down to the 
 &lt;&lt;/if&gt;&gt; /* end of days if-else stream */
 </tw-passagedata><tw-passagedata pid="47" name="W2 Answer Door D1" tags="" position="2625,2054" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;img src=&quot;images/Week2/CharsBacks/ThordorLonghouse.PNG&quot; alt=&quot;Thordor is standing in the entryway to the longhouse.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 “Haha, chief, I have wondrous news!”
 “Svika and I heard rumours of a great long beast with the head of a serpent! Can you believe it?”
@@ -596,8 +611,11 @@ You awaken with a hint of ocean air hitting your nostrils. You walk down to the 
 &lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;endnobr&gt;&gt;\
 Thordor leaves as quickly as he arrived. You should visit the docks in the evening.
-[[Go into Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="50" name="W2 Town Map" tags="" position="818,1714" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Go into Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="50" name="W2 Town Map" tags="" position="798,1673.3333333333333" size="200,200">&lt;&lt;nobr&gt;&gt;
 &lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;&lt;audio &quot;:playing:not(:town2)&quot; fadeoverto 1 0&gt;&gt;
+&lt;&lt;audio BarracksDead loop play&gt;&gt;
+&lt;&lt;audio BarracksDead fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;set $TempDay to $Day + 7&gt;&gt; Day $TempDay of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -615,7 +633,12 @@ It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt
 &lt;&lt;if $Day is not 1&gt;&gt;[[Go to Longhouse|W2 Longhouse]] &lt;&lt;/if&gt;&gt; /* [Not available on 1st day] */
 &lt;&lt;if $Day &gt; 1&gt;&gt;[[Deal with the Svikas|W2 Decide Svika]]&lt;&lt;/if&gt;&gt;
 /* [Starting Day 2, cannot do day 7, provides warning that once a decision is made there is no going back (if you let Thordor kill one), skips you to end of the week] */
-</tw-passagedata><tw-passagedata pid="51" name="W2 Barracks" tags="" position="101,1897" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="51" name="W2 Barracks" tags="" position="101,1897" size="100,100">&lt;&lt;nobr&gt;&gt;
+  &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  &lt;&lt;audio Barracks play loop&gt;&gt;
+  &lt;&lt;audio Barracks fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;&lt;if $Day is 1&gt;&gt;\
 &lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;\
 The normally loud halls of the barracks are eerily quiet. Trophies of fallen foes, raiders and wildlife alike, hang on the walls. The smell of mead still fills the barracks, even with the warriors absent on their hunting trip.
 [[Return to Town|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;\
@@ -627,7 +650,10 @@ The sound of clashing steel and boisterous warriors fills these halls. Trophies 
 &lt;&lt;if $FishingCompetition is false&gt;&gt;[[Are you okay?|W2 Concerned Thordor]]&lt;&lt;/if&gt;&gt; 
 [[I have other business to attend to...|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="W2 Docks" tags="" position="499,1900" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;\
 &lt;&lt;if $Time is 5&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Both people who claim to be Svika are standing on either side of Thordor.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;\
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;\
+	&lt;&lt;audio Docks loop play&gt;&gt;\
+	&lt;&lt;audio Docks fadein&gt;&gt;\
+	&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Both people who claim to be Svika are standing on either side of Thordor.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 You return to the docks as the sun is touching the water. A longboat sails in from the distance until it arrives at the docks, spilling forth warriors congregating around three figures. You approach to get a clearer picture.
 Thordor: “Aye, aye, calm down the lot of ye! Get the chief, we’ll get down to the…”
 Thordor notices you and waves you to come forth.
@@ -639,13 +665,17 @@ Dishevelled Svika: “Don’t ‘chief’ me you fishy thief! Chief, I’m the r
 Suddenly a loud horn blows and [[the crowd of warriors splits...|W2 Docks Clurice Enters]]
 \
 &lt;&lt;elseif $Time is not 5&gt;&gt;\
-&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;\
-The sails of ships float in the distance as busy fishers drag nets of their freshest pulls to and from their boats. The air is salty, and the wind blows softly through your hair. The yields are looking good this year.
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;\
+	&lt;&lt;audio DocksDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;\
+&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+The sails of ships float in the distance as busy fishers drag nets of their freshest pulls to and from their boats. Svika just stands on the dock, staring at you.
 “Hello Chief, how’re you today?”
 [[I’m doing well, thanks for asking.|W2 Svika Pleasantries]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;elseif $Day is not 1&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/SeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Two identical people who look like Svika. Yet, one of them is disheveled and ragged, while the other looks just fine.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;\
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;\
+	&lt;&lt;audio DocksDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;\
+&lt;img src=&quot;images/Week2/CharsBacks/SeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Two identical people who look like Svika. Yet, one of them is disheveled and ragged, while the other looks just fine.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 You arrive at the docks. The sails of ships still float in the distance, and the salty air clings around you, but the fishers have lost morale. They hover around, unsure of what to do. The two cages Toldjr brought each have a Svika in them. One is dishevelled, and the other pristine.
 [[Return to Town|W2 Leaving Docks]]
 &lt;&lt;if $FishingCompetition and $FishingCompetitionTried is false&gt;&gt;[[Make the Svikas fish|W2 Fishing Competition]]&lt;&lt;/if&gt;&gt;
@@ -659,6 +689,14 @@ You arrive at the docks. The sails of ships still float in the distance, and the
 		&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;else&gt;&gt;
 		&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;if $SvenDead is true&gt;&gt;
+		&lt;&lt;audio Pasture play loop&gt;&gt;
+		&lt;&lt;audio Pasture fadein&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;audio PastureDead play loop&gt;&gt;
+		&lt;&lt;audio PastureDead fadein&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 Rolling, musty hills of the pasture roll over the expanse of the land before you. The goatherds no longer have goats to tend to, so they have taken to chickens, which have proved to be much more challenging to herd. &lt;&lt;if $SvenDead is true&gt;&gt;They seem to communicate poorly ever since you lost Sven…&lt;&lt;/if&gt;&gt;
@@ -680,24 +718,39 @@ Rolling, musty hills of the pasture roll over the expanse of the land before you
 
 
 
-</tw-passagedata><tw-passagedata pid="54" name="W2 Workshop" tags="" position="1446,1895" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
+</tw-passagedata><tw-passagedata pid="54" name="W2 Workshop" tags="" position="1446,1895" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio Workshop play loop&gt;&gt;
+	&lt;&lt;audio Workshop fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
 The sound of sawing and hammering reverberates through the heavy log walls of the workshop as you enter it. The smell of freshly cut lumber hangs in the air as the carpenters work. You hear the clank of metal as nails are forged, and you spot a couple wooden cages in the corner. They seem large enough for a small creature.
 “Ah, chief, good to see you.”
 [[What are you working on today?|W2 Workshop Tour]]
 [[Good to see you too.|W2 Leaving Workshop]]
 &lt;&lt;if $SwimmingCompetition is false and $Day is not 1&gt;&gt;[[Any idea which Svika is real?|W2 Workshop Advice]]&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="55" name="W2 Temple" tags="" position="1883,1897" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
+</tw-passagedata><tw-passagedata pid="55" name="W2 Temple" tags="" position="1883,1897" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio Temple play loop&gt;&gt;
+	&lt;&lt;audio Temple fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 The temple is eerily silent. A few flames flicker from long burning candles on the altar. The idols of the gods stand tall and proud. You approach the idols. Smoke billows off burning incense, filling the temple with a pleasant mist. Clurice opens her eyes.
 “Chief. May the gods bless you.”
 [[Have the gods spoken?|W2 Temple Tour]]
 [[May they bless you as well.|W2 Leaving Temple]]
 &lt;&lt;if $GodsQuiz is false and $Day is not 1&gt;&gt;[[Any idea which Svika is real?|W2 Temple Advice]]&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="56" name="W2 Longhouse" tags="" position="2276,1899" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
+</tw-passagedata><tw-passagedata pid="56" name="W2 Longhouse" tags="" position="2276,1899" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 &lt;&lt;if $Time is not 5&gt;&gt;[[Return to Town|W2 Leaving Longhouse]]&lt;&lt;/if&gt;&gt;
 [[Sleep|W2 Sleep]]
 </tw-passagedata><tw-passagedata pid="57" name="W2 Concerned Thordor" tags="" position="268,1900" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week2/ConcernedThordor.PNG&quot; alt=&quot;Thordor&#39;s brow furrows, and his gaze is intense.&quot; width=&quot;35%&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week2/ConcernedThordor.PNG&quot; alt=&quot;Thordor&#39;s brow furrows, and his gaze is intense.&quot; width=&quot;35%&quot; /&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;:playing&quot; volume 0.60&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 “‘Course I’m not okay!”
 “Two Svikas… One’s s’posed to be my sister!”
@@ -709,6 +762,7 @@ You return to the calm of your longhouse. Your father’s axe, the last chief, s
 
 [[Return to Town|W2 Town Map]]
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="59" name="W2 Barracks Advice" tags="" position="151,2195" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;audio &quot;:playing&quot; volume 1.00&gt;&gt;\
 “You know… One idea.”
 “Haha… Fishing. Svika is the best fisher in our village.”
 “Why don’t we make them compete! Whoever gets the most fish by day end must be the real Svika.”
@@ -767,7 +821,12 @@ Clurice crosses her arms and gives both Svikas a sour look.
 
 [[Make your decision now|W2 Decide Svika]] 
 [[Continue to deliberate|W2 Deliberate More]]
-&lt;&lt;set $GodsQuizTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="W2 Decide Svika" tags="" position="499,2202" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
+&lt;&lt;set $GodsQuizTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="W2 Decide Svika" tags="" position="499,2202" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;audio &quot;:playing:not(:docksdead)&quot; fadeout&gt;&gt;
+&lt;&lt;audio DocksDead loop play&gt;&gt;
+&lt;&lt;audio DocksDead fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 The time has at last come. Thordor accompanies you to the Svikas, his massive axe in his hands.
 “I’m telling you chief, let me kill the fake Svika. They have it coming!”
 You arrive at the cages…
@@ -781,6 +840,9 @@ Which Svika is the fake?
 	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
 	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 You decide you don’t have enough information to make your decision yet. You return to your longhouse and to the safety of your bed…
 [[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="68" name="W2 Chickens Checkin" tags="" position="935,2045" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
@@ -820,13 +882,19 @@ Clurice guides you through her visions before performing a ritual to bless you. 
 She smiles upon you and leads you in prayer before sending you back to the village with an invigorated mind.
 [[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="75" name="W2 Leaving Temple" tags="" position="1896,2045" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 Clurice nods her head as you take your leave from the temple. The cold, fresh air softly numbs the scent of incense as you return to the village.
-[[Return to Town|W2 Town Map]]&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="76" name="W2 Temple Advice" tags="" position="2028,2052" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
+[[Return to Town|W2 Town Map]]&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="76" name="W2 Temple Advice" tags="" position="2028,2052" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
+	&lt;&lt;audio TempleDead play loop&gt;&gt;
+	&lt;&lt;audio TempleDead fadeoverto 1 1&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 “I am not too sure, chief…”
 “Though, an outsider would not be familiar with our gods.”
 “Ask them to name as many village gods as they can remember. That may aid in your search for the real Svika.”
 [[I’ll think about it...|W2 Town Map]] &lt;&lt;set $GodsQuiz to true&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="W2 Leaving Longhouse" tags="" position="2201,2049" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 There is still much to do today. You leave the comfort of your home and return to your duties in the village.
-[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="78" name="W2 Sleep" tags="" position="2351,2049" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
+[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="78" name="W2 Sleep" tags="" position="2351,2049" size="100,100">&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;\
+&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 The day has been long. It is time to sleep. May the gods stop the nightmares…
 
 [[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="79" name="W3 Dream Sequence" tags="" position="807,2709" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -1061,7 +1129,12 @@ You quickly escape the Edifice before it collapses as flames rip it and sunder i
 You spend the day interacting with the people of you village, and before you know it, it is evening and you see the warriors boats coming into bay. 
 [[Greet Returning Thordor at the Docks|W2 Docks]] &lt;&lt;set $Time to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Week1Transition" tags="" position="2355,1144" size="100,100">Day lapses into evening. Evening lapses into night...
 
-[[.........|Week 2 Dream Sequence]] </tw-passagedata><tw-passagedata pid="115" name="W2 Docks Clurice Enters" tags="" position="313,1674.166666666667" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaClurice.PNG&quot; alt=&quot;Clurice has joined the crowd on the docks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+[[.........|Week 2 Dream Sequence]] 
+&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="W2 Docks Clurice Enters" tags="" position="313,1674" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio DocksDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaClurice.PNG&quot; alt=&quot;Clurice has joined the crowd on the docks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 Clurice: “Ah chief, I got a troubling vision, and it seems true…”
          “We should hold them until we are sure which is real.”
 Thordor: “Aye, I agree… And I’ll cut off the head of whichever is a fake!”
