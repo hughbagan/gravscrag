@@ -654,7 +654,7 @@ You arrive at the docks. The sails of ships still float in the distance, and the
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;\
 Rolling, musty hills of the pasture roll over the expanse of the land before you. The goatherds no longer have goats to tend to, so they have taken to chickens, which have proved to be much more challenging to herd. &lt;&lt;if $SvenDead is true&gt;&gt;They seem to communicate poorly ever since you lost Sven…&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $SvenDead is false&gt;&gt;[Overlay Sven]
+&lt;&lt;if $SvenDead is false&gt;&gt;
 “Hi Chief! Welcome back.”
 [[Hi Sven, how are the chickens?|W2 Chickens Checkin]]
 [[I have other business to attend to.|W2 Leaving Pastures]]
@@ -745,17 +745,21 @@ Which Svika is the fake?
 [[Pristine Svika is the fake|W2 Pristine Svika Picked]]
 [[Dishevelled Svika is the fake|W2 Dishevelled Svika Picked]]
 </tw-passagedata><tw-passagedata pid="67" name="W2 Deliberate More" tags="" position="718,2205" size="100,100">You decide you don’t have enough information to make your decision yet. You return to your longhouse and to the safety of your bed…
-[[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="68" name="W2 Chickens Checkin" tags="" position="935,2045" size="100,100">“They’re doing great, chief!”
+[[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="68" name="W2 Chickens Checkin" tags="" position="935,2045" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
+“They’re doing great, chief!”
 “They’re no goats, but I love them nonetheless.”
 “Thanks for stopping by!”
-[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="69" name="W2 Leaving Pastures" tags="" position="1185,2049" size="100,100">You leave the earthy smell of the hills and the sounds of the chickens, and return to the heart of the town.
-[[Return to Town|W2 Town Map]]
-</tw-passagedata><tw-passagedata pid="70" name="W2 Pasture Advice" tags="" position="1058,2045" size="100,100">&lt;&lt;if $SvenDead is false&gt;&gt;“Oh… I heard about that.”
+[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="69" name="W2 Leaving Pastures" tags="" position="1185,2049" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them.&quot; width=&quot;100%&quot;/&gt;\
+You leave the earthy smell of the hills and the sounds of the chickens, and return to the heart of the town.
+[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="70" name="W2 Pasture Advice" tags="" position="1058,2045" size="100,100">&lt;&lt;if $SvenDead is false&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;\
+“Oh… I heard about that.”
 “Well, maybe she remembers her best friend?”
 “Me, of course! Believe it or not, we were as close as a goat’s eyes back in the day.”
 “Ask her, I’m sure only the real Svika would remember.”
 [[Thank you Sven, I’ll think about it|W2 Town Map]] &lt;&lt;set $BestFriendQuiz to true&gt;&gt;
-&lt;&lt;else&gt;&gt;“Well, she and Sven used to be best friends. She’d probably remember that if you asked.”
+&lt;&lt;else&gt;&gt;\
+&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;\
+“Well, she and Sven used to be best friends. She’d probably remember that if you asked.”
 [[Thank you, I’ll think about it|W2 Town Map]] &lt;&lt;set $BestFriendQuiz to true&gt;&gt;&lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="71" name="W2 Workshop Tour" tags="" position="1326,2042" size="100,100">Toldjr smiles and waves you to follow him.
 “Plenty, Chief. Take a look at these…”
