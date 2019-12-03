@@ -646,7 +646,13 @@ You arrive at the docks. The sails of ships still float in the distance, and the
 &lt;&lt;if $GodsQuiz and $GodsQuizTried is false&gt;&gt;[[Ask the Svikas to name the gods of the village|W2 Gods Quiz]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
-</tw-passagedata><tw-passagedata pid="53" name="W2 Pastures" tags="" position="1055,1899" size="100,100">[Background of Pastures]
+</tw-passagedata><tw-passagedata pid="53" name="W2 Pastures" tags="" position="1055,1899" size="100,100">&lt;&lt;nobr&gt;&gt;\
+	&lt;&lt;if $SvenDead is true&gt;&gt;
+		&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;\
 Rolling, musty hills of the pasture roll over the expanse of the land before you. The goatherds no longer have goats to tend to, so they have taken to chickens, which have proved to be much more challenging to herd. &lt;&lt;if $SvenDead is true&gt;&gt;They seem to communicate poorly ever since you lost Sven…&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $SvenDead is false&gt;&gt;[Overlay Sven]
 “Hi Chief! Welcome back.”
