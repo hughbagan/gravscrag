@@ -561,17 +561,17 @@ Day 7
 Søndag, 14th of Gormánuður
 &lt;&lt;if $PristineSvikaKilled is true&gt;&gt;
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. As you arrive you see the dishevelled Svika sitting with Thordor near the cages. Nearby is the pristine Svika’s body, but it looks odd. It seems to be made of fishy flesh and eels spilled out of where its head was cut off by Thordor’s axe. At least you can rest well knowing that the real Svika is safe…
-[[Continue to the Next Week|W3 Dream Sequence]]
+[[Continue|W3 Dream Sequence]]
 &lt;&lt;elseif $DishevelledSvikaKilled is true&gt;&gt;
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. You don’t see Thordor in his usual guard position. You approach to see the severed head of Svika rolled a few feet towards the docks. As you get closer you look down into the water and notice Thordor. He is under the water and restrained by seaweed. The pristine Svika is nowhere in sight… What have you let happen?
 &lt;&lt;set $ThordorDead to true&gt;&gt;\
 &lt;&lt;set $SvikaDead to true&gt;&gt;\
-[[Continue to the Next Week|W3 Dream Sequence]]
+[[Continue|W3 Dream Sequence]]
 &lt;&lt;else&gt;&gt;\
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. You notice two figures ahead, and an odd smell fills the air. The same smell after a kill has been left out for a night. You approach to see the dishevelled Svika sobbing into her hands. Before her is Thordor’s corpse, lines around the neck indicate he was strangled by something. A few feet away is the pristine Svika, her own corpse is almost fish-like, with eels spilling out of where she sustained several wounds matching Svika’s dagger.
 [[Thordor is gone… But at least Svika still lives.|W3 Dream Sequence]]
 &lt;&lt;set $ThordorDead to true&gt;&gt;\
-/* [[Continue to the Next Week|W3 Dream Sequence]] */
+/* [[Continue|W3 Dream Sequence]] */
 &lt;&lt;/if&gt;&gt; /* end of day 7 various things */
 &lt;&lt;/if&gt;&gt; /* end of days if-else stream */
 </tw-passagedata><tw-passagedata pid="47" name="W2 Answer Door D1" tags="" position="2625,2054" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -823,7 +823,15 @@ There is still much to do today. You leave the comfort of your home and return t
 [[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="78" name="W2 Sleep" tags="" position="2351,2049" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 The day has been long. It is time to sleep. May the gods stop the nightmares…
 
-[[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="79" name="W3 Dream Sequence" tags="" position="807,2709" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="80" name="W2 Pristine Svika Picked" tags="" position="414,2360" size="100,100">&lt;&lt;set $PristineSvikaKilled to true&gt;&gt;\
+[[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="79" name="W3 Dream Sequence" tags="" position="807,2709" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $PristineSvikaKilled is true&gt;&gt;
+	&lt;img src=&quot;images/Week2/Deaths/DoppelgangerDeathSmall.PNG&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;elseif $DishevelledSvikaKilled is true&gt;&gt;
+	&lt;img src=&quot;images/Week2/Deaths/ThordorDeath.PNG&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;else&gt;&gt;
+	&lt;img src=&quot;images/Week2/Deaths/ThordorDeathSmall.PNG&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="W2 Pristine Svika Picked" tags="" position="414,2360" size="100,100">&lt;&lt;set $PristineSvikaKilled to true&gt;&gt;\
 &lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
 Thordor: “Good, chief! Now, may I do the honours?”
 “I’ll give the imposter what they deserve just as the sun sets.”
