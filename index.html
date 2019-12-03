@@ -116,7 +116,7 @@ body, tw-story {
   margin-left: 0; /* 20em by default */
   margin-right: 0;
 }
-.center {
+.center {	/* To center an img, wrap with div w/ this class */
   text-align: center;
 }
 a {
@@ -576,7 +576,9 @@ Thordor is gone… But at least Svika still lives.
 &lt;&lt;/if&gt;&gt; /* end of day 7 various things */
 &lt;&lt;/if&gt;&gt; /* end of days if-else stream */
 
-</tw-passagedata><tw-passagedata pid="47" name="W2 Answer Door D1" tags="" position="2625,2054" size="100,100">[Overlay Thordor] /*insert image here*/
+</tw-passagedata><tw-passagedata pid="47" name="W2 Answer Door D1" tags="" position="2625,2054" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorLonghouse.PNG&quot; alt=&quot;Thordor is standing in the entryway to the longhouse.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;endnobr&gt;&gt;
 “Haha, chief, I have wondrous news!”
 “Svika and I heard rumours of a great long beast with the head of a serpent! Can you believe it?”
 “Of course, the second I heard this…”
@@ -586,9 +588,14 @@ Thordor is gone… But at least Svika still lives.
 [[Next|W2D1 Answer Door Next]]
 </tw-passagedata><tw-passagedata pid="48" name="W2 Go Back To Sleep" tags="" position="2873,2050" size="100,100">You ignore the loud thumping at your door and climb into your bed.
 [[Next Day|W2 Next Day]] 
-</tw-passagedata><tw-passagedata pid="49" name="W2D1 Answer Door Next" tags="" position="2791,2200" size="100,100">[Remove Thordor Overlay] /*insert removal of Thordor*/
+</tw-passagedata><tw-passagedata pid="49" name="W2D1 Answer Door Next" tags="" position="2791,2200" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;endnobr&gt;&gt;
 Thordor leaves as quickly as he arrived. You should visit the docks in the evening.
-[[Town Map|W2 Town Map]]</tw-passagedata><tw-passagedata pid="50" name="W2 Town Map" tags="" position="818,1714" size="100,100">&lt;&lt;set $TempDay to $Day + 7&gt;&gt; Day $TempDay of Gormánuður
+[[Town Map|W2 Town Map]]</tw-passagedata><tw-passagedata pid="50" name="W2 Town Map" tags="" position="818,1714" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;&lt;set $TempDay to $Day + 7&gt;&gt; Day $TempDay of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $Time is not 5&gt;&gt;
 [[Go to the Barracks|W2 Barracks]]
@@ -602,15 +609,13 @@ It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt
 &lt;&lt;if $Day is not 1&gt;&gt;[[Go to Longhouse|W2 Longhouse]] &lt;&lt;/if&gt;&gt; /* [Not available on 1st day] */
 &lt;&lt;if $Day &gt; 1&gt;&gt;[[Deal with the Svikas|W2 Decide Svika]]&lt;&lt;/if&gt;&gt;
 /* [Starting Day 2, cannot do day 7, provides warning that once a decision is made there is no going back (if you let Thordor kill one), skips you to end of the week] */
-</tw-passagedata><tw-passagedata pid="51" name="W2 Barracks" tags="" position="101,1897" size="100,100">[Background of Barracks] /* insert background of barracks */
-&lt;&lt;if $Day is 1&gt;&gt;The normally loud halls of the barracks are eerily quiet. Trophies of fallen foes, raiders and wildlife alike, hang on the walls. The smell of mead still fills the barracks, even with the warriors absent on their hunting trip.
+</tw-passagedata><tw-passagedata pid="51" name="W2 Barracks" tags="" position="101,1897" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;The normally loud halls of the barracks are eerily quiet. Trophies of fallen foes, raiders and wildlife alike, hang on the walls. The smell of mead still fills the barracks, even with the warriors absent on their hunting trip.
 [[Return to Town|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $Day is not 1&gt;&gt;The sound of clashing steel and boisterous warriors fills these halls. Trophies hang among battle prizes on the walls. The smell of mead and sweat fills the enclosed barrack.
-[Overlay Thordor]  /* insert Thordor image here */
+&lt;&lt;if $Day is not 1&gt;&gt;&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;The sound of clashing steel and boisterous warriors fills these halls. Trophies hang among battle prizes on the walls. The smell of mead and sweat fills the enclosed barrack.
 “Hello, Chief…”
 &lt;&lt;if $FishingCompetition is false&gt;&gt;[[Are you okay?|W2 Concerned Thordor]]&lt;&lt;/if&gt;&gt; 
-[[I have other business to attend to|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="W2 Docks" tags="" position="499,1900" size="100,100">[Background of Docks]
+[[I have other business to attend to...|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="W2 Docks" tags="" position="499,1900" size="100,100">[Background of Docks]
 &lt;&lt;if $Day is 1&gt;&gt;
 &lt;&lt;if $Time is 5&gt;&gt;You return to the docks as the sun begins to its cresting descent. A longboat sails in from the distance until it arrives at the docks, spilling forth warriors congregating around three figures. You approach to get a clearer picture.
 [Overlay Thordor, and both Svikas]
@@ -682,22 +687,25 @@ The temple is eerily silent. A few flames flicker from long burning candles on t
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 &lt;&lt;if $Time is not 5&gt;&gt;[[Return to Town|W2 Leaving Longhouse]]&lt;&lt;/if&gt;&gt;
 [[Sleep|W2 Sleep]]
-</tw-passagedata><tw-passagedata pid="57" name="W2 Concerned Thordor" tags="" position="268,1900" size="100,100">“‘Course I’m not okay!”
+</tw-passagedata><tw-passagedata pid="57" name="W2 Concerned Thordor" tags="" position="268,1900" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week2/ConcernedThordor.PNG&quot; alt=&quot;Thordor&#39;s brow furrows, and his gaze is intense.&quot; width=&quot;40%&quot; /&gt;&lt;/div&gt;
+&lt;&lt;endnobr&gt;&gt;
+“‘Course I’m not okay!”
 “Two Svikas… One’s s’posed to be my sister!”
 “This whole ordeal is making my head throb.”
 [[Any ideas which Svika is real?|W2 Barracks Advice]] 
 [[I’m sorry, I don’t think I can help.|W2 Leaving Barracks]]
-</tw-passagedata><tw-passagedata pid="58" name="W2 Leaving Barracks" tags="" position="84,2049" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;You leave the empty barracks, walking back towards the town square&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $Day is not 1&gt;&gt;You leave the warriors to their revelry. The sound of their cheers fills the air behind you as you leave the barracks.&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="58" name="W2 Leaving Barracks" tags="" position="84,2049" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;You leave the empty barracks, walking back towards the town square.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $Day is not 1&gt;&gt;&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;You leave the warriors to their revelry. The sound of their cheers fills the air behind you as you leave the barracks.&lt;&lt;/if&gt;&gt;
 
 [[Return to Town|W2 Town Map]]
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="59" name="W2 Barracks Advice" tags="" position="151,2195" size="100,100">“You know… One idea.”
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="59" name="W2 Barracks Advice" tags="" position="151,2195" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;
+“You know… One idea.”
 “Haha… Fishing. Svika is the best fisher in our village.”
 “Why don’t we make them compete! Whoever gets the most fish by day end must be the real Svika.”
 Thordor nods his head and grins widely.
 [[I’ll consider your idea.|W2 Town Map]]
-&lt;&lt;set $FishingCompetition to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="60" name="W2 Svika Pleasantries" tags="" position="641,1904" size="100,100">“Well, have a good day, Chief.”
+&lt;&lt;set $FishingCompetition to true&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="W2 Svika Pleasantries" tags="" position="641,1904" size="100,100">“Well, have a good day, Chief.”
 [[Goodby|W2 Town Map]]
 </tw-passagedata><tw-passagedata pid="61" name="W2 Leaving Docks" tags="" position="766,1905" size="100,100">You leave the salty smell of the docks and return to the heart of the town.
 [[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="62" name="W2 Fishing Competition" tags="" position="364,2047" size="100,100">You release the Svikas from their cages and give them each a fishing rod. You accompany them, along with Thordor, on a boat which is sailed into the water just the right distance for fishing. The two svikas begin to pull fish after fish out of the water, filling nets, but one Svikas quickly picks up ahead of the other. Though her hands are shaky and she has bags under her eyes, the dishevelled Svika quickly pulls ahead. Thordor grins at you and points at her with a nod before he sails the ship back in towards the shore.
