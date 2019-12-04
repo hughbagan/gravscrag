@@ -234,13 +234,17 @@ Last night… it was just a dream, right?
 &lt;&lt;audio &quot;:playing&quot; volume 0.20&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="SvenWeekTownMap" tags="" position="677,434" size="200,200">&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;&lt;audio &quot;:playing:not(:town)&quot; stop&gt;&gt;&lt;&lt;audio TownMapNoChime loop play&gt;&gt;
 Day $Day of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $Time is not 5&gt;&gt;[[Go to the Barracks|SvenWeekBarracks]]
+&lt;&lt;if $Time is not 5&gt;&gt;\
+[[Go to the Barracks|SvenWeekBarracks]]
 [[Go to the Docks|SvenWeekDocks]]
 [[Go to the Pastures|SvenWeekPastures]]
 [[Go to the Workshop|SvenWeekWorkshop]]
-[[Go to the Temple|SvenWeekTemple]]&lt;&lt;/if&gt;&gt;
+[[Go to the Temple|SvenWeekTemple]]
+&lt;&lt;/if&gt;&gt;\
 [[Go back to the Longhouse|SvenWeekLonghouse]]
-&lt;&lt;if $Time is not 5&gt;&gt;&lt;&lt;if $SvenIssue is true&gt;&gt;&lt;&lt;if $Day is 2 or $Day is 4 or $Day is 6&gt;&gt;[[Attend to Sven&#39;s Problem|SvenWeekProblem]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="SvenWeekBarracks" tags="" position="246,613" size="200,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $Time is not 5&gt;&gt;\&lt;&lt;if $SvenIssue is true&gt;&gt;\&lt;&lt;if $Day is 2 or $Day is 4 or $Day is 6&gt;&gt;\
+[[Attend to Sven&#39;s Problem|SvenWeekProblem]]
+&lt;&lt;/if&gt;&gt;\&lt;&lt;/if&gt;&gt;\&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="5" name="SvenWeekBarracks" tags="" position="246,613" size="200,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 The sound of clashing steel and boisterous warriors fills these halls. Trophies hang from the walls among battle prizes. The smell of mead and sweat fills the barracks.
 “Hey there Chief! Haha, come to get involved in our festivities?”
 [[Yes]]
@@ -297,13 +301,22 @@ You leave the salty smell of the docks and return to the heart of the town.
 
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="15" name="SvenWeekProblem" tags="" position="2299,491" size="200,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;&lt;&lt;audio PastureDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators. It is time to deal with these goats.
-&lt;&lt;if $KillOption is true&gt;&gt;[[Kill the goats]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $FishOilOption is true&gt;&gt;[[Administer fish oil]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $GroomingOption is true&gt;&gt;[[Groom the goats]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $CageOption is true&gt;&gt;[[Cage the goats]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $SacrificeOption is true&gt;&gt;[[Sacrifice a goat]]&lt;&lt;/if&gt;&gt;\
-[[Observe the goats]]
-</tw-passagedata><tw-passagedata pid="16" name="I’m looking for some advice." tags="" position="477,848" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $KillOption is true&gt;&gt;\
+[[Kill the goats]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $FishOilOption is true&gt;&gt;\
+[[Administer fish oil]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $GroomingOption is true&gt;&gt;\
+[[Groom the goats]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $CageOption is true&gt;&gt;\
+[[Cage the goats]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $SacrificeOption is true&gt;&gt;\
+[[Sacrifice a goat]]
+&lt;&lt;/if&gt;&gt;\
+[[Observe the goats]]</tw-passagedata><tw-passagedata pid="16" name="I’m looking for some advice." tags="" position="477,848" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “What kind of advice?”
 …
 “That’s… Definitely odd. I wonder… Here, try this!”
@@ -619,19 +632,25 @@ Thordor leaves as quickly as he arrived. You should visit the docks in the eveni
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;set $TempDay to $Day + 7&gt;&gt; Day $TempDay of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $Time is not 5&gt;&gt;
-[[Go to the Barracks|W2 Barracks]]
-[[Go to the Docks|W2 Docks]] /* [Only option on evening of 1st day] */
-[[Go to the Pastures|W2 Pastures]]
-[[Go to the Workshop|W2 Workshop]]
-[[Go to the Temple|W2 Temple]]
-&lt;&lt;if $Day is 1&gt;&gt;\[[Wait for Thordor to Return|W2 Wait for Thordor]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Time is not 5&gt;&gt;\
+	[[Go to the Barracks|W2 Barracks]]
+	[[Go to the Docks|W2 Docks]] /* [Only option on evening of 1st day] */
+	[[Go to the Pastures|W2 Pastures]]
+	[[Go to the Workshop|W2 Workshop]]
+	[[Go to the Temple|W2 Temple]]
+	&lt;&lt;if $Day is 1&gt;&gt;\
+		[[Wait for Thordor to Return|W2 Wait for Thordor]]
+	&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $Day is 1 and $Time is 5&gt;&gt;
+&lt;&lt;if $Day is 1 and $Time is 5&gt;&gt;\
 	[[Greet Returning Thordor at the Docks|W2 Docks]]
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $Day is not 1&gt;&gt;[[Go to Longhouse|W2 Longhouse]] &lt;&lt;/if&gt;&gt; /* [Not available on 1st day] */
-&lt;&lt;if $Day &gt; 1&gt;&gt;[[Deal with the Svikas|W2 Decide Svika]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Day is not 1&gt;&gt;\
+	[[Go to Longhouse|W2 Longhouse]] /* [Not available on 1st day] */
+&lt;&lt;/if&gt;&gt;\  
+&lt;&lt;if $Day &gt; 1&gt;&gt;\
+[[Deal with the Svikas|W2 Decide Svika]]
+&lt;&lt;/if&gt;&gt;\
 /* [Starting Day 2, cannot do day 7, provides warning that once a decision is made there is no going back (if you let Thordor kill one), skips you to end of the week] */
 </tw-passagedata><tw-passagedata pid="51" name="W2 Barracks" tags="" position="101,1897" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
@@ -678,10 +697,18 @@ The sails of ships float in the distance as busy fishers drag nets of their fres
 &lt;img src=&quot;images/Week2/CharsBacks/SeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Two identical people who look like Svika. Yet, one of them is disheveled and ragged, while the other looks just fine.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 You arrive at the docks. The sails of ships still float in the distance, and the salty air clings around you, but the fishers have lost morale. They hover around, unsure of what to do. The two cages Toldjr brought each have a Svika in them. One is dishevelled, and the other pristine.
 [[Return to Town|W2 Leaving Docks]]
-&lt;&lt;if $FishingCompetition and $FishingCompetitionTried is false&gt;&gt;[[Make the Svikas fish|W2 Fishing Competition]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $SwimmingCompetition and $SwimmingCompetitionTried is false&gt;&gt;[[Make the Svikas swim|W2 Swimming Competition]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $BestFriendQuiz and $BestFriendQuizTried is false&gt;&gt;[[Ask the Svikas about their best friend|W2 Best Friend Quiz]]&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $GodsQuiz and $GodsQuizTried is false&gt;&gt;[[Ask the Svikas to name the gods of the village|W2 Gods Quiz]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $FishingCompetition and $FishingCompetitionTried is false&gt;&gt;\
+	[[Make the Svikas fish|W2 Fishing Competition]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $SwimmingCompetition and $SwimmingCompetitionTried is false&gt;&gt;\
+	[[Make the Svikas swim|W2 Swimming Competition]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $BestFriendQuiz and $BestFriendQuizTried is false&gt;&gt;\
+	[[Ask the Svikas about their best friend|W2 Best Friend Quiz]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $GodsQuiz and $GodsQuizTried is false&gt;&gt;\
+	[[Ask the Svikas to name the gods of the village|W2 Gods Quiz]]
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
 </tw-passagedata><tw-passagedata pid="53" name="W2 Pastures" tags="" position="1055,1899" size="100,100">&lt;&lt;nobr&gt;&gt;
