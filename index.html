@@ -173,7 +173,7 @@ Example: Stop playback of playing tracks except those in the &quot;:town&quot; g
 &lt;&lt;set $Time to 0&gt;&gt;
 &lt;&lt;set $Day to 1&gt;&gt;
 &lt;&lt;set $Week to &quot;Sven&quot;&gt;&gt; 	/* We may or may not need this var */
-&lt;&lt;set $SvenDead    to true&gt;&gt;
+&lt;&lt;set $SvenDead    to false&gt;&gt;
 &lt;&lt;set $SvikaDead   to false&gt;&gt;
 &lt;&lt;set $ThordorDead to false&gt;&gt;
 &lt;&lt;set $ToldjrDead  to false&gt;&gt;
@@ -261,7 +261,7 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 [[How are the goats?]]
 [[Just stopping by to say hello.]]
 &lt;&lt;if $SvenAccept is true and $GroomingOption is false&gt;&gt;[[How do you think we should help the goats?]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="SvenWeekWorkshop" tags="" position="1006,624" size="200,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="SvenWeekWorkshop" tags="" position="996,610.6666666666667" size="200,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 The sound of sawing and hammering reverberates through the heavy wood of the workshop as you enter it. The smell of freshly cut wood hangs in the air as the carpenters work. You hear the clank of metal against metal as nails are forged, and you spot a couple wooden cages in the corner. They seem large enough for a small creature.
 
 “Ah, chief, good to see you.”
@@ -518,7 +518,7 @@ NOW COME HENCE, TOO
 LET ME FEEL WHO
 BE TOGETHER
 [[   𝕀   𝕊𝔼𝔼   𝕐𝕆𝕌   |SvenWeekDay1Intro]]
-@@</tw-passagedata><tw-passagedata pid="45" name="Week 2 Dream Sequence" tags="" position="776,1490" size="200,100">&lt;&lt;nobr&gt;&gt;\
+@@</tw-passagedata><tw-passagedata pid="45" name="Week 2 Dream Sequence" tags="" position="1151,1445" size="200,100">&lt;&lt;nobr&gt;&gt;\
 /* General variables */
 &lt;&lt;set $Time to 0&gt;&gt;
 &lt;&lt;set $Day to 0&gt;&gt;
@@ -678,10 +678,10 @@ The sails of ships float in the distance as busy fishers drag nets of their fres
 &lt;img src=&quot;images/Week2/CharsBacks/SeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Two identical people who look like Svika. Yet, one of them is disheveled and ragged, while the other looks just fine.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 You arrive at the docks. The sails of ships still float in the distance, and the salty air clings around you, but the fishers have lost morale. They hover around, unsure of what to do. The two cages Toldjr brought each have a Svika in them. One is dishevelled, and the other pristine.
 [[Return to Town|W2 Leaving Docks]]
-&lt;&lt;if $FishingCompetition and $FishingCompetitionTried is false&gt;&gt;[[Make the Svikas fish|W2 Fishing Competition]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $SwimmingCompetition and $SwimmingCompetitionTried is false&gt;&gt;[[Make the Svikas swim|W2 Swimming Competition]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $BestFriendQuiz and $BestFriendQuizTried is false&gt;&gt;[[Ask the Svikas about their best friend|W2 Best Friend Quiz]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $GodsQuiz and $GodsQuizTried is false&gt;&gt;[[Ask the Svikas to name the gods of the village|W2 Gods Quiz]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $FishingCompetition and $FishingCompetitionTried is false&gt;&gt;[[Make the Svikas fish|W2 Fishing Competition]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $SwimmingCompetition and $SwimmingCompetitionTried is false&gt;&gt;[[Make the Svikas swim|W2 Swimming Competition]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $BestFriendQuiz and $BestFriendQuizTried is false&gt;&gt;[[Ask the Svikas about their best friend|W2 Best Friend Quiz]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $GodsQuiz and $GodsQuizTried is false&gt;&gt;[[Ask the Svikas to name the gods of the village|W2 Gods Quiz]]&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
 </tw-passagedata><tw-passagedata pid="53" name="W2 Pastures" tags="" position="1055,1899" size="100,100">&lt;&lt;nobr&gt;&gt;
