@@ -1,7 +1,8 @@
-# A game by [Enter Name Here]
+# GRAVSCRAG
+## a game by [Enter Team Name Here]
 
 To play, just open `index.html` in your web browser, like Chrome or Firefox.
 
 <hr>
 
-[repository](https://github.com/hughbagan/textadventure350)
+[link to repository](https://github.com/hughbagan/textadventure350)
