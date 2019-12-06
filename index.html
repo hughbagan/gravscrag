@@ -179,6 +179,7 @@ Example: Stop playback of playing tracks except those in the &quot;:town&quot; g
 &lt;&lt;set $ToldjrDead  to false&gt;&gt;
 &lt;&lt;set $CluriceDead to false&gt;&gt;
 &lt;&lt;set $DeadCount to 0&gt;&gt;
+&lt;&lt;set $CountedDeaths to false&gt;&gt;
 
 
 /*Intro Variable*/
@@ -1183,21 +1184,24 @@ You and your allies clash with the clergy following Clurice. The two sides are e
 You charge alone. You are a powerful combatant, and these cultists have had no formal training in combat. You are overwhelmed by their numbers however, and struggle to fight past them. You witness Clurice and Toldjr entering the completed Edifice, and you barely manage to fight your way past the cultists to [[follow them into the structure.|W3 Edifice Battle P2]]  &lt;&lt;set $CluriceDead to true&gt;&gt; &lt;&lt;set $ToldjrDead to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="112" name="Game Conclusion" tags="" position="1808,5369" size="100,100">&lt;&lt;nobr&gt;&gt;\
-&lt;&lt;if $SvenDead is true&gt;&gt;\
-&lt;&lt;set $DeadCount += 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $SvikaDead is true&gt;&gt;\
-&lt;&lt;set $DeadCount += 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $ThordorDead is true&gt;&gt;\
-&lt;&lt;set $DeadCount += 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $ThordorDead is true&gt;&gt;\
-&lt;&lt;set $DeadCount += 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $CluriceDead is true&gt;&gt;\
-&lt;&lt;set $DeadCount += 1&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $CountedDeaths is false&gt;&gt;
+&lt;&lt;if $SvenDead is true&gt;&gt;
+&lt;&lt;set $DeadCount += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $SvikaDead is true&gt;&gt;
+&lt;&lt;set $DeadCount += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $ThordorDead is true&gt;&gt;
+&lt;&lt;set $DeadCount += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $ThordorDead is true&gt;&gt;
+&lt;&lt;set $DeadCount += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $CluriceDead is true&gt;&gt;
+&lt;&lt;set $DeadCount += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $CountedDeaths to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;\
 &lt;&lt;if $DeadCount == 0&gt;&gt;\
 	Against all odds you have managed to keep the whole village alive. You led them through a truly terrifying time, but the survivors are shaken by the things they have witnessed. You lose a few to madness, but you quickly regroup them and help them take control of their lives. The village is soon back to the way it was before, and you all work together to survive the unnaturally frigid winter. Soon the only threat in your lives are the raiders and wolves you are used to. You’re happy. One day you retire as chieftain and enjoy the last of your life. Things are going well, until the new chief begins to experience odd visions...
@@ -1206,7 +1210,7 @@ You charge alone. You are a powerful combatant, and these cultists have had no f
 &lt;&lt;elseif $DeadCount == 3 or $DeadCount == 4&gt;&gt;\
 	Gravscrag has sustained major losses, and the village continues to toil on until a massive figure hovers in the distance. You have just enough time to pack everyone onto ships and sail away from your village, leaving your lives behind, but escaping before this horrific creature arrives at your shores. Its appearance shakes you to your core, and you feel as though your mind will never recover. Your last sight before you lost consciousness was the giant creature’s skull-like face. When you awake, it is time for the village to begin anew...
 &lt;&lt;else&gt;&gt;\
-You awake on a boat. Its sails are aloft and its oars are sitting beside you. In your hand is a torch.
+You awake on a boat. Its sails are aloft and its oars are sitting beside you. In your hand is a torch. DEADCOUNT is $DeadCount
 
 [[Put down the torch|Game Conclusion P2]]
 [[Extinguish the torch|Game Conclusion]]
@@ -1427,23 +1431,23 @@ You decide you don’t have enough information to make your decision yet. You [[
 
 &lt;&lt;if $SvenDead is false&gt;&gt;\
 Sven returns to the fields, doing his best to herd and raise chickens. Soon they become his new favourite animal.
-&lt;&lt;\if&gt;\
+&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $SvikaDead is false&gt;&gt;\
 Svika begins training the newest fishers, helping them learn to fish properly.
-&lt;&lt;\if&gt;\
+&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $ThordorDead is false&gt;&gt;\
 Thordor is just as rowdy as he has always been, but something is different about him. He seems to be shaken by the things he has had to do.
-&lt;&lt;\if&gt;\
+&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $ToldjrDead is false&gt;&gt;\
 Toldjr returns to working on his projects. His newest project is an innovative design for an improved ship.
-&lt;&lt;\if&gt;\
+&lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $CluriceDead is false&gt;&gt;\
 Clurice’s experience shook her faith. She prayed to the gods but found no answers. She has given up her role as head of the faith now that she has lost her hope.
-&lt;&lt;\if&gt;\</tw-passagedata><tw-passagedata pid="145" name="Debugger Kill All" tags="" position="2056.6666666666665,106.33333333333326" size="100,100">So it shall be. They are all dead.
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="145" name="Debugger Kill All" tags="" position="2056.6666666666665,106.33333333333326" size="100,100">So it shall be. They are all dead.
 
 &lt;&lt;set $SvenDead    to true&gt;&gt;
 &lt;&lt;set $SvikaDead   to true&gt;&gt;
