@@ -206,6 +206,11 @@ Example: Stop playback of playing tracks except those in the &quot;:town&quot; g
 &lt;&lt;set $GoatsFixed to false&gt;&gt;
 &lt;&lt;set $SvenVisit to false&gt;&gt;
 
+&lt;&lt;set $KillTried to false&gt;&gt;
+&lt;&lt;set $FishOilTried to false&gt;&gt;
+&lt;&lt;set $GroomingTried to false&gt;&gt;
+&lt;&lt;set $CageTried to false&gt;&gt;
+&lt;&lt;set $SacrificeTried to false&gt;&gt;
 
 
 /* Week 2 Variables */
@@ -305,7 +310,7 @@ You leave the warriors to their revelry. The sound of their cheers fills the air
 
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="13" name="Hoping you could show me around the boats." tags="" position="359,1874" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “Oh? Why, sure!”
-You spend the rest of the day watching as Svika trains the young fishers. You go out on the water and watch as they draw in nets of fresh fish. Before you know it the sun begins to set over the calm waters…
+You watch as Svika trains the young fishers. You go out on the water and watch as they draw in nets of fresh fish. The calm waters are silent, and an eerie mist hangs over the horizon as you return to shore.
 
 [[Town Map|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="14" name="Just checking in." tags="" position="361,1982" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “Huh. Well, thanks for dropping by.”
@@ -314,19 +319,19 @@ You leave the salty smell of the docks and return to the heart of the town.
 
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="15" name="SvenWeekProblem" tags="" position="2299,1627" size="200,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;&lt;&lt;audio PastureDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
 Rolling, musty, hills of the pasture roll over the expanse of land before you. Shepherds herd their goats and take care of various livestock. It has been a long time since you lost your herd to predators. It is time to deal with these goats.
-&lt;&lt;if $KillOption is true&gt;&gt;\
+&lt;&lt;if $KillOption is true and $KillTried is false&gt;&gt;\
 [[Kill the goats]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $FishOilOption is true&gt;&gt;\
+&lt;&lt;if $FishOilOption is true and $FishOilTried is false&gt;&gt;\
 [[Administer fish oil]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $GroomingOption is true&gt;&gt;\
+&lt;&lt;if $GroomingOption is true and $GroomingTried is false&gt;&gt;\
 [[Groom the goats]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $CageOption is true&gt;&gt;\
+&lt;&lt;if $CageOption is true and $CageTried is false&gt;&gt;\
 [[Cage the goats]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $SacrificeOption is true&gt;&gt;\
+&lt;&lt;if $SacrificeOption is true and $SacrificeTried is false&gt;&gt;\
 [[Sacrifice a goat]]
 &lt;&lt;/if&gt;&gt;\
 [[Observe the goats]]</tw-passagedata><tw-passagedata pid="16" name="I’m looking for some advice." tags="" position="477,1984" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
@@ -417,72 +422,83 @@ There is still much to do today. You leave the comfort of your home and return t
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="33" name="Next Day" tags="" position="2337,1915" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
 &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
 &lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
-&lt;&lt;if $Day is 2 and $GoatsFixed is false&gt;&gt;
-Tirsdag, 2nd of (Fitting Month?)
+&lt;&lt;if $Day is 2 and $GoatsFixed is false&gt;&gt;\
+Tirsdag, 2nd of Gormánuður
 You awake from a calm, dark sleep. Not a single dream infected your mind. The sun creeps in.
 It’s time to attend to your duties.
-[[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $Day is 3 and $GoatsFixed is false&gt;&gt;
-Onsdag, 3rd of (Fitting Month?)
+[[Go into town.|SvenWeekTownMap]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Day is 3 and $GoatsFixed is false&gt;&gt;\
+Onsdag, 3rd of Gormánuður
 You awaken in cold sweat. You can’t remember the events of your dreams, just the heavy feeling in your chest. You hear a knocking from your door.
-[[Answer the door|AnswerDoor3]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $Day is 4 and $GoatsFixed is false&gt;&gt;
-Torsday, 4th of (Fitting Month?)
+[[Answer the door|AnswerDoor3]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Day is 4 and $GoatsFixed is false&gt;&gt;\
+Torsday, 4th of Gormánuður
 You jolt awake in your bed, your eyes wide as the nightmares fade from your mind. You’re safe here. You’re safe…
-[[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $Day is 5 and $GoatsFixed is false&gt;&gt;
-Fredag, 5th of (Fitting Month?)
+[[Go into town.|SvenWeekTownMap]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Day is 5 and $GoatsFixed is false&gt;&gt;\
+Fredag, 5th of Gormánuður
 The ceiling seems to spin as you lay wide awake in your bed. It was not easy getting sleep last night, and waking up has been even harder…
-&lt;&lt;if $SvenVisit is false or $GoatsFixed is false&gt;&gt;A knock reverberates from your door.
+&lt;&lt;if $SvenVisit is false or $GoatsFixed is false&gt;&gt;\
+A knock reverberates from your door.
 [[Answer the door|AnswerDoor5]]
-&lt;&lt;else&gt;&gt;Maybe work will prove a worthy distraction.
-[[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $Day is 6 and $GoatsFixed is false&gt;&gt;
-Lørdag, 6th of (Fitting Month?)
+&lt;&lt;else&gt;&gt;\
+Maybe work will prove a worthy distraction.
+[[Go into town.|SvenWeekTownMap]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Day is 6 and $GoatsFixed is false&gt;&gt;\
+Lørdag, 6th of Gormánuður
 You blink awake with your face pressed against the wooden floor of your longhouse. You’re half hanging out of bed with an arm pinned between you and the bed. There are certainly better ways to wake up…
-[[Go into town.|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $Day is 7 or $GoatsFixed is true&gt;&gt;
-Søndag, 7th of (Fitting Month?)
-&lt;&lt;if $GoatsFixed is true&gt;&gt; &lt;&lt;if $Day is not 7&gt;&gt;The rest of the week passed without incident. &lt;&lt;/if&gt;&gt;You awake from a peaceful slumber&lt;&lt;if $Day is not 7&gt;&gt; on the 7th day&lt;&lt;/if&gt;&gt;. You smile to yourself. Not a single nightmare. The gods must be pleased.
+[[Go into town.|SvenWeekTownMap]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $Day is 7 or $GoatsFixed is true&gt;&gt;\
+Søndag, 7th of Gormánuður
+&lt;&lt;if $GoatsFixed is true&gt;&gt;\ 
+&lt;&lt;if $Day is not 7&gt;&gt;The rest of the week passed without incident. &lt;&lt;/if&gt;&gt;You awake from a peaceful slumber&lt;&lt;if $Day is not 7&gt;&gt; on the 7th day&lt;&lt;/if&gt;&gt;. You smile to yourself. Not a single nightmare. The gods must be pleased.
 You arrive at the pasture to check up on Sven.
 With the goats gone you find Sven with his crook.
 Chickens are harder to herd, but it seems Sven has put himself up to the challenge. 
 [[.........|Week1Transition]]
-&lt;&lt;else&gt;&gt;A scream pulls you from your slumber. Shrill and continuous. You pull yourself to the door and watch as a shepherd weeps and is held by another shepherd. They point you towards the pastures.
+&lt;&lt;else&gt;&gt;\
+A scream pulls you from your slumber. Shrill and continuous. You pull yourself to the door and watch as a shepherd weeps and is held by another shepherd. They point you towards the pastures.
 You arrive at the rolling hills.
 A herd of goats with bloody beards.
 On the ground only bones and scraps of what was once a face. You’d recognize this body anywhere.
 Sven. &lt;&lt;set $SvenDead to true&gt;&gt;
-[[.........|SvenDeath]]&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 1.00&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Kill the goats" tags="" position="2017,1775" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[.........|SvenDeath]]&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 1.00&gt;&gt;&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="34" name="Kill the goats" tags="" position="2017,1775" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You brought your axe with you, the same one your father once wielded. One by one you butcher the goats. The shepherds hold them still as you cleave their heads from their necks. They are prepared and salted for future feasts, and their horns are turned into cups and decorations.
 Sven watches you from afar with a frown. He turns away halfway through and leaves the pastures.
 By the time you have slaughtered each goat the sun has set. Only time will tell if you chose the right course of action.
 [[Next Day]]
-&lt;&lt;set $GoatsFixed to true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Administer fish oil" tags="" position="2136,1778" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $GoatsFixed to true&gt;&gt;
+&lt;&lt;set $KillTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Administer fish oil" tags="" position="2136,1778" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You bring a spoon and your bottle of fish oil you received from Svika. You have Sven help you feed each goat a spoonful of fish oil. The goats greedily slurp up the contents. They try to take the spoon each time. You are bitten a few times in the process, but you manage to keep the spoon.
 After the long day of feeding goats fish oil you walk home. As the sun sets you wonder if fish oil really is a cure to their strange affliction…
-[[Next Day]]</tw-passagedata><tw-passagedata pid="36" name="Groom the goats" tags="" position="2281,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]
+&lt;&lt;set $FishOilTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Groom the goats" tags="" position="2281,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You spend the day brushing the goats and ensuring their quality of life is as good as it can be. They don’t seem to eat, but you start to understand why Sven likes being around the goats so much. Grooming them is kind of fun…
 You return home after a long day of grooming. Hopefully you have helped them.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="37" name="Cage the goats" tags="" position="2409,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]
+&lt;&lt;set $GroomingTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Cage the goats" tags="" position="2409,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You have Toldjr help you craft and bring as many cages as you can to the pastures. You herd the goats into cages for the whole day. These goats seem more slippery than normal. You watch as the goats headbutt and chew on their cages with unnatural flexibility. The sun is on the horizon
 and threatening to set once the last goat has been caged, but you hear the bleat of a goat behind you. One of the goats has chewed through their cage. Another breaks its way out, and soon all your work has been thrown away as the goats escape and return to their pasture. The day has become too dark to continue… You return home and get ready for the next day.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="38" name="Sacrifice a goat" tags="" position="2559,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]
+&lt;&lt;set $CageTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Sacrifice a goat" tags="" position="2559,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You have brought the dagger with you. You remember the words and the gods to honor this sacrifice to. You have one of the shepherds prepare their finest goat. It is rather thin, like the rest of the goats. This will have to do. You take your dagger and draw blood from the now bleating
 goat. You perform the sacrifice…
 Clurice arrives with cloths and cups. She fills the cup with the blood of the goat and dips her fingers in it, flicking the blood onto the other goats as she chants prayers to the gods. Prayers for a blessing. A cloth is laid over the dead goat’s eyes, and Clurice follows through with the ritual for each other goat…
 The day ends with the final goat being blessed. May the gods allow things to return to normal. It is time to return home…
-[[Next Day]]</tw-passagedata><tw-passagedata pid="39" name="Observe the goats" tags="" position="2709,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+[[Next Day]]
+&lt;&lt;set $SacrificeTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Observe the goats" tags="" position="2709,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You spend the day watching over the goats alongside Sven.
 &lt;&lt;if $Day is 2&gt;&gt;The goats mostly keep to themselves, rarely moving. They seem to watch their shepherds’ every movement. Their heads slowly turn to watch as you walk by them. The pastures are covered in an eerie, uncomfortable silence.&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 4&gt;&gt;The goats move with unnatural agility, sudden dashing sprints before returning to their docile nature. You watch as some of these goats corner small animals, leaving nothing behind but a small puddle of blood where the creatures once stood. The goats refrain from eating the growing grass, and you find bones occasionally scattered across the field.&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 6&gt;&gt;You find yourself having to dodge out of the way of more aggressive goats. They butt their heads up against each other. Their bleating has the undertone of a threat, echoing through the pastures. You aid a few shepherds whose goats have dragged them to the ground, chewing and pulling on their cloaks and clothes, and who had sustained bites from the aggressive horned creatures.&lt;&lt;/if&gt;&gt;
 The sun begins to set on the horizon after a long day of observing the goats.
-[[Next Day]]</tw-passagedata><tw-passagedata pid="40" name="AnswerDoor3" tags="" position="2112,2065" size="100,100">&lt;&lt;if $GoatsFixed is true&gt;&gt;
+[[Next Day]]
+</tw-passagedata><tw-passagedata pid="40" name="AnswerDoor3" tags="" position="2112,2065" size="100,100">&lt;&lt;if $GoatsFixed is true&gt;&gt;
 &lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief. I’m not sure what to do now, with the goats all dead. I really like goats…”
 Sven pauses for a long moment before returning to look at you.
@@ -524,7 +540,7 @@ Sven takes a step back.
 Things seem to be getting worse…
 [[Town Map|SvenWeekTownMap]]
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2858,1996" size="100,100">End of Sven&#39;s week
+&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2844.6666666666665,2099.3333333333335" size="100,100">End of Sven&#39;s week
 &lt;&lt;audio TempleDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SvenDeath" tags="" position="2562,2065" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 
 [[.........|Week1Transition]]</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="697,1215" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
@@ -1249,7 +1265,7 @@ Clurice: “Please, speak with the community leaders.”
 [[Speak with Toldjr|Intro Toldjr]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $TalkedCount is 5&gt;&gt;\
-The night is getting late. You are getting tired, and decide to [[return to you bed.|SvenWeekDream]] /* (Once other options Exhausted, leads into dream sequence) */
+The night is getting late. You are getting tired, and decide to [[return to your bed.|SvenWeekDream]] /* (Once other options Exhausted, leads into dream sequence) */
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="124" name="Intro Clurice" tags="" position="311,810" size="100,100">Clurice smiles and opens her arms.
 “As you know, this is our temple. Here we worship and listen to the gods and their needs. I, Clurice, am their speaker. You speak for the village, and I speak for the gods and the faithful.”
