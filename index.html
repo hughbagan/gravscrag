@@ -131,10 +131,12 @@ a:hover {
 }
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// Only show the UIBar in debug mode
 if (!Config.debug) {
 	UIBar.hide();
 }
+
 
 
 
@@ -249,8 +251,8 @@ A story by
 Hugh Bagan, Kieran Gilmore, Dalton Johnson, Seth Karstad, Matt Quigley, Ian Schober
 
 [[Start Game|Intro Burning Boat]]
-&lt;&lt;if $Debug is true&gt;&gt;[[Select Starting Point and Variables|Debugger]]&lt;&lt;/if&gt;&gt;
-@@</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="692.3333333333334,1406.6666666666667" size="200,100">Mondag, 1st of Gormánuður
+[[Chapter Select|Debugger]]
+@@</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="692,1406" size="200,100">Mondag, 1st of Gormánuður
 The previous night’s dream haunts you still, but you have chiefly duties to attend to.
 &lt;img src=&quot;images/LonghouseSvenGoat.PNG&quot; alt=&quot;Sven is holding his crook in one hand, and a baby goat in the other.&quot; width=&quot;100%&quot;/&gt;
 “Hey chief! Rise and shine! I was just passing by; hope you have a good day.”
@@ -588,7 +590,7 @@ Things seem to be getting worse…
 &lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2844,2099" size="100,100">End of Sven&#39;s week
 &lt;&lt;audio TempleDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SvenDeath" tags="" position="2562,2065" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 
-[[.........|Week1Transition]]</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="700.3333333333334,1273.3333333333333" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
+[[.........|Week1Transition]]</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="700,1273" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;audio FirstDreamDeeper play loop&gt;&gt;
 @@.center;
 I COME WITH GRACE
@@ -1003,7 +1005,7 @@ There is still much to do today. You leave the comfort of your home and return t
 &lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 The day has been long. It is time to sleep. May the gods stop the nightmares…
 
-[[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="79" name="W2 Outcome" tags="" position="1885.3333333333335,3743.3333333333335" size="100,100">&lt;&lt;if $PristineSvikaKilled is true&gt;&gt;\
+[[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="79" name="W2 Outcome" tags="" position="1885,3743" size="100,100">&lt;&lt;if $PristineSvikaKilled is true&gt;&gt;\
 	&lt;img src=&quot;images/Week2/Deaths/DoppelgangerDeathSmall.PNG&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;elseif $DishevelledSvikaKilled is true&gt;&gt;\
 	&lt;img src=&quot;images/Week2/Deaths/ThordorDeath.PNG&quot; width=&quot;100%&quot; /&gt;
@@ -1059,7 +1061,7 @@ A booming sound, almost like thunder, shakes the walls of your longhouse. You pe
 
 &lt;&lt;/if&gt;&gt; /* end of days if-else stream */
 
-</tw-passagedata><tw-passagedata pid="85" name="W3 Town Map" tags="" position="828,4176.666666666667" size="200,200">&lt;&lt;if $SeenEdifice is false&gt;&gt;
+</tw-passagedata><tw-passagedata pid="85" name="W3 Town Map" tags="" position="828,4176" size="200,200">&lt;&lt;if $SeenEdifice is false&gt;&gt;
 [[Examine the Mysterious Structure|W3 Edifice]]
 &lt;&lt;else&gt;&gt;&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $AttemptedBarracks&gt;&gt; ̶G̶o̶ ̶t̶o̶ ̶t̶h̶e̶ ̶B̶a̶r̶r̶a̶c̶k̶s̶
@@ -1125,10 +1127,11 @@ You return to the calm of your longhouse. Your father’s axe, the last chief, s
 Clurice: It is their will.
 She pours the liquid into a cup and hands it to you. You all stand in a circle around the edifice as the sun begins to set. Clurice leads you in drinking from the cups. Your vision begins to blur, and you begin to sway in place. You feel dizzy. Your head begins to throb and your mouth goes dry. You watch as the others around the spire begin to fall. Every member of the town who has followed you collapses until, finally, you lose consciousness and collapse. The last image you see is of the nightmares, the creature who has been haunting you. You don’t wake up.
 [[Game Over|Credits]]
-</tw-passagedata><tw-passagedata pid="94" name="W3 Resist Clurice" tags="" position="2311,4643" size="100,100">The tugging pulls harder and harder until it finally laxes. Your vision blurs for a moment before returning to you. You notice the crowd now looking to you. People from every part of your village have come here to congregate, and their eyes are on you.
+&lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="W3 Resist Clurice" tags="" position="2311,4643" size="100,100">The tugging pulls harder and harder until it finally laxes. Your vision blurs for a moment before returning to you. You notice the crowd now looking to you. People from every part of your village have come here to congregate, and their eyes are on you.
 Clurice: There they are. The traitor. The giver of nightmares. The gods have shown me the horror you will bring, Chief! We will set things straight. We are the builders of the edifice, the gods will smile upon us.
 Clurice stares at you as the crowd begins to disperse. Those who follow her clergy stick close, and the builders, and Toldjr, continue their work in constructing this “edifice.” You will need to find help elsewhere.
-[[Go Back to Town|W3 Town Map]]</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="897,5901" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">Thought your speech was passionate and well thought out, the warriors do not move an inch. These seem unphased by your attempt to corral them. It looks like you will need to find help elsewhere. &lt;&lt;set $AttemptedBarracks to true&gt;&gt;
+[[Go Back to Town|W3 Town Map]]
+&lt;&lt;set $Edifi</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="897,5901" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">Thought your speech was passionate and well thought out, the warriors do not move an inch. These seem unphased by your attempt to corral them. It looks like you will need to find help elsewhere. &lt;&lt;set $AttemptedBarracks to true&gt;&gt;
 [[Return to Town|W3 Town Map]] 
 </tw-passagedata><tw-passagedata pid="97" name="W3 Barracks Correct Speech" tags="" position="343,4656" size="100,100">You tell the warriors of their greatness. Of the enemies they fought, the raiders they defended the town from, and the tales connected with many of the trophies hanging on the walls. You watch as they start to regain their composure, holding themselves proudly.&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $AttemptedBarracks to true&gt;&gt;
@@ -1466,19 +1469,23 @@ Toldjr: “Everything from longhouses, to ships, to cages, chief. If there is an
 
 [[Return to the celebration|Intro Party]]
 &lt;&lt;set $TalkedToldjr to true&gt;&gt;
-&lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Debugger" tags="" position="1118,37" size="100,100">Jump to Week
-[[Start of Sven Week|SvenWeekDream]]
-[[Start of Week 2|Week 2 Dream Sequence]]
-[[Start of Week 3|W3 Dream Sequence]]
+&lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Debugger" tags="" position="1118,37" size="100,100">Jump to Chapter
+[[Start of Chapter 1|SvenWeekDream]]
+[[Start of Chapter 2|Week 2 Dream Sequence]]
+[[Start of Chapter 3|W3 Dream Sequence]]
 [[Start of Conclusion|Game Conclusion]]
 
-Kill some folks
+&lt;&lt;if $Debug is true&gt;&gt;\
+Kill characters
 [[Kill Sven|Degbugger Kill Sven]]
 [[Kill Thordor|Debugger Kill Thordor]]
 [[Kill Thordor and Svika|Debugger Kill Thordor and Svika]]
 [[Kill Clurice|Debugger Kill Clurice]]
 [[Kill Clurice and Toldjr|Debugger Kill Clurice and Toldjr]]
-[[Kill Them All|Debugger Kill All]]</tw-passagedata><tw-passagedata pid="135" name="Degbugger Kill Sven" tags="" position="1305,98" size="100,100">So it shall be. Sven is dead.
+[[Kill Them All|Debugger Kill All]]
+&lt;&lt;/if&gt;&gt;\
+
+[[Return to Title|Main]]</tw-passagedata><tw-passagedata pid="135" name="Degbugger Kill Sven" tags="" position="1305,98" size="100,100">So it shall be. Sven is dead.
 &lt;&lt;set $SvenDead    to true&gt;&gt;\
 
 [[Return to Debugger|Debugger]]
@@ -1555,7 +1562,7 @@ Clurice’s experience shook her faith. She prayed to the gods but found no answ
 
 [[Return to Debugger|Debugger]]
 
-</tw-passagedata><tw-passagedata pid="146" name="AfterPartySleep" tags="" position="733.3333333333334,1120.0000000000002" size="100,100">You ate a lot at the celebration. It doesn&#39;t take you long to find your bed. Before you can ponder the mysterious death of your father, you drift [[deep into sleep...|SvenWeekDream]]
+</tw-passagedata><tw-passagedata pid="146" name="AfterPartySleep" tags="" position="733,1120" size="100,100">You ate a lot at the celebration. It doesn&#39;t take you long to find your bed. Before you can ponder the mysterious death of your father, you drift [[deep into sleep...|SvenWeekDream]]
 &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
