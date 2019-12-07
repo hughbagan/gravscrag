@@ -1132,8 +1132,15 @@ The boisterous warriors have gone quiet. They sit in contemplation. Some of them
 [[Persuade them with talk of glory|W3 Barracks Correct Speech]]
 [[Invigorate them with a rousing speech|W3 Barracks Wrong Speech]]
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="88" name="W3 Docks" tags="" position="766,4511" size="100,100">[Background of Docks]
-The sails of ships float in the distance, but no fish have been pulled ashore. The wind whips through the air and nips at your skin.  The bay seems oddly devoid of fish. If this keeps up, we may not survive the winter. The fishers sit at the docks, staring off sadly at the horizon. They seem to have lost [[Encourage them with a heartwarming speech|W3 Dock Wrong Speech]]
+</tw-passagedata><tw-passagedata pid="88" name="W3 Docks" tags="" position="766,4511" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+  &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  &lt;&lt;audio DocksDead play loop&gt;&gt;
+  &lt;&lt;audio DocksDead fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+The sails of ships float in the distance, but no fish have been pulled ashore. The wind whips through the air and nips at your skin.  The bay seems oddly devoid of fish. If this keeps up, we may not survive the winter. The fishers sit at the docks, staring off sadly at the horizon. They seem to have lost their spirit.
+
+[[Encourage them with a heartwarming speech|W3 Dock Wrong Speech]]
 [[Persuade them with talk of glory|W3 Dock Wrong Speech]]
 [[Invigorate them with a rousing speech|W3 Docks Correct Speech]]
 [[Return to Town|W3 Town Map]]
@@ -1167,7 +1174,10 @@ Clurice stares at you as the crowd begins to disperse. Those who follow her cler
 [[Go Back to Town|W3 Town Map]]
 &lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="988.6666666666667,5356" size="200,200">&lt;img src=&quot;images/Together.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
 @@.center;
-&lt;div class=&quot;title&quot;&gt;[ENTER TEAM NAME HERE]&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;[ENTER TEAM NAME HERE]&lt;/div&gt;\
+
+//is...//
+
 &lt;div class=&quot;title&quot;&gt;WRITING&lt;/div&gt;\
 Dalton Johnson
 
@@ -1181,7 +1191,11 @@ Matt Quigley
 Hugh Bagan
 Seth Karstad
 
-Thank you for playing!
+&lt;div class=&quot;title&quot;&gt;ETC&lt;/div&gt;\
+Gravscrag is made in the Twine 2 engine, using the Sugarcube 2 format.
+Gravscrag uses the Libre Baskerville font.
+
+Thank you very much for playing!
 
 [[Return to Title|Main]]
 @@</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
@@ -1237,31 +1251,49 @@ The warriors are on your side. They will prove useful when the time comes to sto
 The warriors return to their meditating. You try to speak, but they will no longer listen. You are forced to leave without the support of the warriors. You’ll need to find help elsewhere.
 
 [[Return to Town|W3 Town Map]]
-&lt;&lt;set $AttemptedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="W3 Dock Wrong Speech" tags="" position="666,4650" size="100,100">Though you gave it your best shot, you find your words falling on deaf ears. It seems they aren’t helped by your speech, they continue to sulk. They won’t listen, no matter how hard you try. You will need to find aid elsewhere…
-[[Return to Town|W3 Town Map]]&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $AttemptedDocks to true&gt;&gt;
+&lt;&lt;set $AttemptedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="W3 Dock Wrong Speech" tags="" position="666,4650" size="100,100">&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+Though you gave it your best shot, you find your words falling on deaf ears. It seems they aren’t helped by your speech, they continue to sulk.
+
+[[Encourage them with a heartwarming speech|W3 Dock Wrong Speech]]
+[[Persuade them with talk of glory|W3 Dock Wrong Speech]]
+[[Invigorate them with a rousing speech|W3 Docks Correct Speech]]
+[[Return to Town|W3 Town Map]]
+</tw-passagedata><tw-passagedata pid="101" name="W3 Docks Correct Speech" tags="" position="863,4645" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if $SvikaDead&gt;&gt;
+		&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;else&gt;&gt;
+		/* Svika is alive */
+		&lt;img src=&quot;images/Week3/Backs/DirtySvikaDocks.PNG&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot;/&gt;
+		&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  		&lt;&lt;audio Docks play loop&gt;&gt;
+  		&lt;&lt;audio Docks fadein&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="101" name="W3 Docks Correct Speech" tags="" position="863,4645" size="100,100">You use your words to encourage the energetic spirits of the fishers. You watch as their spirits return. They get back on their feet and stop feeling sorry for themselves.
-&lt;&lt;if $SvikaDead is false&gt;&gt; They get back on their boats and sail into the waters to join the other fishers. Svika and the younger fishers stay behind. Svika smiles and nods to you.
-Svika: Thank you, chief. We all needed to hear that.
+You use your words to encourage the energetic spirits of the fishers. You watch as their spirits return. They get back on their feet and stop feeling sorry for themselves.
+&lt;&lt;if $SvikaDead is false&gt;&gt;They get back on their boats and sail into the waters to join the other fishers. Svika and the younger fishers stay behind. Svika smiles and nods to you.
+&quot;Thank you, chief. We all needed to hear that.&quot;
 You have a strong feeling the fishers will be there when you need them.&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $ConvincedDocks to true&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 [[Return to Town|W3 Town Map]]
 &lt;&lt;else&gt;&gt; A fisher approaches you, their brow knit together.
-Fisher: We want to help, but how can we trust you? If you remember the name of Svika’s boat, we will help.
+&quot;We want to help, but how can we trust you? If you remember the name of Svika’s boat, we will help.&quot;
 [[Knaøtver|W3 Docks Correct Answer]]
 [[Sukerva|W3 Docks Wrong Answer]]
 [[Snilld|W3 Docks Wrong Answer]]
 [[Kanveikur|W3 Docks Wrong Answer]]&lt;&lt;/if&gt;&gt; &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="102" name="W3 Docks Correct Answer" tags="" position="788,4795" size="100,100">The fisher smiles and nods. The others follow their lead and get back on their boats, sailing into the water and joining the other fishers. You have a strong feeling they will be there when you need them.&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $ConvincedDocks to true&gt;&gt;
-&lt;&lt;endnobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="102" name="W3 Docks Correct Answer" tags="" position="788,4795" size="100,100">The fisher smiles and nods. The others follow their lead and get back on their boats, sailing into the water and joining the other fishers. You have a strong feeling they will be there when you need them.
+
 [[Return to Town|W3 Town Map]]
+&lt;&lt;set $AttemptedDocks to true&gt;&gt;
+&lt;&lt;set $ConvincedDocks to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="103" name="W3 Docks Wrong Answer" tags="" position="938,4795" size="100,100">The fisher shakes their head and sighs, joining the other sulking fishers. You try, but no other words will rouse the fishers. It seems you will need to find help elsewhere.
-[[Return to Town|W3 Town Map]]</tw-passagedata><tw-passagedata pid="104" name="W3 Pastured Correct Speech" tags="" position="1295,4623" size="100,100">You sit down with the goatherds and talk with them. You tell them how much the community cares about them, and remind them of how they care about one another.
+
+[[Return to Town|W3 Town Map]]
+&lt;&lt;set $AttemptedDocks to true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="104" name="W3 Pastured Correct Speech" tags="" position="1295,4623" size="100,100">You sit down with the goatherds and talk with them. You tell them how much the community cares about them, and remind them of how they care about one another.
 &lt;&lt;if $SvenDead is false&gt;&gt;Sven nods along and reinforces everything you say. He helps the goatherds get a sense of their community, reuniting them. You feel a sense of pride swell over you as you see Sven’s smile. You know he has your back, and he will be there when the time comes.&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $ConvincedPastures to true&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
