@@ -167,6 +167,9 @@ if (!Config.debug) {
 &lt;&lt;createaudiogroup &quot;:town2&quot;&gt;&gt;
 	&lt;&lt;track &quot;BarracksDead&quot;&gt;&gt;
 &lt;&lt;/createaudiogroup&gt;&gt;
+&lt;&lt;createaudiogroup &quot;:town3&quot;&gt;&gt;
+	&lt;&lt;track &quot;Edifice&quot;&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt;
 &lt;&lt;createaudiogroup &quot;:docksdead&quot;&gt;&gt;
 	&lt;&lt;track &quot;DocksDead&quot;&gt;&gt;
 &lt;&lt;/createaudiogroup&gt;&gt;
@@ -707,9 +710,9 @@ You awaken with a hint of ocean air hitting your nostrils. You walk down to the 
 Thordor leaves as quickly as he arrived. You should visit the docks in the evening.
 [[Go into Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="50" name="W2 Town Map" tags="" position="838,3029" size="200,200">&lt;&lt;nobr&gt;&gt;
 &lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-&lt;&lt;audio &quot;:playing:not(:town2)&quot; fadeoverto 1 0&gt;&gt;
-&lt;&lt;audio BarracksDead loop play&gt;&gt;
-&lt;&lt;audio BarracksDead fadein&gt;&gt;
+	&lt;&lt;audio &quot;:playing:not(:town2)&quot; fadeoverto 1 0&gt;&gt;
+	&lt;&lt;audio BarracksDead loop play&gt;&gt;
+	&lt;&lt;audio BarracksDead fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;set $TempDay to $Day + 7&gt;&gt; Day $TempDay of Gormánuður
 It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt;print $EarlyMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 2&gt;&gt;&lt;&lt;print $LateMorningText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 3&gt;&gt;&lt;&lt;print $NoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 4&gt;&gt;&lt;&lt;print $AfternoonText&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $Time is 5&gt;&gt;&lt;&lt;print $EveningText&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -1068,6 +1071,9 @@ A booming sound, almost like thunder, shakes the walls of your longhouse. You pe
 
 </tw-passagedata><tw-passagedata pid="85" name="W3 Town Map" tags="" position="828,4176" size="200,200">&lt;&lt;nobr&gt;&gt;
 	&lt;img src=&quot;images/Week3/Backs/VillageEdifice.PNG&quot; alt=&quot;The village. A huge spire is being constructed behind the Barracks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	&lt;&lt;audio &quot;:playing:not(:town3)&quot; fadeoverto 1 0&gt;&gt;
+	&lt;&lt;audio Edifice loop play&gt;&gt;
+	&lt;&lt;audio Edifice fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 The town center is empty. A massive spire pokes up above the rooftops. You can hear some commotion over in that direction.
 &lt;&lt;if $SeenEdifice is false&gt;&gt;\
@@ -1089,16 +1095,21 @@ G̶o̶ ̶t̶o̶ ̶t̶h̶e̶ ̶P̶a̶s̶t̶u̶r̶e̶s̶
 [[Go to the Temple|W3 Temple]]
 [[Go to Longhouse|W3 Longhouse]]
 [[Go to the Edifice|W3 Edifice]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="W3 Edifice" tags="" position="2635,4505" size="100,100">&lt;&lt;if $SeenEdifice is false&gt;&gt;
-&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge stone tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="W3 Edifice" tags="" position="2635,4505" size="100,100">&lt;&lt;nobr&gt;&gt;
+  &lt;&lt;audio &quot;:playing:not(Edifice)&quot; fadeoverto 1 0&gt;&gt;
+  &lt;&lt;audio Edifice loop play&gt;&gt;
+  &lt;&lt;audio Edifice fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;&lt;if $SeenEdifice is false&gt;&gt;
+&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
 A large structures, two longhouses tall, shaped in a circle like a tower stands in the center of town. It’s wooden, and unfinished, but it looks sturdy. A crowd of people gathers before it, and stop it you see the familiar antlers of Clurice. Helping to construct this building is Toldjr, who seems engrossed in his work. You approach the tower and begin to hear Clurice speak.
 
 &quot;The gods have spoken to me. Every night, with every dream, they reveal a traitor in our midst. The gods demand subservience! Our own chief has resisted their wills, but we know better. We will bow to the gods. We will do as the gods ask. We will build their spire!&quot;
 
 You feel something tugging at the back of your mind as if trying to pull you from your body.
 
-[[Submit to Clurice|W3 Submit to Clurice]]
 [[Resist Clurice|W3 Resist Clurice]]
+/* [[Submit to Clurice|W3 Submit to Clurice]] */
 &lt;&lt;else&gt;&gt;
 &lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge stone tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
 Clergy and craftsman alike work to ceaselessly continue their construction of their edifice. Clurice leads them in prayer and Toldjr guides the craftsman. The air feels still when you are near this thing, and Clurice leers at you whenever your eyes meet.
@@ -1109,7 +1120,12 @@ Clergy and craftsman alike work to ceaselessly continue their construction of th
 [[Return to Town|W3 Town Map]]
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="87" name="W3 Barracks" tags="" position="238,4513" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="87" name="W3 Barracks" tags="" position="238,4513" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+  &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  &lt;&lt;audio BarracksDead play loop&gt;&gt;
+  &lt;&lt;audio BarracksDead fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 The boisterous warriors have gone quiet. They sit in contemplation. Some of them are sitting silently in front of the hearth with their eyes closed. Their weapons and shields are discarded on the ground. It&#39;s oddly quiet.
 
 [[Encourage them with a heartwarming speech|W3 Barracks Wrong Speech]]
@@ -1150,14 +1166,21 @@ Clurice stares at you as the crowd begins to disperse. Those who follow her cler
 
 [[Go Back to Town|W3 Town Map]]
 &lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="897,5901" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
-Thought your speech was passionate and well thought out, the warriors do not move an inch. These seem unphased by your attempt to corral them. It looks like you will need to find help elsewhere. 
-&lt;&lt;set $AttemptedBarracks to true&gt;&gt;
-[[Return to Town|W3 Town Map]] 
+Thought your speech was passionate and well thought out, the warriors do not move an inch. These seem unphased by your attempt to corral them.
+
+[[Encourage them with a heartwarming speech|W3 Barracks Wrong Speech]]
+[[Persuade them with talk of glory|W3 Barracks Correct Speech]]
+[[Invigorate them with a rousing speech|W3 Barracks Wrong Speech]]
+[[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="97" name="W3 Barracks Correct Speech" tags="" position="343,4656" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if $ThordorDead is true&gt;&gt;
 		&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;else&gt;&gt;
+		/* Thordor is alive */
 		&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+		&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  		&lt;&lt;audio Barracks play loop&gt;&gt;
+  		&lt;&lt;audio Barracks fadein&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 You tell the warriors of their greatness. Of the enemies they fought, the raiders they defended the town from, and the tales connected with many of the trophies hanging on the walls. You watch as they start to regain their composure, holding themselves proudly.
@@ -1179,17 +1202,23 @@ A warrior approaches you, his arms crossed.
 [[Treskjærer|W3 Barracks Wrong Answer]]
 [[Isvandrer|W3 Barracks Wrong Answer]]
 [[Svekling|W3 Barracks Wrong Answer]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="W3 Barracks Correct Answer" tags="" position="268,4806" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="W3 Barracks Correct Answer" tags="" position="268,4806" size="100,100">&lt;&lt;nobr&gt;&gt;
+  &lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+  &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  &lt;&lt;audio Barracks play loop&gt;&gt;
+  &lt;&lt;audio Barracks fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 Warrior: Aye… He wielded that. Ye have our backs, chief.
 The warriors are on your side. They will prove useful when the time comes to stop Clurice and Toldjr.
-&lt;&lt;set $ConvincedBarracks to true&gt;&gt;
+
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="99" name="W3 Barracks Wrong Answer" tags="" position="418,4806" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $AttemptedBarracks to true&gt;&gt;
+&lt;&lt;set $ConvincedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="W3 Barracks Wrong Answer" tags="" position="418,4806" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 &quot;Ye know nothing of Thordor, nor of us. Clurice is right about you. You are nothing but a faker.&quot;
 The warriors return to their meditating. You try to speak, but they will no longer listen. You are forced to leave without the support of the warriors. You’ll need to find help elsewhere.
 
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="100" name="W3 Dock Wrong Speech" tags="" position="666,4650" size="100,100">Though you gave it your best shot, you find your words falling on deaf ears. It seems they aren’t helped by your speech, they continue to sulk. They won’t listen, no matter how hard you try. You will need to find aid elsewhere…
+&lt;&lt;set $AttemptedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="W3 Dock Wrong Speech" tags="" position="666,4650" size="100,100">Though you gave it your best shot, you find your words falling on deaf ears. It seems they aren’t helped by your speech, they continue to sulk. They won’t listen, no matter how hard you try. You will need to find aid elsewhere…
 [[Return to Town|W3 Town Map]]&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
@@ -1322,6 +1351,8 @@ You are still shaking after the gory mess you witnessed… Svika and Thordor hav
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="117" name="W3 Dream Sequence" tags="" position="2173,3916" size="200,100">&lt;&lt;nobr&gt;&gt;
 	&lt;img src=&quot;images/Week3/ThirdDream.PNG&quot; alt=&quot;There is a wolf, with the talons of a bird and the tail of a fish and the wings of a bird. It howls to the sky. Around it dance mere shadows of people, suspended by their strings by the hands of the puppeteer. Their mouths hang open in their torment as they place bricks of stone into the arms of the giant hands that bring them their own doom.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;audio Edifice loop play&gt;&gt;
+	&lt;&lt;audio Edifice fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 @@.center;
 ＣＯＭＥ， ＭＹ ＰＡＷＮＳ
