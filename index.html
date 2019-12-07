@@ -1176,7 +1176,6 @@ Clergy and craftsman alike work to ceaselessly continue their construction of th
 
 [[Speak to Clurice|W3 Speak to Clurice]]
 [[Speak to Toldjr|W3 Speak to Toldjr]]
-/* (Warning to ask if they are sure, and warn them there is no going back; leads to “Outcome”) */\
 [[Destroy the Edifice|W3 Destroy Edifice Check]]
 [[Return to Town|W3 Town Map]]
 &lt;&lt;/if&gt;&gt;
@@ -1440,13 +1439,22 @@ You watch the goatherd smile in fondness at the memories of Sven. The others slo
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $ConvincedPastures to true&gt;&gt;
 &lt;&lt;set $AttemptedPastures to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="108" name="W3 Speak to Clurice" tags="" position="2448,4757" size="100,100">You attempt to approach Clurice, but are met with a wall of her clergy. She stares at you from behind them with her icy cold eyes.
+</tw-passagedata><tw-passagedata pid="108" name="W3 Speak to Clurice" tags="" position="2448,4757" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week3/CluriceCultist.PNG&quot; alt=&quot;Clurice stands before you.&quot; width=&quot;35%&quot; /&gt;
+&lt;/div&gt;
+&lt;&lt;endnobr&gt;&gt;
+You attempt to approach Clurice, but are met with a wall of her clergy. She stares at you from behind them with her icy cold eyes.
 
 [[Leave Clurice|W3 Edifice]]
-</tw-passagedata><tw-passagedata pid="109" name="W3 Speak to Toldjr" tags="" position="2645,4750" size="100,100">You attempt to speak to Toldjr, but he is distant and unresponsive. He continues to construct the edifice piece by piece as though something was moving his limbs for him.
+</tw-passagedata><tw-passagedata pid="109" name="W3 Speak to Toldjr" tags="" position="2645,4750" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week3/ToldjrCultist.PNG&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
+&lt;/div&gt;
+&lt;&lt;endnobr&gt;&gt;
+You attempt to speak to Toldjr, but he is distant and unresponsive. He continues to construct the edifice piece by piece as though something was moving his limbs for him.
 
 [[Leave Toldjr|W3 Edifice]]
-</tw-passagedata><tw-passagedata pid="110" name="W3 Destroy Edifice" tags="" position="2848,4758" size="100,100">You take a hold of your axe and a torch from your home as you approach the Edifice.
+</tw-passagedata><tw-passagedata pid="110" name="W3 Destroy Edifice" tags="" position="2848,4758" size="100,100">&lt;img src=&quot;images/Week3/Backs/Edifice.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+You take a hold of your axe and a torch from your home as you approach the Edifice.
 &lt;&lt;if $ConvincedBarracks&gt;&gt;\
 	Warriors flock from all parts of the town, their weapons brandished and ready to serve you.&lt;&lt;set $AlliesCount += 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
@@ -1464,38 +1472,53 @@ You stand alone before the Edifice. You will need to make your stand by yourself
 &lt;&lt;else&gt;&gt;\
 [[You charge toward the edifice with your allies charging beside you|W3 Edifice Battle]]. 
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="111" name="W3 Edifice Battle" tags="" position="2848,4908" size="100,100">&lt;&lt;if $AlliesCount &gt;= 2&gt;&gt;\
+	&lt;&lt;nobr&gt;&gt;
+		&lt;img src=&quot;images/Week3/Backs/Edifice.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+	&lt;&lt;endnobr&gt;&gt;
 The clergy attempts to stop you, but your amassed forces are too great for them, and they are quickly overwhelmed. The craftsman are taken aside as the Edifice is torn down piece by piece. Toldjr stands with a face devoid of all thought as he is held back, watching the structure crumble. Clurice screams and curses, claiming that you will be the death of the whole village. When it is done you throw your torch onto its remains and watch as [[the Edifice turns to ashes.|W3 Edifice Battle P2]]
 &lt;&lt;elseif $AlliesCount == 1&gt;&gt;\
-You and your allies clash with the clergy following Clurice. The two sides are evenly matched, engaging in an ongoing battle as both sides take heavy casualties. You begin to lose all hope when you see Toldjr and the builders holding their heads and crumpling to the ground before his eyes snap open. He yells something to the builders, but you can’t make it out. They wield their hammers and they charge into the fray. At first you fear you will be overwhelmed, until you notice Toldjr guiding the craftsmen to battle the clergy! Toldjr joins your side and helps you fight your way past the clergy and [[into the Edifice.|W3 Edifice Battle P2]]  &lt;&lt;set $CluriceDead to true&gt;&gt;
+	&lt;&lt;nobr&gt;&gt;
+		&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeHurt.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+		&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
+  		&lt;&lt;audio Workshop play loop&gt;&gt;
+  		&lt;&lt;audio Workshop fadein&gt;&gt;
+	&lt;&lt;endnobr&gt;&gt;
+You and your allies clash with the clergy following Clurice. The two sides are evenly matched, engaging in an ongoing battle as both sides take heavy casualties. You begin to lose all hope when you see Toldjr and the builders holding their heads and crumpling to the ground before his eyes snap open. He yells something to the builders, but you can’t make it out. They wield their hammers and they charge into the fray. At first you fear you will be overwhelmed, until you notice Toldjr guiding the craftsmen to battle the clergy! Toldjr joins your side and helps you fight your way past the clergy and [[into the Edifice.|W3 Edifice Battle P2]]&lt;&lt;set $CluriceDead to true&gt;&gt;
 &lt;&lt;else&gt;&gt;\
-You charge alone. You are a powerful combatant, and these cultists have had no formal training in combat. You are overwhelmed by their numbers however, and struggle to fight past them. You witness Clurice and Toldjr entering the completed Edifice, and you barely manage to fight your way past the cultists to [[follow them into the structure.|W3 Edifice Battle P2]]  &lt;&lt;set $CluriceDead to true&gt;&gt; &lt;&lt;set $ToldjrDead to true&gt;&gt;
+	&lt;&lt;nobr&gt;&gt;
+		&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+	&lt;&lt;endnobr&gt;&gt;
+You charge alone. You are a powerful combatant, and these cultists have had no formal training in combat. You are overwhelmed by their numbers however, and struggle to fight past them. You witness Clurice and Toldjr entering the completed Edifice, and you barely manage to fight your way past the cultists to [[follow them into the structure.|W3 Edifice Battle P2]]&lt;&lt;set $CluriceDead to true&gt;&gt;&lt;&lt;set $ToldjrDead to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="112" name="Game Conclusion" tags="" position="1808,5369" size="100,100">&lt;&lt;nobr&gt;&gt;\
 &lt;&lt;if $CountedDeaths is false&gt;&gt;
-&lt;&lt;if $SvenDead is true&gt;&gt;
-&lt;&lt;set $DeadCount += 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $SvikaDead is true&gt;&gt;
-&lt;&lt;set $DeadCount += 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ThordorDead is true&gt;&gt;
-&lt;&lt;set $DeadCount += 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ToldjrDead is true&gt;&gt;
-&lt;&lt;set $DeadCount += 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $CluriceDead is true&gt;&gt;
-&lt;&lt;set $DeadCount += 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;set $CountedDeaths to true&gt;&gt;
+	&lt;&lt;if $SvenDead is true&gt;&gt;
+		&lt;&lt;set $DeadCount += 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $SvikaDead is true&gt;&gt;
+		&lt;&lt;set $DeadCount += 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $ThordorDead is true&gt;&gt;
+		&lt;&lt;set $DeadCount += 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $ToldjrDead is true&gt;&gt;
+		&lt;&lt;set $DeadCount += 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $CluriceDead is true&gt;&gt;
+		&lt;&lt;set $DeadCount += 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;set $CountedDeaths to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;\
 &lt;&lt;if $DeadCount == 0&gt;&gt;\
-	Against all odds you have managed to keep the whole village alive. You led them through a truly terrifying time, but the survivors are shaken by the things they have witnessed. You lose a few to madness, but you quickly regroup them and help them take control of their lives. The village is soon back to the way it was before, and you all work together to survive the unnaturally frigid winter. Soon the only threat in your lives are the raiders and wolves you are used to. You’re happy. One day you retire as chieftain and enjoy the last of your life. Things are going well, until the new chief begins to [[experience odd visions...|Epilogue]]
+Against all odds you have managed to keep the whole village alive. You led them through a truly terrifying time, but the survivors are shaken by the things they have witnessed. You lose a few to madness, but you quickly regroup them and help them take control of their lives. The village is soon back to the way it was before, and you all work together to survive the unnaturally frigid winter. Soon the only threat in your lives are the raiders and wolves you are used to. You’re happy. One day you retire as chieftain and enjoy the last of your life. Things are going well, until the new chief begins to [[experience odd visions...|Epilogue]]
+
 &lt;&lt;elseif $DeadCount == 1 or $DeadCount == 2&gt;&gt;\
-	Things in Gravscrag have been rough. It’s been a dangerous winter filled with frigid, icy, cold. Many members of the village were taken by the cold of night, and many more by the disease that finds itself spreading. Those who remain have been shaken by the events of the village, but you all work together to survive. The visions and nightmares begin to fade, and Gravscrag manages to rebuild itself. It’s almost like the past was merely a terrible dream. You grow old, and happy. And then [[the visions return...|Epilogue]]
+Things in Gravscrag have been rough. It’s been a dangerous winter filled with frigid, icy, cold. Many members of the village were taken by the cold of night, and many more by the disease that finds itself spreading. Those who remain have been shaken by the events of the village, but you all work together to survive. The visions and nightmares begin to fade, and Gravscrag manages to rebuild itself. It’s almost like the past was merely a terrible dream. You grow old, and happy. And then [[the visions return...|Epilogue]]
+
 &lt;&lt;elseif $DeadCount == 3 or $DeadCount == 4&gt;&gt;\
-	Gravscrag has sustained major losses, and the village continues to toil on until a massive figure hovers in the distance. You have just enough time to pack everyone onto ships and sail away from your village, leaving your lives behind, but escaping before this horrific creature arrives at your shores. Its appearance shakes you to your core, and you feel as though your mind will never recover. Your last sight before you lost consciousness was the giant creature’s skull-like face. When you awake, it is time for the [[village to begin anew...|Epilogue]]
+Gravscrag has sustained major losses, and the village continues to toil on until a massive figure hovers in the distance. You have just enough time to pack everyone onto ships and sail away from your village, leaving your lives behind, but escaping before this horrific creature arrives at your shores. Its appearance shakes you to your core, and you feel as though your mind will never recover. Your last sight before you lost consciousness was the giant creature’s skull-like face. When you awake, it is time for the [[village to begin anew...|Epilogue]]
+
 &lt;&lt;else&gt;&gt;\
 You awake on a boat. Its sails are aloft and its oars are sitting beside you. In your hand is a torch.
 
@@ -1550,14 +1573,29 @@ You are still shaking after the gory mess you witnessed… Svika and Thordor hav
 &lt;&lt;set $Time to 1&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="W3 Edifice Battle P2" tags="" position="2839,5071" size="100,100">&lt;&lt;if $AlliesCount &gt;= 2&gt;&gt;\
 [Temple background]
 [Overlay spellbroken Clurice and Todjr]
+&lt;&lt;nobr&gt;&gt;
+	&lt;img src=&quot;images/Week3/Backs/CluriceToldjrTemple.PNG&quot; alt=&quot;Clurice and Toldjr are standing in the Temple. They are quite exhausted.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio TownMap play loop&gt;&gt;
+	&lt;&lt;audio TownMap fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 It takes days, but eventually Clurice and Toldjr return to normal. Clurice tells you of the nightmares she was having, though they seem to have stopped. She thanks you for stopping her from making a rash choice, one she never told you about. She thanks you for not letting her drink the poison she planned to feed the clergy and builders once the Edifice was completed.
 Toldjr eventually regained his mind, but he had no memory of building the Edifice. He is glad to be alive, and thanks you for [[ensuring the safety of the village.|Game Conclusion]]
+\
 &lt;&lt;elseif $AlliesCount == 1&gt;&gt;\
-[Clurice death scene]
+&lt;&lt;nobr&gt;&gt;
+	&lt;img src=&quot;images/Week3/Backs/CluriceDeath.PNG&quot; alt=&quot;Just Clurice&#39;s antlers, hood, and knife.&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;endnobr&gt;&gt;
 The Edifice crumbles to ash behind you, burying Clurice with it. The clergy have been defeated, but [[there have been heavy losses on both sides.|W3 Edifice Battle P3]]
+\
 &lt;&lt;else&gt;&gt;\
-[Clurice Transform scene]
-A boiling cauldron sits in the center of the Edifice. Clurice positions Toldjr before it, and both are just out of reach when you witness Clurice’s true plan. It is just as you enter the Edifice that she plunges a dagger into the mindless Toldjr’s chest and rips his heart clean out, throwing it in the cauldron. Just as the heart hits the green, misty, liquid, thunder strikes and a flash of lightning enters the Edifice. All you can see before you are blinded is the monster that Clurice has become, both in mind and in body. When you can finally see again there is no trace of Clurice, but the smell of smoke is strong. [[You run out of the edifice|W3 Edifice Battle P3]]
+&lt;&lt;nobr&gt;&gt;
+	&lt;img src=&quot;images/Week3/Backs/CluriceTransform.PNG&quot; alt=&quot;Clurice standing on the altar.&quot; width=&quot;100%&quot; /&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio FirstDream play loop&gt;&gt;
+	&lt;&lt;audio FirstDream fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+A boiling cauldron sits in the center of the Edifice. Clurice positions Toldjr before it, and both are just out of reach when you witness Clurice’s true plan. It is just as you enter the Edifice that she plunges a dagger into the mindless Toldjr’s chest and rips his heart clean out, throwing it in the cauldron. Just as the heart hits the green, misty, liquid, thunder strikes and a flash of lightning enters the Edifice. All you can see before you are blinded is the monster that Clurice has become, both in mind and in body. When you can finally see again there is no trace of Clurice, but the smell of smoke is strong. [[You run out of the edifice...|W3 Edifice Battle P3]]
 &lt;&lt;/if&gt;&gt;\
 
 
@@ -1565,7 +1603,8 @@ A boiling cauldron sits in the center of the Edifice. Clurice positions Toldjr b
 [Cut to workshop background]
 [Overlay spellbroken Toldjr]
 Toldjr eventually opens up and explains that he felt like a prisoner in his own body. He was toiling away against his will, exhausted, he just wished to sleep. When he saw you coming, something in him let him break through and help. Clurice may be gone, but Toldjr still lives. With his help you remove what remained of the edifice. [[Time moves on, and eventually Clurice is replaced...|Game Conclusion]]
-&lt;&lt;else&gt;&gt;
+\
+&lt;&lt;else&gt;&gt;\
 You quickly escape the Edifice before it collapses as flames rip it and sunder its structure, leaving it a pile of ashes burying the body of Toldjr.
 The village eventually sifts through the ashes and gives Toldjr a proper burial. The remains of the edifice are swept away by the wind, and the loss of both Clurice and Toldjr is mourned by the village as a whole. You don’t have the heart to tell anyone what happened to Clurice. [[Soon, the only remnant of the edifice are in your memories...|Game Conclusion]]
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="120" name="Intro Burning Boat" tags="" position="731,206" size="100,100">&lt;img src=&quot;images/Intro/IntroChiefbbq.PNG&quot; alt=&quot;A single boat floats out in the bay. It is burning. The plume of fire and smoke casts a reflection across the water.&quot; width=&quot;100%&quot;/&gt; 
@@ -1772,9 +1811,11 @@ You decide you don’t have enough information to make your decision yet. You [[
 [[.....|Epilogue]]</tw-passagedata><tw-passagedata pid="144" name="Epilogue" tags="" position="1808,5969" size="100,100">&lt;&lt;if $DeadCount == 0&gt;&gt;\
 [Overlay everyone]
     That sure was an odd Gormánuður, but at least everything is back to normal!  Back to work. Long live the chief!
+	
 &lt;&lt;elseif $DeadCount &lt; 5&gt;&gt;\
 [Overlay Survivors]
     It has been a rough, cold, month, and your village has made its losses along the way, but at least these people are still by your side… 
+
 &lt;&lt;elseif $DeadCount == 5&gt;&gt;
     It’s not your fault. This is how things are meant to be. It happens wherever I go. You are a fool if you thought you were any different. It is better to accept the inevitability of death… Goodbye, mortal.
 	
@@ -1810,9 +1851,10 @@ Clurice’s experience shook her faith. She prayed to the gods but found no answ
 [[Return to Chapter Select|Debugger]]
 
 </tw-passagedata><tw-passagedata pid="146" name="AfterPartySleep" tags="" position="733,1120" size="100,100">You ate a lot at the celebration. It doesn&#39;t take you long to find your bed. Before you can ponder the mysterious death of your father, you drift [[deep into sleep...|SvenWeekDream]]
-&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="W3 Destroy Edifice Check" tags="" position="2838,4520" size="100,100">As you look upon the edifice being built by the craftmen, and the clergy singing to an unknown god, you take pause. Should you attack now, or should you return to town and rally more people? There will be no turning back after this.
+&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="W3 Destroy Edifice Check" tags="" position="2838,4520" size="100,100">&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
+As you look upon the edifice being built by the craftmen, and the clergy singing to an unknown god, you take pause. Should you attack now, or should you return to town and rally more people? There will be no turning back after this.
 
-[[Wait|W3 Edifice]]
+[[Wait!|W3 Edifice]]
 [[Attack!|W3 Destroy Edifice]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
