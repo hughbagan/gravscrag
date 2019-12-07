@@ -261,7 +261,8 @@ Hugh Bagan, Kieran Gilmore, Dalton Johnson, Seth Karstad, Matt Quigley, Ian Scho
 [[Chapter Select|Debugger]]
 
 [[Credits]]
-@@</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="692,1406" size="200,100">Mondag, 1st of Gormánuður
+@@
+&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="692,1406" size="200,100">Mondag, 1st of Gormánuður
 The previous night’s dream haunts you still, but you have chiefly duties to attend to.
 &lt;img src=&quot;images/LonghouseSvenGoat.PNG&quot; alt=&quot;Sven is holding his crook in one hand, and a baby goat in the other.&quot; width=&quot;100%&quot;/&gt;
 “Hey chief! Rise and shine! I was just passing by; hope you have a good day.”
@@ -1253,11 +1254,9 @@ Clurice: There they are. The traitor. The giver of nightmares. The gods have sho
 Clurice stares at you as the crowd begins to disperse. Those who follow her clergy stick close, and the builders, and Toldjr, continue their work in constructing this “edifice.” You will need to find help elsewhere.
 
 [[Go Back to Town|W3 Town Map]]
-&lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="988,5356" size="200,200">&lt;img src=&quot;images/Together.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="988,5356" size="200,200">&lt;img src=&quot;images/Intro/Title.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
 @@.center;
-&lt;div class=&quot;title&quot;&gt;[ENTER TEAM NAME HERE]&lt;/div&gt;\
-
-//is...//
+a game by &lt;div class=&quot;title&quot;&gt;[ENTER TEAM NAME HERE]&lt;/div&gt;\
 
 &lt;div class=&quot;title&quot;&gt;WRITING&lt;/div&gt;\
 Dalton Johnson
@@ -1278,12 +1277,15 @@ Gravscrag is made in the &lt;a href=&quot;https://twinery.org/&quot;&gt;Twine 2 
 Gravscrag uses the &lt;a href=&quot;https://fonts.google.com/specimen/Libre+Baskerville&quot;&gt;Libre Baskerville&lt;/a&gt; font.
 Some parts of the game also make use of the &lt;a href=&quot;https://lingojam.com/WeirdTextGenerator&quot;&gt;Weird Text Generator&lt;/a&gt;.
 
-Thank you very much for playing!
+(っ◔◡◔)っ ♥ Thanks for playing!!! ♥
 
+&lt;img src=&quot;images/Together.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;\
 &lt;&lt;if $StartedGame is false&gt;&gt;\
 [[Return to Title|Main]]
 &lt;&lt;/if&gt;&gt;\
-@@</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+@@
+&lt;&lt;audio Barracks play loop&gt;&gt;
+&lt;&lt;audio Barracks fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 Thought your speech was passionate and well thought out, the warriors do not move an inch. These seem unphased by your attempt to corral them.
 
 [[Encourage them with a heartwarming speech|W3 Barracks Wrong Speech]]
@@ -1805,19 +1807,40 @@ You decide you don’t have enough information to make your decision yet. You [[
 [[Sit down|Game Conclusion P3]]
 </tw-passagedata><tw-passagedata pid="142" name="Game Conclusion P3" tags="" position="1808,5669" size="100,100">You sit down on the seat of your ship and stare back at the town. The flames begin to lick at your flesh as they spread around you and up to set the sails ablaze.
 
-[[.....|Game Conclusion P4]]
+[[.............|Game Conclusion P4]]
 </tw-passagedata><tw-passagedata pid="143" name="Game Conclusion P4" tags="" position="1808,5819" size="100,100">A young boy watches from the shore of Gravscrag as a ship burns in the distance. He heralds a message to the rest of the town. A new chief will soon be initiated, the old chief is dead.
 
-[[.....|Epilogue]]</tw-passagedata><tw-passagedata pid="144" name="Epilogue" tags="" position="1808,5969" size="100,100">&lt;&lt;if $DeadCount == 0&gt;&gt;\
-[Overlay everyone]
-    That sure was an odd Gormánuður, but at least everything is back to normal!  Back to work. Long live the chief!
+[[.............|Epilogue]]</tw-passagedata><tw-passagedata pid="144" name="Epilogue" tags="" position="1808,5969" size="100,100">&lt;&lt;nobr&gt;&gt;
+  &lt;div class=&quot;center&quot;&gt;
+  	&lt;&lt;if $SvenDead is false&gt;&gt;
+  		&lt;img src=&quot;images/Sven.PNG&quot; width=&quot;20%&quot; alt=&quot;Sven. &quot;/&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $SvikaDead is false&gt;&gt;
+		&lt;img src=&quot;images/Svika.PNG&quot; width=&quot;20%&quot; alt=&quot;Svika. &quot;/&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $CluriceDead is false&gt;&gt;
+		&lt;img src=&quot;images/Week3/CluriceSpellBroken.PNG&quot; width=&quot;20%&quot; alt=&quot;Clurice. &quot;/&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $ThordorDead is false&gt;&gt;
+		&lt;img src=&quot;images/Thordor.PNG&quot; width=&quot;20%&quot; alt=&quot;Thordor. &quot;/&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $ToldjrDead is false&gt;&gt;
+		&lt;img src=&quot;images/Week3/ToldjrSpellBroken.PNG&quot; width=&quot;20%&quot; alt=&quot;Toldjr.&quot; /&gt;
+	&lt;&lt;/if&gt;&gt;
+  &lt;/div&gt;
+  &lt;&lt;if $DeadCount &gt;= 5&gt;&gt;
+  	&lt;img src=&quot;images/Ending/BadEndingEveryoneDiesSmall.PNG&quot; alt=&quot;You should be glad you can&#39;t see this image lol&quot; width=&quot;100%&quot;/&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+\
+&lt;&lt;if $DeadCount == 0&gt;&gt;\
+That sure was an odd Gormánuður, but at least everything is back to normal! Back to work. Long live the chief!
 	
 &lt;&lt;elseif $DeadCount &lt; 5&gt;&gt;\
-[Overlay Survivors]
-    It has been a rough, cold, month, and your village has made its losses along the way, but at least these people are still by your side… 
+It has been a rough, cold, month, and your village has made its losses along the way, but at least these people are still by your side… 
 
-&lt;&lt;elseif $DeadCount == 5&gt;&gt;
-    It’s not your fault. This is how things are meant to be. It happens wherever I go. You are a fool if you thought you were any different. It is better to accept the inevitability of death… Goodbye, mortal.
+&lt;&lt;elseif $DeadCount &gt;= 5&gt;&gt;
+It’s not your fault. This is how things are meant to be. It happens wherever I go. You are a fool if you thought you were any different. It is better to accept the inevitability of death… Goodbye, mortal.
 	
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $SvenDead is false&gt;&gt;\
@@ -1837,11 +1860,16 @@ Toldjr returns to working on his projects. His newest project is an innovative d
 
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $CluriceDead is false&gt;&gt;\
-Clurice’s experience shook her faith. She prayed to the gods but found no answers. She has given up her role as head of the faith now that she has lost her hope.
+Clurice’s experience shook her faith. She prayed to the gods but found no answers. She has given up her role as head of the faith now that she has lost her hope. Now, Clurice has taken it upon herself to learn as much as she can. During her weekly meetings in the Temple, she shares her knowledge and wisdom with everybody.
 
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;set $StartedGame to true&gt;&gt;\
-[[The End|Credits]] </tw-passagedata><tw-passagedata pid="145" name="Debugger Kill All" tags="" position="2056,106" size="100,100">So it shall be. They are all dead.
+
+@@.center;
+[[THE END|Credits]]
+@@
+
+</tw-passagedata><tw-passagedata pid="145" name="Debugger Kill All" tags="" position="2056,106" size="100,100">So it shall be. They are all dead.
 &lt;&lt;set $SvenDead    to true&gt;&gt;\
 &lt;&lt;set $SvikaDead   to true&gt;&gt;\
 &lt;&lt;set $ThordorDead to true&gt;&gt;\
