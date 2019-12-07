@@ -904,7 +904,7 @@ The temple is eerily silent. A few flames flicker from long burning candles on t
 </tw-passagedata><tw-passagedata pid="56" name="W2 Longhouse" tags="" position="2316,3255" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 
 &lt;&lt;if $Time is not 5&gt;&gt;[[Return to Town|W2 Leaving Longhouse]]&lt;&lt;/if&gt;&gt;
@@ -1217,16 +1217,29 @@ Rolling, musty hills of the pasture roll over the expanse of the land before you
 [[Persuade them with talk of glory|W3 Pastured Wrong Speech]]
 [[Invigorate them with a rousing speech|W3 Pastured Wrong Speech]]
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="90" name="W3 Workshop" tags="" position="1449,4461" size="100,100">[Background of Workshop]
+</tw-passagedata><tw-passagedata pid="90" name="W3 Workshop" tags="" position="1449,4461" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Week3/Backs/Workshop.PNG&quot; alt=&quot;The forge is hot, and tools are strewn around, but nobody is here right now.&quot; width=&quot;100%&quot;/&gt;
+  &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  &lt;&lt;audio Workshop play loop&gt;&gt;
+  &lt;&lt;audio Workshop fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 The workshop is empty. Not a single craftsman is present, and all their tools and materials have been taken with them. You know where they are. They are constructing the edifice for Clurice. All they have left behind in this place are the cages which have sat in the corner since the start of Gormánuður.
 
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="91" name="W3 Temple" tags="" position="1592,4463" size="100,100">[Background of Temple]
+</tw-passagedata><tw-passagedata pid="91" name="W3 Temple" tags="" position="1592,4463" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;img src=&quot;images/Week3/Backs/Temple.PNG&quot; alt=&quot;The Temple is empty, and the candles by the altars have gone out.&quot; width=&quot;100%&quot;/&gt;
+  &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+  &lt;&lt;audio TempleDead play loop&gt;&gt;
+  &lt;&lt;audio TempleDead fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
 A few candles flicker in the darkness within the temple. The walls are scratched and many parts of the temple seem to be ruined. Braziers are toppled and extinguished, and the statues of the gods have been shattered in several places. What remains of them has been carved into a message. “False Idols.” A carving in the wall reveals a monstrous sight, a creature you feel is vaguely familiar. Under it is carved “The True God.”
 
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="92" name="W3 Longhouse" tags="" position="1807,4489" size="100,100">[Background of Longhouse]
-You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, but you cannot ignore what is happening in town.
+</tw-passagedata><tw-passagedata pid="92" name="W3 Longhouse" tags="" position="1807,4489" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+You return to the calm of your longhouse. Except now, it feels more solemn and gloomy. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, but you cannot ignore what is happening in town.
 
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="93" name="W3 Submit to Clurice" tags="" position="2309,4474" size="100,100">You walk into the building and learn it is called the Edifice. You aid Clurice and Toldjr in its construction. The nightmares begin to get worse with each passing day as you continue to toil. Once the edifice has been completed you watch as Clurice fills a large bowl with shimmering red liquid.
@@ -1359,12 +1372,19 @@ You have a strong feeling the fishers will be there when you need them.&lt;&lt;n
 [[Kanveikur|W3 Docks Wrong Answer]]&lt;&lt;/if&gt;&gt; &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="102" name="W3 Docks Correct Answer" tags="" position="788,4795" size="100,100">The fisher smiles and nods. The others follow their lead and get back on their boats, sailing into the water and joining the other fishers. You have a strong feeling they will be there when you need them.
+</tw-passagedata><tw-passagedata pid="102" name="W3 Docks Correct Answer" tags="" position="788,4795" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio Docks play loop&gt;&gt;
+	&lt;&lt;audio Docks fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+The fisher smiles and nods. The others follow their lead and get back on their boats, sailing into the water and joining the other fishers. You have a strong feeling they will be there when you need them.
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 &lt;&lt;set $ConvincedDocks to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="103" name="W3 Docks Wrong Answer" tags="" position="938,4795" size="100,100">The fisher shakes their head and sighs, joining the other sulking fishers. You try, but no other words will rouse the fishers. It seems you will need to find help elsewhere.
+</tw-passagedata><tw-passagedata pid="103" name="W3 Docks Wrong Answer" tags="" position="938,4795" size="100,100">&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+The fisher shakes their head and sighs, joining the other sulking fishers. You try, but no other words will rouse the fishers. It seems you will need to find help elsewhere.
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
@@ -1402,13 +1422,20 @@ You try and speak to the goatherds, but not a single one pays attention. Your sp
 [[Persuade them with talk of glory|W3 Pastured Wrong Speech]]
 [[Invigorate them with a rousing speech|W3 Pastured Wrong Speech]]
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="106" name="W3 Pastures Wrong Answer" tags="" position="1206,4794.333333333333" size="100,100">Goatherd: No… if you truly knew Sven you would know he didn’t have a favourite. Clurice was right about you, it’s your fault he’s dead.
+</tw-passagedata><tw-passagedata pid="106" name="W3 Pastures Wrong Answer" tags="" position="1206,4794.333333333333" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+Goatherd: No… if you truly knew Sven you would know he didn’t have a favourite. Clurice was right about you, it’s your fault he’s dead.
 The goatherds once more scatter, isolating themselves from one another. They give you no heed, and force you to return to the town empty handed. You’ll need help from someone else…
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedPastures to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="107" name="W3 Pastures Correct Answer" tags="" position="1395,4798" size="100,100">&quot;You’re right, Sven was proud of, and loved, all his goats.
-You watch the goatherd smile in fondness at the memories of Sven. The others slowly begin to gather around the two of you, coming back together and reuniting them. They’ll have your back when you need them, you’re sure of it.&quot;
+</tw-passagedata><tw-passagedata pid="107" name="W3 Pastures Correct Answer" tags="" position="1395,4798" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
+	&lt;&lt;audio Pasture play loop&gt;&gt;
+	&lt;&lt;audio Pasture fadein&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;
+&quot;You’re right, Sven was proud of, and loved, all his goats.&quot;
+You watch the goatherd smile in fondness at the memories of Sven. The others slowly begin to gather around the two of you, coming back together and reuniting them. They’ll have your back when you need them, you’re sure of it.
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $ConvincedPastures to true&gt;&gt;
