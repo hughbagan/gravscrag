@@ -1425,7 +1425,7 @@ You try and speak to the goatherds, but not a single one pays attention. Your sp
 [[Invigorate them with a rousing speech|W3 Pastured Wrong Speech]]
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="106" name="W3 Pastures Wrong Answer" tags="" position="1206,4794.333333333333" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
-Goatherd: No… if you truly knew Sven you would know he didn’t have a favourite. Clurice was right about you, it’s your fault he’s dead.
+&quot;No… if you truly knew Sven you would know he didn’t have a favourite. Clurice was right about you, it’s your fault he’s dead.&quot;
 The goatherds once more scatter, isolating themselves from one another. They give you no heed, and force you to return to the town empty handed. You’ll need help from someone else…
 
 [[Return to Town|W3 Town Map]]
@@ -1608,13 +1608,13 @@ Toldjr eventually regained his mind, but he had no memory of building the Edific
 \
 &lt;&lt;elseif $AlliesCount == 1&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/Backs/CluriceDeath.PNG&quot; alt=&quot;Just Clurice&#39;s antlers, hood, and knife.&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week3/CluriceDeath.PNG&quot; alt=&quot;Just Clurice&#39;s antlers, hood, and knife.&quot; width=&quot;100%&quot; /&gt;
 &lt;&lt;endnobr&gt;&gt;
 The Edifice crumbles to ash behind you, burying Clurice with it. The clergy have been defeated, but [[there have been heavy losses on both sides.|W3 Edifice Battle P3]]
 \
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/Backs/CluriceTransform.PNG&quot; alt=&quot;Clurice standing on the altar.&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week3/CluriceTransform.PNG&quot; alt=&quot;Clurice standing on the altar.&quot; width=&quot;100%&quot; /&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio FirstDream play loop&gt;&gt;
 	&lt;&lt;audio FirstDream fadein&gt;&gt;
@@ -1624,7 +1624,11 @@ A boiling cauldron sits in the center of the Edifice. Clurice positions Toldjr b
 
 
 </tw-passagedata><tw-passagedata pid="119" name="W3 Edifice Battle P3" tags="" position="2834,5221" size="100,100">&lt;&lt;if $AlliesCount == 1&gt;&gt;\
-&lt;img src=&quot;images/Week3/ToldjrSpellBroken.PNG&quot; alt=&quot;Toldjr.&quot; width=&quot;35%&quot;/&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;div class=&quot;center&quot;&gt;
+	&lt;img src=&quot;images/Week3/ToldjrSpellBroken.PNG&quot; alt=&quot;Toldjr.&quot; width=&quot;35%&quot;/&gt;
+&lt;/div&gt;
+&lt;&lt;endnobr&gt;&gt;
 Toldjr eventually opens up and explains that he felt like a prisoner in his own body. He was toiling away against his will, exhausted, he just wished to sleep. When he saw you coming, something in him let him break through and help. Clurice may be gone, but Toldjr still lives. With his help you remove what remained of the edifice. [[Time moves on, and eventually Clurice is replaced...|Game Conclusion]]
 \
 &lt;&lt;else&gt;&gt;\
