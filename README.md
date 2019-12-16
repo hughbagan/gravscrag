@@ -1,8 +1,12 @@
 # GRAVSCRAG
 ## a game by [Enter Team Name Here]
 
-To play, just open `index.html` in your web browser, like Chrome or Firefox. The most recent build is live at https://hughbagan.github.io/textadventure350, although it is recommended to download the game instead to load the assets locally.
+Your father, the chief of Gravscrag, is dead. It now falls to you, the new chief of this quiet northern town, to lead your people through these times of strife. Break the cycle of this curse once and for all... or despair for all eternity.
+
+To play, open `index.html` in your web browser, like Chrome or Firefox.
+
+*Gravscrag* was made for STS 350 Fall 2019 at the University of Alberta.
 
 <hr>
 
-[link to repository](https://github.com/hughbagan/textadventure350)
+[link to source repository](https://github.com/hughbagan/textadventure350)
