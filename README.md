@@ -1,4 +1,5 @@
-# GRAVSCRAG
+![GRAVSCRAG](cover.png)
+
 ## a game by [Enter Team Name Here]  
 
 Your father, the chief of Gravscrag, is dead. It now falls to you, the new chief of this quiet northern town, to lead your people through these times of strife. Break the cycle of this curse once and for all... or despair for all eternity.
@@ -7,13 +8,13 @@ Your father, the chief of Gravscrag, is dead. It now falls to you, the new chief
 
 *Gravscrag* was made in STS 350 Fall 2019 at the University of Alberta.
 
-[Enter Team Name Here] is...
+[Enter Team Name Here] is...  
 Art - Ian Schober, Kieran Gilmore  
 Writing - Dalton Johnson  
 Music - Matt Quigley  
 Programming - Esther Karstad, Hugh Bagan
 
-Made with [Twine](https://twinery.org/) and [SugarCube v2.30.0](https://www.motoslave.net/sugarcube/)
+Made with [Twine v2.3.5](https://twinery.org/) and [SugarCube v2.30.0](https://www.motoslave.net/sugarcube/)
 
 <hr>
 

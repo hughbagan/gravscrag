@@ -60,7 +60,7 @@ h(Math,"acosh",Cr.acosh,Math.acosh(Number.MAX_VALUE)===Infinity);h(Math,"acosh",
 /*
  * jQuery throttle / debounce - v1.1 - 3/7/2010
  * http://benalman.com/projects/jquery-throttle-debounce-plugin/
- * 
+ *
  * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
@@ -251,7 +251,7 @@ Example: Stop playback of playing tracks except those in the &quot;:town&quot; g
 &lt;&lt;set $AttemptedDocks    to false&gt;&gt;
 &lt;&lt;set $AttemptedPastures to false&gt;&gt;
 
-&lt;&lt;set $AlliesCount to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Main" tags="" position="671,43" size="200,100">&lt;img src=&quot;images/Intro/Title.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $AlliesCount to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Main" tags="" position="671,43" size="200,100">&lt;img src=&quot;images/Intro/Title.webp&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
 @@.center;
 A story by
 Hugh Bagan, Kieran Gilmore, Dalton Johnson, Esther Karstad, Matt Quigley, Ian Schober
@@ -264,14 +264,14 @@ Hugh Bagan, Kieran Gilmore, Dalton Johnson, Esther Karstad, Matt Quigley, Ian Sc
 @@
 &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="SvenWeekDay1Intro" tags="" position="692,1406" size="200,100">Mondag, 1st of Gormánuður
 The previous night’s dream haunts you still, but you have chiefly duties to attend to.
-&lt;img src=&quot;images/LonghouseSvenGoat.PNG&quot; alt=&quot;Sven is holding his crook in one hand, and a baby goat in the other.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/LonghouseSvenGoat.webp&quot; alt=&quot;Sven is holding his crook in one hand, and a baby goat in the other.&quot; width=&quot;100%&quot;/&gt;
 “Hey chief! Rise and shine! I was just passing by; hope you have a good day.”
 
 Last night… it was just a dream, right?
 
 [[Go into town|SvenWeekTownMap]]
 &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="SvenWeekTownMap" tags="" position="677,1570" size="200,200">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Village.webp&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 	&lt;&lt;audio &quot;:playing:not(:town)&quot; fadeoverto 1 0&gt;&gt;
 	&lt;&lt;audio TownMapNoChime loop play&gt;&gt;
 	&lt;&lt;audio TownMapNoChime fadein&gt;&gt;
@@ -289,7 +289,7 @@ It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt
 &lt;&lt;if $Time is not 5&gt;&gt;\&lt;&lt;if $SvenIssue is true&gt;&gt;\&lt;&lt;if $Day is 2 or $Day is 4 or $Day is 6&gt;&gt;\
 [[Attend to Sven&#39;s Problem|SvenWeekProblem]]
 &lt;&lt;/if&gt;&gt;\&lt;&lt;/if&gt;&gt;\&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="5" name="SvenWeekBarracks" tags="" position="246,1749" size="200,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio Barracks loop play&gt;&gt;
   &lt;&lt;audio Barracks fadein&gt;&gt;
@@ -301,7 +301,7 @@ The sound of clashing steel and boisterous warriors fills these halls. Trophies 
 [[Yes]]
 [[No]]
 &lt;&lt;if $SvenIssue is true and $KillOption is false&gt;&gt;[[I need your advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="SvenWeekDocks" tags="" position="529,1802" size="200,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/DocksSvika.webp&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
  	&lt;&lt;audio Docks loop play&gt;&gt;
  	&lt;&lt;audio Docks fadein&gt;&gt;
@@ -313,7 +313,7 @@ The sails of ships float in the distance as busy fishers drag nets of their fres
 [[Hoping you could show me around the boats.]]
 [[Just checking in.]]
 &lt;&lt;if $SvenIssue is true and $FishOilOption is false&gt;&gt;[[I’m looking for some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SvenWeekPastures" tags="" position="698,1990" size="200,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
  	&lt;&lt;audio Pasture loop play&gt;&gt;
  	&lt;&lt;audio Pasture fadein&gt;&gt;
@@ -330,7 +330,7 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 [[Just stopping by to say hello.]]
 &lt;&lt;if $SvenAccept is true and $GroomingOption is false&gt;&gt;[[How do you think we should help the goats?]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="SvenWeekWorkshop" tags="" position="996,1746" size="200,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
  	&lt;&lt;audio Workshop loop play&gt;&gt;
  	&lt;&lt;audio Workshop fadein&gt;&gt;
@@ -342,7 +342,7 @@ The sound of sawing and hammering reverberates through the heavy wood of the wor
 [[What are you working on today?]]
 [[Good to see you too.]]
 &lt;&lt;if $SvenIssue is true and $CageOption is false&gt;&gt;[[I need some advice.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="SvenWeekTemple" tags="" position="1361,1758" size="200,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
  	&lt;&lt;audio Temple loop play&gt;&gt;
  	&lt;&lt;audio Temple fadein&gt;&gt;
@@ -353,34 +353,34 @@ The temple is eerily silent. A few flames flicker from long burning candles on t
 
 [[Have the gods spoken?]]
 [[May they bless you as well.]]
-&lt;&lt;if $SvenIssue is true and $SacrificeOption is false&gt;&gt;[[I am in need of spiritual guidance.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="SvenWeekLonghouse" tags="" position="1714,1758" size="200,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;if $SvenIssue is true and $SacrificeOption is false&gt;&gt;[[I am in need of spiritual guidance.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="SvenWeekLonghouse" tags="" position="1714,1758" size="200,100">&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 
 &lt;&lt;if $Time is not 5&gt;&gt;\
 [[Return to Town]]
 &lt;&lt;/if&gt;&gt;\
-[[Sleep]]</tw-passagedata><tw-passagedata pid="11" name="Yes" tags="" position="112,1708" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+[[Sleep]]</tw-passagedata><tw-passagedata pid="11" name="Yes" tags="" position="112,1708" size="100,100">&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 “That’s the spirit!”
 You fill your mug with mead and partake in the revelry with the rest of the warriors. In exchanging war stories you find the respect and admiration of the younger warriors.
 
-[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="12" name="No" tags="" position="114,1845" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="12" name="No" tags="" position="114,1845" size="100,100">&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 “Come now, that’s no fun.”
 You leave the warriors to their revelry. The sound of their cheers fills the air behind you as you leave the barracks.
 
 [[Return to Town|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="13" name="Hoping you could show me around the boats." tags="" position="359,1874" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="13" name="Hoping you could show me around the boats." tags="" position="359,1874" size="100,100">&lt;img src=&quot;images/DocksSvika.webp&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “Oh? Why, sure!”
 You watch as Svika trains the young fishers. You go out on the water and watch as they draw in nets of fresh fish. The calm waters are silent, and an eerie mist hangs over the horizon as you return to shore.
 
-[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="14" name="Just checking in." tags="" position="361,1982" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="14" name="Just checking in." tags="" position="361,1982" size="100,100">&lt;img src=&quot;images/DocksSvika.webp&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “Huh. Well, thanks for dropping by.”
 You leave the salty smell of the docks and return to the heart of the town.
 
 [[Return to Town|SvenWeekTownMap]]
 
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="15" name="SvenWeekProblem" tags="" position="2299,1627" size="200,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
  	&lt;&lt;audio PastureDead play loop&gt;&gt;
  	&lt;&lt;audio PastureDead fadein&gt;&gt;
@@ -402,7 +402,7 @@ Rolling, musty, hills of the pasture roll over the expanse of land before you. S
 &lt;&lt;if $SacrificeOption is true and $SacrificeTried is false&gt;&gt;\
 [[Sacrifice a goat]]
 &lt;&lt;/if&gt;&gt;\
-[[Observe the goats]]</tw-passagedata><tw-passagedata pid="16" name="I’m looking for some advice." tags="" position="477,1984" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
+[[Observe the goats]]</tw-passagedata><tw-passagedata pid="16" name="I’m looking for some advice." tags="" position="477,1984" size="100,100">&lt;img src=&quot;images/DocksSvika.webp&quot; alt=&quot;The water laps calmly against the bulwarks of the ships.&quot; width=&quot;100%&quot;/&gt;
 “What kind of advice?”
 …
 “That’s… Definitely odd. I wonder… Here, try this!”
@@ -411,23 +411,23 @@ Svika gives you a bottle of fish oil.
 You consider Svika’s advice before returning to the village.
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $FishOilOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Why is that?" tags="" position="488,2152" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $FishOilOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Why is that?" tags="" position="488,2152" size="100,100">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Well you see… The goats have been acting strangely today. They’ve hardly eaten a dang thing! I’m scared they’re gonna go and starve themselves…”
 
 [[I see...]]
-&lt;&lt;set $SvenIssue to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="I see..." tags="" position="481,2297" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenIssue to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="I see..." tags="" position="481,2297" size="100,100">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Do you think you could help, chief?”
 
 [[I’ll see what I can do.]]
-[[No.]]</tw-passagedata><tw-passagedata pid="19" name="I’ll see what I can do." tags="" position="597,2445" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+[[No.]]</tw-passagedata><tw-passagedata pid="19" name="I’ll see what I can do." tags="" position="597,2445" size="100,100">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Thank you so much, chief! If there is anything I can do, let me know!”
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $SvenAccept to true&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="No." tags="" position="733,2444" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenAccept to true&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="No." tags="" position="733,2444" size="100,100">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Oh, alright… I am sure I can figure something out.”
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $SvenAccept to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="How are the goats?" tags="" position="633,2145" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SvenAccept to false&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="How are the goats?" tags="" position="633,2145" size="100,100">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Still acting strangely. I can’t seem to understand why…”
 &lt;&lt;if $Day is 1&gt;&gt;“They’re still not eating a darned thing!”&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 3&gt;&gt;“They still haven’t grazed, but some of the other shepherds said they saw a mouse’s tail from one’s mouth. We even found bloody bones nearby some of the goats…”&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 5&gt;&gt;“The goats have gotten quite aggressive! We can hardly stop them from chewing on near everything around them. I thought they liked my cloak before, but now I have to rip it away from them nearly every time I’m nearby!”&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $SvenAccept is false&gt;&gt;“Are you sure you can’t help?”
@@ -435,36 +435,36 @@ You consider Svika’s advice before returning to the village.
 [[Yes.|No.]] /* Sends to &quot;No&quot; */
 [[I’ll see what I can do.]]
 &lt;&lt;else&gt;&gt;[[Return to Town|SvenWeekTownMap]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Just stopping by to say hello." tags="" position="763,2140" size="100,100">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Just stopping by to say hello." tags="" position="763,2140" size="100,100">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “Hello, chief!”
 You leave behind the vast pastures and return to the village.
 
 [[Return to Town|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="How do you think we should help the goats?" tags="" position="986,2141" size="100,200">&lt;img src=&quot;images/FieldSven.PNG&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="How do you think we should help the goats?" tags="" position="986,2141" size="100,200">&lt;img src=&quot;images/FieldSven.webp&quot; alt=&quot;The sweeping fields are pock-marked with goats.&quot; width=&quot;100%&quot;/&gt;
 “I think they’re just feeling a bit off today.”
 “We should groom them. That always helps them feel better.” Sven grins widely.
 You consider grooming the goats. Maybe they are just feeling off?
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $GroomingOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="I need your advice." tags="" position="124,1973" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $GroomingOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="I need your advice." tags="" position="124,1973" size="100,100">&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;The barracks is bustling with warriors.&quot; width=&quot;100%&quot;/&gt;
 “Oh? What problems are ye having?”
 …
 “Sven’s goats are acting strange? Huh. Well you know, we could always kill them and string their horns as decorations around the place! Haha!”
 You consider Thordor’s advice. Would killing these goats be the right thing to do?
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $KillOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="What are you working on today?" tags="" position="931,1910" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $KillOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="What are you working on today?" tags="" position="931,1910" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 Toldjr smiles and waves you to follow him.
 “Plenty, Chief. Take a look at these…”
 Toldjr leads you around the workshop. Amongst the various projects are plans for more longhouses, cages, and various useful items. The workers hold themselves with pride for their good, hard work.
 
-[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="26" name="Good to see you too." tags="" position="1048,1910" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="26" name="Good to see you too." tags="" position="1048,1910" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 Toldjr gives you a nod before returning to his work. You leave the hard-working echoes of the workshop and return to the town’s center.
 
 [[Return to Town|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="27" name="I need some advice." tags="" position="1159,1909" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="27" name="I need some advice." tags="" position="1159,1909" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;The workshop is hot and sweaty. Toldjr is holding his hammer and a list.&quot; width=&quot;100%&quot;/&gt;
 “What kind of advice are we talking about?”
 …
 “Huh. I wonder…”
@@ -474,18 +474,18 @@ Toldjr gives you some wooden cages.
 You ponder Toldjr’s logic before returning to the village. Is this a smart course of action?
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $CageOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Have the gods spoken?" tags="" position="1302,1893" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $CageOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Have the gods spoken?" tags="" position="1302,1893" size="100,100">&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 “Yes, as they always do.”
 Clurice guides you through her visions before performing a ritual to bless you. You learn of a giant being with antlers seeking refuge.
 “They gods are content with your rulership, Chief.”
 She smiles upon you and leads you in prayer before sending you back to the village with an invigorated mind.
 
-[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="29" name="May they bless you as well." tags="" position="1416,1892" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+[[Return to Town|SvenWeekTownMap]]</tw-passagedata><tw-passagedata pid="29" name="May they bless you as well." tags="" position="1416,1892" size="100,100">&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 Clurice nods her head as you take your leave from the temple. The cold, fresh air softly numbs the scent of incense as you return to the village.
 
 [[Return to Town|SvenWeekTownMap]]
 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="30" name="I am in need of spiritual guidance." tags="" position="1529,1895" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="30" name="I am in need of spiritual guidance." tags="" position="1529,1895" size="100,100">&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice looks at you from under her hood. Her antlers stretch above you.&quot; width=&quot;100%&quot;/&gt;
 “What else would I be here for?”
 …
 “These animals sound quite disturbed. Perhaps the gods wish for you to bless them in their name. A sacrifice should subdue them, should we bless them with a ritual of the gods.”
@@ -494,8 +494,8 @@ Clurice hands you a sacrificial dagger.
 You leave the temple with the dagger’s handle in the palm of your hand. You ponder Clurice’s fervor. Is this what the gods want?
 
 [[Return to Town|SvenWeekTownMap]]
-&lt;&lt;set $SacrificeOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Sleep" tags="" position="1854,1890" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
-The day has been long. It is time to sleep. [[May the gods stop the nightmares…|Next Day]]</tw-passagedata><tw-passagedata pid="32" name="Return to Town" tags="" position="1689,1890" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SacrificeOption to true&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Sleep" tags="" position="1854,1890" size="100,100">&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+The day has been long. It is time to sleep. [[May the gods stop the nightmares…|Next Day]]</tw-passagedata><tw-passagedata pid="32" name="Return to Town" tags="" position="1689,1890" size="100,100">&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 There is still much to do today. You leave the comfort of your home and [[return to your duties in the village.|SvenWeekTownMap]]
 
 &lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="33" name="Next Day" tags="" position="2337,1915" size="100,100">&lt;&lt;set $Day to $Day + 1&gt;&gt; /* Increment the Day */
@@ -541,11 +541,11 @@ You blink awake with your face pressed against the wooden floor of your longhous
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $Day is 7 or $GoatsFixed is true&gt;&gt;\
 Søndag, 7th of Gormánuður
-&lt;&lt;if $GoatsFixed is true&gt;&gt;\ 
+&lt;&lt;if $GoatsFixed is true&gt;&gt;\
 &lt;&lt;if $Day is not 7&gt;&gt;The rest of the week passed without incident. &lt;&lt;/if&gt;&gt;You awake from a peaceful slumber&lt;&lt;if $Day is not 7&gt;&gt; on the 7th day&lt;&lt;/if&gt;&gt;. You smile to yourself. Not a single nightmare. The gods must be pleased.
 You arrive at the pasture to check up on Sven.
 With the goats gone you find Sven with his crook.
-Chickens are harder to herd, but it seems Sven has put himself up to the challenge. 
+Chickens are harder to herd, but it seems Sven has put himself up to the challenge.
 [[.........|Week1Transition]]
 &lt;&lt;else&gt;&gt;\
 A scream pulls you from your slumber. Shrill and continuous. You pull yourself to the door and watch as a shepherd weeps and is held by another shepherd. They point you towards the pastures.
@@ -554,36 +554,36 @@ A herd of goats with bloody beards.
 On the ground only bones and scraps of what was once a face. You’d recognize this body anywhere.
 Sven. &lt;&lt;set $SvenDead to true&gt;&gt;
 [[.........|SvenDeath]]&lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 1.00&gt;&gt;&lt;&lt;/if&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="34" name="Kill the goats" tags="" position="2017,1775" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="34" name="Kill the goats" tags="" position="2017,1775" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You brought your axe with you, the same one your father once wielded. One by one you butcher the goats. The shepherds hold them still as you cleave their heads from their necks. They are prepared and salted for future feasts, and their horns are turned into cups and decorations.
 Sven watches you from afar with a frown. He turns away halfway through and leaves the pastures.
 By the time you have slaughtered each goat the sun has set. Only time will tell if you chose the right course of action. You return to your longhouse and [[fall into a deep slumber|Next Day]]
 
 &lt;&lt;set $GoatsFixed to true&gt;&gt;
-&lt;&lt;set $KillTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Administer fish oil" tags="" position="2136,1778" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $KillTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Administer fish oil" tags="" position="2136,1778" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You bring a spoon and your bottle of fish oil you received from Svika. You have Sven help you feed each goat a spoonful of fish oil. The goats greedily slurp up the contents. They try to take the spoon each time. You are bitten a few times in the process, but you manage to keep the spoon.
 After the long day of feeding goats fish oil you walk home. As the sun sets you wonder if fish oil really is a cure to their strange affliction…
 You return to your longhouse and [[fall into a deep slumber|Next Day]]
-&lt;&lt;set $FishOilTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Groom the goats" tags="" position="2281,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $FishOilTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Groom the goats" tags="" position="2281,1770" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You spend the day brushing the goats and ensuring their quality of life is as good as it can be. They don’t seem to eat, but you start to understand why Sven likes being around the goats so much. Grooming them is kind of fun…
 You return home after a long day of grooming. Hopefully you have helped them.
 You [[fall into a deep slumber|Next Day]]
-&lt;&lt;set $GroomingTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Cage the goats" tags="" position="2409,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $GroomingTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Cage the goats" tags="" position="2409,1770" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You have Toldjr help you craft and bring as many cages as you can to the pastures. You herd the goats into cages for the whole day. These goats seem more slippery than normal. You watch as the goats headbutt and chew on their cages with unnatural flexibility. The sun is on the horizon and threatening to set once the last goat has been caged, but you hear the bleat of a goat behind you. One of the goats has chewed through their cage. Another breaks its way out, and soon all your work has been thrown away as the goats escape and return to their pasture. The day has become too dark to continue… You return home and get ready for the next day.
 [[Next Day]]
-&lt;&lt;set $CageTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Sacrifice a goat" tags="" position="2559,1770" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $CageTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Sacrifice a goat" tags="" position="2559,1770" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You have brought the dagger with you. You remember the words and the gods to honor this sacrifice to. You have one of the shepherds prepare their finest goat. It is rather thin, like the rest of the goats. This will have to do. You take your dagger and draw blood from the now bleating
 goat. You perform the sacrifice…
 Clurice arrives with cloths and cups. She fills the cup with the blood of the goat and dips her fingers in it, flicking the blood onto the other goats as she chants prayers to the gods. Prayers for a blessing. A cloth is laid over the dead goat’s eyes, and Clurice follows through with the ritual for each other goat…
-The day ends with the final goat being blessed. May the gods allow things to return to normal. 
+The day ends with the final goat being blessed. May the gods allow things to return to normal.
 You return to your longhouse and [[fall into a deep slumber|Next Day]]
-&lt;&lt;set $SacrificeTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Observe the goats" tags="" position="2724,1768" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SacrificeTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Observe the goats" tags="" position="2724,1768" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The fields where the goat herds live.&quot; width=&quot;100%&quot;/&gt;
 You spend the day watching over the goats alongside Sven.
 &lt;&lt;if $Day is 2&gt;&gt;The goats mostly keep to themselves, rarely moving. They seem to watch their shepherds’ every movement. Their heads slowly turn to watch as you walk by them. The pastures are covered in an eerie, uncomfortable silence.&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 4&gt;&gt;The goats move with unnatural agility, sudden dashing sprints before returning to their docile nature. You watch as some of these goats corner small animals, leaving nothing behind but a small puddle of blood where the creatures once stood. The goats refrain from eating the growing grass, and you find bones occasionally scattered across the field.&lt;&lt;/if&gt;&gt;&lt;&lt;if $Day is 6&gt;&gt;You find yourself having to dodge out of the way of more aggressive goats. They butt their heads up against each other. Their bleating has the undertone of a threat, echoing through the pastures. You aid a few shepherds whose goats have dragged them to the ground, chewing and pulling on their cloaks and clothes, and who had sustained bites from the aggressive horned creatures.&lt;&lt;/if&gt;&gt;
 
 [[Return to Town|SvenWeekTownMap]]
 &lt;&lt;set $Time -= 1&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="AnswerDoor3" tags="" position="2112,2065" size="100,100">&lt;&lt;if $GoatsFixed is true&gt;&gt;
-&lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/LonghouseSvenChicken.webp&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief. I’m not sure what to do now, with the goats all dead. I really like goats…”
 Sven pauses for a long moment before returning to look at you.
 “I think I’ll start herding chickens.
@@ -592,7 +592,7 @@ Well, it’s time to get on with the rest of your day…
 &lt;&lt;set $SvenVisit to true&gt;&gt;
 [[Return to Town|SvenWeekTownMap]]
 &lt;&lt;else&gt;&gt;
-&lt;img src=&quot;images/LonghouseSvenGoat.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a baby goat.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/LonghouseSvenGoat.webp&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a baby goat.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief! I’m just stopping by.”
 Sven smiles, but you sense something is wrong. His smile fades as he stares at the ground.
 “The goats are eating again… But not grass. The other shepherds are telling me they say a mouse’s tail hanging from one’s mouth.”
@@ -605,7 +605,7 @@ Well, it’s time to get on with the rest of your day. &lt;&lt;set $SvenAccept t
 
 [[Return to Town|SvenWeekTownMap]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;audio FirstDream loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="AnswerDoor5" tags="" position="2262,2065" size="100,100">&lt;&lt;if $SvenVisit is false and $GoatsFixed is true&gt;&gt;
-&lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/LonghouseSvenChicken.webp&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Hey there chief. I’m not sure what to do now, with the goats all dead. I really like goats…”
 Sven pauses for a long moment before returning to look at you.
 “I think I’ll start herding chickens.
@@ -614,7 +614,7 @@ Well, it’s time to get on with the rest of your day…
 &lt;&lt;set $SvenVisit to true&gt;&gt;
 [[Return to Town|SvenWeekTownMap]]
 &lt;&lt;else&gt;&gt;
-&lt;img src=&quot;images/LonghouseSvenChicken.PNG&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/LonghouseSvenChicken.webp&quot; alt=&quot;Sven is standing in the entry of your longhouse, holding a chicken. He&#39;s looking a little ragged.&quot; width=&quot;100%&quot;/&gt;
 “Oh, uh… Hi Chief…”
 Sven forces a smile.
 “We had another incident. This time a bit… Bigger than a mouse.”
@@ -627,9 +627,9 @@ Things seem to be getting worse…
 [[Return to Town|SvenWeekTownMap]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;audio FirstDreamDeeper loop volume 0.05 fadeoverto 1 0.1&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Congratulations! Game Over" tags="" position="2844,2099" size="100,100">End of Sven&#39;s week
-&lt;&lt;audio TempleDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SvenDeath" tags="" position="2562,2065" size="100,100">&lt;img src=&quot;images/Final_sven_death.png&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;&lt;audio TempleDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SvenDeath" tags="" position="2562,2065" size="100,100">&lt;img src=&quot;images/Final_sven_death.webp&quot; alt=&quot;Only Sven&#39;s hand is visible, peeking over a fallen tree trunk. A gaunt goat with a broken horn stands over him, blood dropping from its fangs. Crows have their way with him now...&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 
-[[.........|Week1Transition]]</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="700,1273" size="200,100">&lt;img src=&quot;images/Final_dream_1.png&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
+[[.........|Week1Transition]]</tw-passagedata><tw-passagedata pid="44" name="SvenWeekDream" tags="" position="700,1273" size="200,100">&lt;img src=&quot;images/Final_dream_1.webp&quot; alt=&quot;A goat tears at its own flesh as snakes escape from it. A shepherd&#39;s crook is snapped like bone. A blade glows in the darkness of the goat&#39;s shadow.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;audio FirstDreamDeeper play loop&gt;&gt;
 @@.center;
 I COME WITH GRACE
@@ -652,7 +652,7 @@ BE TOGETHER
 &lt;&lt;set $Day to 0&gt;&gt;
 &lt;&lt;audio DocksDead play loop&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;\
-&lt;img src=&quot;images/Week2/SecondDream_small.png&quot; alt=&quot;A terrible creature -- half human, half fish -- kneels over a body of water. Its fur cloak cannot hide its scaly body. Blood drips from its huge hideous jaws. Reflected in the water is Svika, with Thordor standing beside her.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week2/SecondDream_small.webp&quot; alt=&quot;A terrible creature -- half human, half fish -- kneels over a body of water. Its fur cloak cannot hide its scaly body. Blood drips from its huge hideous jaws. Reflected in the water is Svika, with Thordor standing beside her.&quot; width=&quot;100%&quot;/&gt;
 @@.center;
 ＲＯＷ， ＲＯＷ， ＲＯＷ ＹＯＵＲ ＢＯＡＴ
 ＧＥＮＴＬＹ ＤＯＷＮ ＴＨＥ ＳＴＲＥＡＭ
@@ -714,23 +714,23 @@ You begins to toss and turn as though waves shook you on the deck of a longboat�
 Day 7
 Søndag, 14th of Gormánuður
 &lt;&lt;if $PristineSvikaKilled is true&gt;&gt;
-	&lt;img src=&quot;images/Week2/Deaths/DoppelgangerDeathSmall.PNG&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Week2/Deaths/DoppelgangerDeathSmall.webp&quot; width=&quot;100%&quot;/&gt;
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. As you arrive you see the dishevelled Svika sitting with Thordor near the cages. Nearby is the pristine Svika’s body, but it looks odd. It seems to be made of fishy flesh and eels spilled out of where has been stabbed by Thordor&#39;s sword. At least you can rest well knowing that [[the real Svika is safe…|W2 End of Week]]
 &lt;&lt;elseif $DishevelledSvikaKilled is true&gt;&gt;
-	&lt;img src=&quot;images/Week2/Deaths/ThordorDeath.PNG&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/Deaths/ThordorDeath.webp&quot; width=&quot;100%&quot; /&gt;
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. The air is clouded with foggy mist. You don’t see Thordor in his usual guard position. You approach to see the severed head of Svika rolled a few feet towards the docks. You taste copper in the air, and you walk closer. As you walk further down the dock you hear the slobbering of a wild beast devouring a meal. It is too late that you see the fish-like person devourer Thordor. Your hand swings to grab your axe, but the creature notices you and dives into the water. Before you have time to realize the gravity of what has happened, it has escaped, leaving behind [[the dead corpses of Svika and Thordor…|W2 End of Week]]
 &lt;&lt;set $ThordorDead to true&gt;&gt;\
 &lt;&lt;set $SvikaDead to true&gt;&gt;\
 
 &lt;&lt;else&gt;&gt;\
-	&lt;img src=&quot;images/Week2/Deaths/ThordorDeathSmall.PNG&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/Deaths/ThordorDeathSmall.webp&quot; width=&quot;100%&quot; /&gt;
 You awaken with a hint of ocean air hitting your nostrils. You walk down to the dock to witness what has become of the Svikas. You notice two figures ahead, and an odd smell fills the air. The same smell after a kill has been left out for a night. You approach to see the dishevelled Svika sobbing into her hands. Before her is Thordor’s corpse, lines around the neck indicate he was strangled by something. A few feet away is the pristine Svika, her own corpse is almost fish-like, with eels spilling out of where she sustained several wounds matching Thordor&#39;s axe, which Svika clutches.
 [[Thordor is gone… But at least Svika still lives.|W2 End of Week]]
 &lt;&lt;set $ThordorDead to true&gt;&gt;\
 &lt;&lt;/if&gt;&gt; /* end of day 7 various things */
 &lt;&lt;/if&gt;&gt; /* end of days if-else stream */
 </tw-passagedata><tw-passagedata pid="47" name="W2 Answer Door D1" tags="" position="2665,3410" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorLonghouse.PNG&quot; alt=&quot;Thordor is standing in the entryway to the longhouse.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorLonghouse.webp&quot; alt=&quot;Thordor is standing in the entryway to the longhouse.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 “Haha, chief, I have wondrous news!”
@@ -741,14 +741,14 @@ You awaken with a hint of ocean air hitting your nostrils. You walk down to the 
 “Can’t wait to show you our spoils, chief!”
 [[Next|W2D1 Answer Door Next]]
 </tw-passagedata><tw-passagedata pid="48" name="W2 Go Back To Sleep" tags="" position="2909,3417" size="100,100">You ignore the loud thumping at your door and climb into your bed.
-[[Next Day|W2 Next Day]] 
+[[Next Day|W2 Next Day]]
 </tw-passagedata><tw-passagedata pid="49" name="W2D1 Answer Door Next" tags="" position="2831,3556" size="100,100">&lt;&lt;nobr&gt;&gt;\
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;endnobr&gt;&gt;\
 Thordor leaves as quickly as he arrived. You should visit the docks in the evening.
 
 [[Go into Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="50" name="W2 Town Map" tags="" position="838,3029" size="200,200">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Village.webp&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 	&lt;&lt;audio &quot;:playing:not(:town2)&quot; fadeoverto 1 0&gt;&gt;
 	&lt;&lt;audio BarracksDead loop play&gt;&gt;
 	&lt;&lt;audio BarracksDead fadein&gt;&gt;
@@ -771,7 +771,7 @@ It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $Day is not 1&gt;&gt;\
 	[[Go to Longhouse|W2 Longhouse]] /* [Not available on 1st day] */
-&lt;&lt;/if&gt;&gt;\  
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $Day &gt; 1 and $Time is not 5&gt;&gt;\
 [[Deal with the Svikas|W2 Decide Svika]]
 &lt;&lt;/if&gt;&gt;\
@@ -782,23 +782,23 @@ It is &lt;&lt;set $Time to $Time + 1&gt;&gt;&lt;&lt;if $Time is 1&gt;&gt;&lt;&lt
   &lt;&lt;audio Barracks fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;if $Day is 1&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;\
 The normally loud halls of the barracks are eerily quiet. Trophies of fallen foes, raiders and wildlife alike, hang on the walls. The smell of mead still fills the barracks, even with the warriors absent on their hunting trip.
 [[Return to Town|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;\
 \
 &lt;&lt;if $Day is not 1&gt;&gt;\
-&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;\
 The sound of clashing steel and boisterous warriors fills these halls. Trophies hang among battle prizes on the walls. The smell of mead and sweat fills the enclosed barrack. Thordor stands wielding his mighty axe, Bjørnemorder.
 
 “Hello, Chief…”
 
-&lt;&lt;if $FishingCompetition is false&gt;&gt;[[Are you okay?|W2 Concerned Thordor]]&lt;&lt;/if&gt;&gt; 
+&lt;&lt;if $FishingCompetition is false&gt;&gt;[[Are you okay?|W2 Concerned Thordor]]&lt;&lt;/if&gt;&gt;
 [[I have other business to attend to...|W2 Leaving Barracks]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="W2 Docks" tags="" position="539,3256" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;\
 &lt;&lt;if $Time is 5&gt;&gt;\
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;\
 	&lt;&lt;audio Docks loop play&gt;&gt;\
 	&lt;&lt;audio Docks fadein&gt;&gt;\
-	&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Both people who claim to be Svika are standing on either side of Thordor.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Both people who claim to be Svika are standing on either side of Thordor.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 You return to the docks as the sun is touching the water. A longboat sails in from the distance until it arrives at the docks, spilling forth warriors congregating around three figures. You approach to get a clearer picture.
 Thordor: “Aye, aye, calm down the lot of ye! Get the chief, we’ll get down to the…”
 Thordor notices you and waves you to come forth.
@@ -812,7 +812,7 @@ Suddenly a loud horn blows and [[the crowd of warriors splits...|W2 Docks Cluric
 &lt;&lt;elseif $Time is not 5&gt;&gt;\
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;\
 	&lt;&lt;audio DocksDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;\
-&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/DocksSvika.webp&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 The sails of ships float in the distance as busy fishers drag nets of their freshest pulls to and from their boats. Svika just stands on the dock, staring at you.  Svika stands by her boat, the Knaøtver.
 
 “Hello Chief, how’re you today?”
@@ -821,7 +821,7 @@ The sails of ships float in the distance as busy fishers drag nets of their fres
 &lt;&lt;elseif $Day is not 1&gt;&gt;\
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;\
 	&lt;&lt;audio DocksDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/SeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Two identical people who look like Svika. Yet, one of them is disheveled and ragged, while the other looks just fine.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/SeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Two identical people who look like Svika. Yet, one of them is disheveled and ragged, while the other looks just fine.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 You arrive at the docks. The sails of ships still float in the distance, and the salty air clings around you, but the fishers have lost morale. They hover around, unsure of what to do. The two cages Toldjr brought each have a Svika in them. One is dishevelled, and the other pristine.
 
 [[Return to Town|W2 Leaving Docks]]
@@ -841,9 +841,9 @@ You arrive at the docks. The sails of ships still float in the distance, and the
 
 </tw-passagedata><tw-passagedata pid="53" name="W2 Pastures" tags="" position="1095,3255" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if $SvenDead is true&gt;&gt;
-		&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.webp&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;else&gt;&gt;
-		&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.webp&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;if $SvenDead is true&gt;&gt;
@@ -882,7 +882,7 @@ Rolling, musty hills of the pasture roll over the expanse of the land before you
 	&lt;&lt;audio Workshop play loop&gt;&gt;
 	&lt;&lt;audio Workshop fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
 The sound of sawing and hammering reverberates through the heavy log walls of the workshop as you enter it. The smell of freshly cut lumber hangs in the air as the carpenters work. You hear the clank of metal as nails are forged, and you spot a couple wooden cages in the corner. They seem large enough for a small creature.
 “Ah, chief, good to see you.”
 [[What are you working on today?|W2 Workshop Tour]]
@@ -893,7 +893,7 @@ The sound of sawing and hammering reverberates through the heavy log walls of th
 	&lt;&lt;audio Temple play loop&gt;&gt;
 	&lt;&lt;audio Temple fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 The temple is eerily silent. A few flames flicker from long burning candles on the altar. The idols of the gods stand tall and proud. You approach the idols. Smoke billows off burning incense, filling the temple with a pleasant mist. Clurice opens her eyes.
 “Chief. May the gods bless you.”
 
@@ -903,13 +903,13 @@ The temple is eerily silent. A few flames flicker from long burning candles on t
 </tw-passagedata><tw-passagedata pid="56" name="W2 Longhouse" tags="" position="2316,3255" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 You return to the calm of your longhouse. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, and the warmth is a pleasant escape from the world’s cold.
 
 &lt;&lt;if $Time is not 5&gt;&gt;[[Return to Town|W2 Leaving Longhouse]]&lt;&lt;/if&gt;&gt;
 [[Climb into your bed|W2 Sleep]]
 </tw-passagedata><tw-passagedata pid="57" name="W2 Concerned Thordor" tags="" position="308,3256" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week2/ConcernedThordor.PNG&quot; alt=&quot;Thordor&#39;s brow furrows, and his gaze is intense.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week2/ConcernedThordor.webp&quot; alt=&quot;Thordor&#39;s brow furrows, and his gaze is intense.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;audio &quot;:playing&quot; volume 0.60&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
@@ -917,13 +917,13 @@ You return to the calm of your longhouse. Your father’s axe, the last chief, s
 “Two Svikas… One’s s’posed to be my sister!”
 “This whole ordeal is making my head throb.”
 
-[[Any ideas which Svika is real?|W2 Barracks Advice]] 
+[[Any ideas which Svika is real?|W2 Barracks Advice]]
 [[I’m sorry, I don’t think I can help.|W2 Leaving Barracks]]
-</tw-passagedata><tw-passagedata pid="58" name="W2 Leaving Barracks" tags="" position="124,3405" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;You leave the empty barracks, walking back towards the town square.&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $Day is not 1&gt;&gt;&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;You leave the warriors to their revelry. The sound of their cheers fills the air behind you as you leave the barracks.&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="58" name="W2 Leaving Barracks" tags="" position="124,3405" size="100,100">&lt;&lt;if $Day is 1&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;The barracks are empty, yet the fire in the hearth still glows warm.&quot; width=&quot;100%&quot;/&gt;You leave the empty barracks, walking back towards the town square.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $Day is not 1&gt;&gt;&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;You leave the warriors to their revelry. The sound of their cheers fills the air behind you as you leave the barracks.&lt;&lt;/if&gt;&gt;
 
 [[Return to Town|W2 Town Map]]
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="59" name="W2 Barracks Advice" tags="" position="191,3551" size="100,100">&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="59" name="W2 Barracks Advice" tags="" position="191,3551" size="100,100">&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;Thordor stands before you.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;audio &quot;:playing&quot; volume 1.00&gt;&gt;\
 “You know… One idea.”
 “Haha… Fishing. Svika is the best fisher in our village.”
@@ -931,15 +931,15 @@ You return to the calm of your longhouse. Your father’s axe, the last chief, s
 Thordor nods his head and grins widely.
 
 [[I’ll consider your idea.|W2 Town Map]]
-&lt;&lt;set $FishingCompetition to true&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="W2 Svika Pleasantries" tags="" position="677,3273" size="100,100">&lt;img src=&quot;images/DocksSvika.PNG&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;\
+&lt;&lt;set $FishingCompetition to true&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="W2 Svika Pleasantries" tags="" position="677,3273" size="100,100">&lt;img src=&quot;images/DocksSvika.webp&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;\
 “Well, have a good day, Chief.”
 
 [[Goodbye.|W2 Town Map]]</tw-passagedata><tw-passagedata pid="61" name="W2 Leaving Docks" tags="" position="806,3261" size="100,100">You leave the salty smell of the docks and return to the heart of the town.
 
 [[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="62" name="W2 Fishing Competition" tags="" position="404,3403" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
-	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/FinalSeaSvika.webp&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 You release the Svikas from their cages and give them each a fishing rod. You accompany them, along with Thordor, on a boat which is sailed into the water just the right distance for fishing. The two svikas begin to pull fish after fish out of the water, filling nets, but one Svika quickly picks up ahead of the other. Though her hands are shaky and she has bags under her eyes, the dishevelled Svika quickly pulls ahead. Thordor grins at you and points at her with a nod before he sails the ship back in towards the shore.
@@ -949,20 +949,20 @@ You release the Svikas from their cages and give them each a fishing rod. You ac
 &lt;&lt;set $FishingCompetitionTried to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="63" name="W2 Swimming Competition" tags="" position="553,3401" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
-	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/FinalSeaSvika.webp&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 You release the Svikas from their cages and have them both dive into the water. You, Thordor, and Toldjr stand on the dock, waiting for which Svika will emerge first. A soaked, dishevelled Svika raises from the water, coughing and weezing, while the pristine Svika arrives above the water a minute after her, taking a deep breath and treading the water with ease.
 Toldjr looks at you and nods, pointing to the pristine Svika.
 
-[[Make your decision now|W2 Decide Svika]] 
+[[Make your decision now|W2 Decide Svika]]
 [[Continue to deliberate|W2 Deliberate More]]
 &lt;&lt;set $SwimmingCompetitionTried to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="64" name="W2 Best Friend Quiz" tags="" position="693,3405" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
-	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/FinalSeaSvika.webp&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 You stand before the cages of the two Svikas and ask your question. Who was their childhood best friend? &lt;&lt;if $SvenDead is false&gt;&gt;Sven&lt;&lt;else&gt;&gt;A goatherd&lt;&lt;/if&gt;&gt; stands beside you, watching the two Svikas.
@@ -975,8 +975,8 @@ Dishevelled Svika: “Sven &lt;&lt;if $SvenDead is true&gt;&gt;was&lt;&lt;/if&gt
 &lt;&lt;set $BestFriendQuizTried to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="65" name="W2 Gods Quiz" tags="" position="826,3405" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
-	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/FinalSeaSvika.webp&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 You hold a sacred text containing the names of the gods in your hands as you approach the cage and ask the Svikas to name all the gods of the village they remember. Clurice hovers behind you, a solemn look under her hood.
@@ -984,10 +984,10 @@ Pristine Svika: “Well… There’s the… Fishing one?”
 Dishevelled Svika: “I’ve never paid much attention to the gods…”
 Clurice crosses her arms and gives both Svikas a sour look.
 
-[[Make your decision now|W2 Decide Svika]] 
+[[Make your decision now|W2 Decide Svika]]
 [[Continue to deliberate|W2 Deliberate More]]
 &lt;&lt;set $GodsQuizTried to true&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="W2 Decide Svika" tags="" position="539,3558" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;
 &lt;&lt;audio &quot;:playing:not(:docksdead)&quot; fadeout&gt;&gt;
 &lt;&lt;audio DocksDead loop play&gt;&gt;
 &lt;&lt;audio DocksDead fadein&gt;&gt;
@@ -1003,22 +1003,22 @@ Which Svika is the fake?
 [[You need more time to deliberate|W2 Don&#39;t Pick Svika Yet]]
 </tw-passagedata><tw-passagedata pid="67" name="W2 Deliberate More" tags="" position="758,3561" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
-	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/FinalSeaSvika.webp&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-You decide you don’t have enough information to make your decision yet. You return to your longhouse and to the safety of your bed, running through the problem in your head as you [[drift to sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="68" name="W2 Chickens Checkin" tags="" position="975,3401" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
+You decide you don’t have enough information to make your decision yet. You return to your longhouse and to the safety of your bed, running through the problem in your head as you [[drift to sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="68" name="W2 Chickens Checkin" tags="" position="975,3401" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.webp&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
 “They’re doing great, chief!”
 “They’re no goats, but I love them nonetheless.”
 “Thanks for stopping by!”
 
-[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="69" name="W2 Leaving Pastures" tags="" position="1225,3405" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them.&quot; width=&quot;100%&quot;/&gt;
+[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="69" name="W2 Leaving Pastures" tags="" position="1225,3405" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.webp&quot; alt=&quot;The sweeping pastures have a solemn feel to them.&quot; width=&quot;100%&quot;/&gt;
 You leave the earthy smell of the hills and the sounds of the chickens, and return to the heart of the town.
 
-[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="70" name="W2 Pasture Advice" tags="" position="1098,3401" size="100,100">&lt;&lt;if $SvenDead is false&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
+[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="70" name="W2 Pasture Advice" tags="" position="1098,3401" size="100,100">&lt;&lt;if $SvenDead is false&gt;&gt;&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.webp&quot; alt=&quot;Sven stands before you.&quot; width=&quot;100%&quot;/&gt;
 “Oh… I heard about that.”
 “Well, maybe she remembers her best friend?”
 “Me, of course! Believe it or not, we were as close as a goat’s eyes back in the day.”
@@ -1026,30 +1026,30 @@ You leave the earthy smell of the hills and the sounds of the chickens, and retu
 
 [[&quot;Thank you Sven, I’ll think about it&quot;|W2 Town Map]] &lt;&lt;set $BestFriendQuiz to true&gt;&gt;
 &lt;&lt;else&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.PNG&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/EmptyPastures.webp&quot; alt=&quot;The sweeping pastures have a solemn feel to them now.&quot; width=&quot;100%&quot;/&gt;
 “Well, she and Sven used to be best friends. She’d probably remember that if you asked.”
 
 [[Thank you, I’ll think about it|W2 Town Map]] &lt;&lt;set $BestFriendQuiz to true&gt;&gt;&lt;&lt;/if&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="71" name="W2 Workshop Tour" tags="" position="1366,3398" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
+</tw-passagedata><tw-passagedata pid="71" name="W2 Workshop Tour" tags="" position="1366,3398" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
 Toldjr smiles and waves you to follow him.
 “Plenty, Chief. Take a look at these…”
 Toldjr leads you around the workshop. Amongst the various projects are plans for more longhouses, cages, and various useful items. The workers hold themselves with pride for their good, hard work.
 Among all these projects however seem to be blueprints for some kind of massive spire in an alien design you have never seen them use before...
 [[Return to Town|W2 Town Map]]
-</tw-passagedata><tw-passagedata pid="72" name="W2 Leaving Workshop" tags="" position="1499,3400" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
+</tw-passagedata><tw-passagedata pid="72" name="W2 Leaving Workshop" tags="" position="1499,3400" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
 Toldjr gives you a nod before returning to his work. You leave the hard-working echoes of the workshop and return to the town’s center.
-[[Return to Town|W2 Town Map]] 
-&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="73" name="W2 Workshop Advice" tags="" position="1636,3401" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.PNG&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
+[[Return to Town|W2 Town Map]]
+&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="73" name="W2 Workshop Advice" tags="" position="1636,3401" size="100,100">&lt;img src=&quot;images/WorkshopToldjr.webp&quot; alt=&quot;Toldjr stands in front of the forge.&quot; width=&quot;100%&quot;/&gt;\
 “Hmmm…”
 “Well, Svika is a good fisher, perhaps she is a good swimmer as well?”
 “See which can hold their breath longer, I reason that must be the real Svika.”
 [[I’ll think about it…|W2 Town Map]] &lt;&lt;set $SwimmingCompetition to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="74" name="W2 Temple Tour" tags="" position="1799,3398" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
+</tw-passagedata><tw-passagedata pid="74" name="W2 Temple Tour" tags="" position="1799,3398" size="100,100">&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 “Yes, as they always do.”
 Clurice guides you through her visions before performing a ritual to bless you. You learn of a giant being with antlers seeking refuge.
 “The gods are content with your rulership, Chief.”
 She smiles upon you and leads you in prayer before sending you back to the village with an invigorated mind.
-[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="75" name="W2 Leaving Temple" tags="" position="1936,3401" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
+[[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="75" name="W2 Leaving Temple" tags="" position="1936,3401" size="100,100">&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 Clurice nods her head as you take your leave from the temple. The cold, fresh air softly numbs the scent of incense as you return to the village.
 
 [[Return to Town|W2 Town Map]]&lt;&lt;set $Time to $Time - 1&gt;&gt; /*making it so time does not advance*/</tw-passagedata><tw-passagedata pid="76" name="W2 Temple Advice" tags="" position="2068,3408" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -1057,46 +1057,46 @@ Clurice nods her head as you take your leave from the temple. The cold, fresh ai
 	&lt;&lt;audio TempleDead play loop&gt;&gt;
 	&lt;&lt;audio TempleDead fadeoverto 1 1&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice stands erect in the temple.&quot; width=&quot;100%&quot;/&gt;\
 “I am not too sure, chief…”
 “Though, an outsider would not be familiar with our gods.”
 “Ask them to name as many village gods as they can remember. That may aid in your search for the real Svika.”
 
-[[I’ll think about it...|W2 Town Map]] &lt;&lt;set $GodsQuiz to true&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="W2 Leaving Longhouse" tags="" position="2241,3405" size="100,100">&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
+[[I’ll think about it...|W2 Town Map]] &lt;&lt;set $GodsQuiz to true&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="W2 Leaving Longhouse" tags="" position="2241,3405" size="100,100">&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 There is still much to do today. You leave the comfort of your home and return to your duties in the village.
 
 [[Return to Town|W2 Town Map]]</tw-passagedata><tw-passagedata pid="78" name="W2 Sleep" tags="" position="2391,3405" size="100,100">&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;\
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;\
 The day has been long. It is time to sleep. May the gods stop the nightmares…
 
 [[Sleep|W2 Next Day]]</tw-passagedata><tw-passagedata pid="79" name="W2 Outcome" tags="" position="1893,3728" size="100,100">&lt;&lt;if $PristineSvikaKilled is true&gt;&gt;\
-	&lt;img src=&quot;images/Week2/Deaths/DoppelgangerDeathSmall.PNG&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Week2/Deaths/DoppelgangerDeathSmall.webp&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;elseif $DishevelledSvikaKilled is true&gt;&gt;\
-	&lt;img src=&quot;images/Week2/Deaths/ThordorDeath.PNG&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/Deaths/ThordorDeath.webp&quot; width=&quot;100%&quot; /&gt;
 &lt;&lt;else&gt;&gt;\
-	&lt;img src=&quot;images/Week2/Deaths/ThordorDeathSmall.PNG&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/Deaths/ThordorDeathSmall.webp&quot; width=&quot;100%&quot; /&gt;
 &lt;&lt;/if&gt;&gt;\
 [[.............|W2 End of Week]]
 /* these images were put into W2 Next Day instead -hugh */</tw-passagedata><tw-passagedata pid="80" name="W2 Pristine Svika Picked" tags="" position="454,3716" size="100,100">&lt;&lt;set $PristineSvikaKilled to true&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
 Thordor: “Good, chief! Now, may I do the honours?”
 “I’ll give the imposter what they deserve just as the sun sets.”
 
 [[Yes, kill them.|W2 Kill Svika]]
 [[No, don’t kill them.|W2 Don&#39;t Kill Svika]]</tw-passagedata><tw-passagedata pid="81" name="W2 Dishevelled Svika Picked" tags="" position="619,3718" size="100,100">&lt;&lt;set $DishevelledSvikaKilled to true&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
 Thordor: “Good, chief! Now, may I do the honours?”
 “I’ll give the imposter what they deserve just as the sun sets.”
 
 [[Yes, kill them.|W2 Kill Svika]]
 [[No, don’t kill them.|W2 Don&#39;t Kill Svika]]
-</tw-passagedata><tw-passagedata pid="82" name="W2 Kill Svika" tags="" position="439,3867" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
+</tw-passagedata><tw-passagedata pid="82" name="W2 Kill Svika" tags="" position="439,3867" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
 Thordor: “As you wish, chief! You go home. Come back in the morning and I’ll have this dealt with.”
 
 [[End Day|W2 Next Day]]
 &lt;&lt;set $Day to 6&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="W2 Don&#39;t Kill Svika" tags="" position="624,3869" size="100,100">&lt;&lt;set $PristineSvikaKilled to false&gt;&gt;\
 &lt;&lt;set $DishevelledSvikaKilled to false&gt;&gt;\
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.PNG&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaDocks.webp&quot; alt=&quot;Thordor stands between the two Svika dopplegangers.&quot; width=&quot;100%&quot; /&gt;\
 Thordor: “I think this is a mistake but… Fine, chief. But I’m staying guard here! We’ll figure out what to do with the fake Svika once daylight comes…”
 
 [[End Day|W2 Next Day]]
@@ -1105,7 +1105,7 @@ Thordor: “I think this is a mistake but… Fine, chief. But I’m staying guar
   &lt;&lt;set $Time to 0&gt;&gt; /* resetting the time of day to morning */
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;if $Day is 1&gt;&gt;
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse.&quot; width=&quot;100%&quot;/&gt;
 Day 1
 Mondag, 15th of Gormánuður
 The inky darkness is dispelled by the bright beams of light spilling into your longhouse. You blink awake, but your eyes threaten to remain shut. You have to force yourself out of bed. It’s time to get up.
@@ -1113,7 +1113,7 @@ The inky darkness is dispelled by the bright beams of light spilling into your l
 [[Head Into Town|W3 Town Map]]
 \
 &lt;&lt;elseif $Day is 2&gt;&gt;
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse.&quot; width=&quot;100%&quot;/&gt;
 Day 2
 Tirsdag, 16th of Gormánuður
 You are awoken by the sound of chanting. Several voices combine into one at the center of town, amplifying their way through your walls and disturbing your slumber. They sound exactly like the words you hear in your nightmares…
@@ -1121,7 +1121,7 @@ You are awoken by the sound of chanting. Several voices combine into one at the 
 [[Head into Town|W3 Town Map]]
 \
 &lt;&lt;elseif $Day is 3&gt;&gt;
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse.&quot; width=&quot;100%&quot;/&gt;
 Day 3
 Onsdag, 17th of Gormánuður
 A booming sound, almost like thunder, shakes the walls of your longhouse. You peek out the window to see the edifice nearing construction. It is almost complete.
@@ -1131,7 +1131,7 @@ A booming sound, almost like thunder, shakes the walls of your longhouse. You pe
 &lt;&lt;/if&gt;&gt; /* end of days if-else stream */
 
 </tw-passagedata><tw-passagedata pid="85" name="W3 Town Map" tags="" position="828,4176" size="200,200">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/Backs/VillageEdifice.PNG&quot; alt=&quot;The village. A huge spire is being constructed behind the Barracks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week3/Backs/VillageEdifice.webp&quot; alt=&quot;The village. A huge spire is being constructed behind the Barracks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 	&lt;&lt;audio &quot;:playing:not(:town3)&quot; fadeoverto 1 0&gt;&gt;
 	&lt;&lt;audio Edifice loop play&gt;&gt;
 	&lt;&lt;audio Edifice fadein&gt;&gt;
@@ -1160,7 +1160,7 @@ The town center is empty. A massive spire pokes up above the rooftops. You can h
   &lt;&lt;audio Edifice fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 &lt;&lt;if $SeenEdifice is false&gt;&gt;
-&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.webp&quot; alt=&quot;Clurice and Toldjr stand in front of a huge tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
 A large structures, two longhouses tall, shaped in a circle like a tower stands in the center of town. It’s wooden, and unfinished, but it looks sturdy. A crowd of people gathers before it, and stop it you see the familiar antlers of Clurice. Helping to construct this building is Toldjr, who seems engrossed in his work. You approach the tower and begin to hear Clurice speak.
 
 &quot;The gods have spoken to me. Every night, with every dream, they reveal a traitor in our midst. The gods demand subservience! Our own chief has resisted their wills, but we know better. We will bow to the gods. We will do as the gods ask. We will build their spire!&quot;
@@ -1170,7 +1170,7 @@ You feel something tugging at the back of your mind as if trying to pull you fro
 [[Resist Clurice|W3 Resist Clurice]]
 /* [[Submit to Clurice|W3 Submit to Clurice]] */
 &lt;&lt;else&gt;&gt;
-&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge stone tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.webp&quot; alt=&quot;Clurice and Toldjr stand in front of a huge stone tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
 Clergy and craftsman alike work to ceaselessly continue their construction of their edifice. Clurice leads them in prayer and Toldjr guides the craftsman. The air feels still when you are near this thing, and Clurice leers at you whenever your eyes meet.
 
 [[Speak to Clurice|W3 Speak to Clurice]]
@@ -1180,7 +1180,7 @@ Clergy and craftsman alike work to ceaselessly continue their construction of th
 &lt;&lt;/if&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="87" name="W3 Barracks" tags="" position="238,4513" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio BarracksDead play loop&gt;&gt;
   &lt;&lt;audio BarracksDead fadein&gt;&gt;
@@ -1192,7 +1192,7 @@ The boisterous warriors have gone quiet. They sit in contemplation. Some of them
 [[Invigorate them with a rousing speech|W3 Barracks Wrong Speech]]
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="88" name="W3 Docks" tags="" position="766,4511" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week3/Backs/Docks.webp&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio DocksDead play loop&gt;&gt;
   &lt;&lt;audio DocksDead fadein&gt;&gt;
@@ -1204,7 +1204,7 @@ The sails of ships float in the distance, but no fish have been pulled ashore. T
 [[Invigorate them with a rousing speech|W3 Docks Correct Speech]]
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="89" name="W3 Pastures" tags="" position="1195,4460" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio PastureDead play loop&gt;&gt;
   &lt;&lt;audio PastureDead fadein&gt;&gt;
@@ -1216,7 +1216,7 @@ Rolling, musty hills of the pasture roll over the expanse of the land before you
 [[Invigorate them with a rousing speech|W3 Pastured Wrong Speech]]
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="90" name="W3 Workshop" tags="" position="1449,4461" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Week3/Backs/Workshop.PNG&quot; alt=&quot;The forge is hot, and tools are strewn around, but nobody is here right now.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week3/Backs/Workshop.webp&quot; alt=&quot;The forge is hot, and tools are strewn around, but nobody is here right now.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio Workshop play loop&gt;&gt;
   &lt;&lt;audio Workshop fadein&gt;&gt;
@@ -1225,7 +1225,7 @@ The workshop is empty. Not a single craftsman is present, and all their tools an
 
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="91" name="W3 Temple" tags="" position="1592,4463" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Week3/Backs/Temple.PNG&quot; alt=&quot;The Temple is empty, and the candles by the altars have gone out.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Week3/Backs/Temple.webp&quot; alt=&quot;The Temple is empty, and the candles by the altars have gone out.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio TempleDead play loop&gt;&gt;
   &lt;&lt;audio TempleDead fadein&gt;&gt;
@@ -1236,7 +1236,7 @@ A few candles flicker in the darkness within the temple. The walls are scratched
 </tw-passagedata><tw-passagedata pid="92" name="W3 Longhouse" tags="" position="1807,4489" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/Longhouse.PNG&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
+&lt;img src=&quot;images/Longhouse.webp&quot; alt=&quot;Your family&#39;s longhouse. It&#39;s cosy in here.&quot; width=&quot;100%&quot;/&gt;
 You return to the calm of your longhouse. Except now, it feels more solemn and gloomy. Your father’s axe, the last chief, sits in the corner. Your bed looks comforting, but you cannot ignore what is happening in town.
 
 [[Return to Town|W3 Town Map]]
@@ -1244,7 +1244,7 @@ You return to the calm of your longhouse. Except now, it feels more solemn and g
 Clurice: It is their will.
 She pours the liquid into a cup and hands it to you. You all stand in a circle around the edifice as the sun begins to set. Clurice leads you in drinking from the cups. Your vision begins to blur, and you begin to sway in place. You feel dizzy. Your head begins to throb and your mouth goes dry. You watch as the others around the spire begin to fall. Every member of the town who has followed you collapses until, finally, you lose consciousness and collapse. The last image you see is of the nightmares, the creature who has been haunting you. You don’t wake up.
 [[Game Over|Credits]]
-&lt;&lt;set $SeenEdifice to true&gt;&gt; /* lol */</tw-passagedata><tw-passagedata pid="94" name="W3 Resist Clurice" tags="" position="2311,4643" size="100,100">&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge stone tower.&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;set $SeenEdifice to true&gt;&gt; /* lol */</tw-passagedata><tw-passagedata pid="94" name="W3 Resist Clurice" tags="" position="2311,4643" size="100,100">&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.webp&quot; alt=&quot;Clurice and Toldjr stand in front of a huge stone tower.&quot; width=&quot;100%&quot; /&gt;
 The tugging pulls harder and harder until it finally laxes. Your vision blurs for a moment before returning to you. You notice the crowd now looking to you. People from every part of your village have come here to congregate, and their eyes are on you.
 
 Clurice: There they are. The traitor. The giver of nightmares. The gods have shown me the horror you will bring, Chief! We will set things straight. We are the builders of the edifice, the gods will smile upon us.
@@ -1252,7 +1252,7 @@ Clurice: There they are. The traitor. The giver of nightmares. The gods have sho
 Clurice stares at you as the crowd begins to disperse. Those who follow her clergy stick close, and the builders, and Toldjr, continue their work in constructing this “edifice.” You will need to find help elsewhere.
 
 [[Go Back to Town|W3 Town Map]]
-&lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="988,5356" size="200,200">&lt;img src=&quot;images/Intro/Title.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $SeenEdifice to true&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Credits" tags="" position="988,5356" size="200,200">&lt;img src=&quot;images/Intro/Title.webp&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
 @@.center;
 a game by &lt;div class=&quot;title&quot;&gt;[ENTER TEAM NAME HERE]&lt;/div&gt;\
 
@@ -1277,14 +1277,14 @@ Some parts of the game also make use of the &lt;a href=&quot;https://lingojam.co
 
 (っ◔◡◔)っ ♥ Thanks for playing!!! ♥
 
-&lt;img src=&quot;images/Together.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;\
+&lt;img src=&quot;images/Together.webp&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;\
 &lt;&lt;if $StartedGame is false&gt;&gt;\
 [[Return to Title|Main]]
 &lt;&lt;/if&gt;&gt;\
 @@
 &lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
 &lt;&lt;audio Barracks play loop&gt;&gt;
-&lt;&lt;audio Barracks fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;audio Barracks fadein&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="W3 Barracks Wrong Speech" tags="" position="144,4666" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 Thought your speech was passionate and well thought out, the warriors do not move an inch. These seem unphased by your attempt to corral them.
 
 [[Encourage them with a heartwarming speech|W3 Barracks Wrong Speech]]
@@ -1293,10 +1293,10 @@ Thought your speech was passionate and well thought out, the warriors do not mov
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="97" name="W3 Barracks Correct Speech" tags="" position="343,4656" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if $ThordorDead is true&gt;&gt;
-		&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;else&gt;&gt;
 		/* Thordor is alive */
-		&lt;img src=&quot;images/BarracksThordor.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/BarracksThordor.webp&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 		&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   		&lt;&lt;audio Barracks play loop&gt;&gt;
   		&lt;&lt;audio Barracks fadein&gt;&gt;
@@ -1322,7 +1322,7 @@ A warrior approaches you, his arms crossed.
 [[Isvandrer|W3 Barracks Wrong Answer]]
 [[Svekling|W3 Barracks Wrong Answer]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="W3 Barracks Correct Answer" tags="" position="268,4806" size="100,100">&lt;&lt;nobr&gt;&gt;
-  &lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+  &lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   &lt;&lt;audio Barracks play loop&gt;&gt;
   &lt;&lt;audio Barracks fadein&gt;&gt;
@@ -1332,12 +1332,12 @@ The warriors are on your side. They will prove useful when the time comes to sto
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedBarracks to true&gt;&gt;
-&lt;&lt;set $ConvincedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="W3 Barracks Wrong Answer" tags="" position="418,4806" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.PNG&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $ConvincedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="W3 Barracks Wrong Answer" tags="" position="418,4806" size="100,100">&lt;img src=&quot;images/Week2/CharsBacks/EmptyBarracks.webp&quot; alt=&quot;Like the warriors, the fire in the hearth of the barracks still glows.&quot; width=&quot;100%&quot;/&gt;
 &quot;Ye know nothing of Thordor, nor of us. Clurice is right about you. You are nothing but a faker.&quot;
 The warriors return to their meditating. You try to speak, but they will no longer listen. You are forced to leave without the support of the warriors. You’ll need to find help elsewhere.
 
 [[Return to Town|W3 Town Map]]
-&lt;&lt;set $AttemptedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="W3 Dock Wrong Speech" tags="" position="666,4650" size="100,100">&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $AttemptedBarracks to true&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="W3 Dock Wrong Speech" tags="" position="666,4650" size="100,100">&lt;img src=&quot;images/Week3/Backs/Docks.webp&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
 Though you gave it your best shot, you find your words falling on deaf ears. It seems they aren’t helped by your speech, they continue to sulk.
 
 [[Encourage them with a heartwarming speech|W3 Dock Wrong Speech]]
@@ -1346,10 +1346,10 @@ Though you gave it your best shot, you find your words falling on deaf ears. It 
 [[Return to Town|W3 Town Map]]
 </tw-passagedata><tw-passagedata pid="101" name="W3 Docks Correct Speech" tags="" position="863,4645" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if $SvikaDead&gt;&gt;
-		&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Week3/Backs/Docks.webp&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;else&gt;&gt;
 		/* Svika is alive */
-		&lt;img src=&quot;images/Week3/Backs/DirtySvikaDocks.PNG&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Week3/Backs/DirtySvikaDocks.webp&quot; alt=&quot;Svika stands before you.&quot; width=&quot;100%&quot;/&gt;
 		&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   		&lt;&lt;audio Docks play loop&gt;&gt;
   		&lt;&lt;audio Docks fadein&gt;&gt;
@@ -1373,7 +1373,7 @@ You have a strong feeling the fishers will be there when you need them.&lt;&lt;n
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 </tw-passagedata><tw-passagedata pid="102" name="W3 Docks Correct Answer" tags="" position="788,4795" size="100,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Week3/Backs/Docks.webp&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio Docks play loop&gt;&gt;
 	&lt;&lt;audio Docks fadein&gt;&gt;
@@ -1383,17 +1383,17 @@ The fisher smiles and nods. The others follow their lead and get back on their b
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 &lt;&lt;set $ConvincedDocks to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="103" name="W3 Docks Wrong Answer" tags="" position="938,4795" size="100,100">&lt;img src=&quot;images/Week3/Backs/Docks.PNG&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="103" name="W3 Docks Wrong Answer" tags="" position="938,4795" size="100,100">&lt;img src=&quot;images/Week3/Backs/Docks.webp&quot; alt=&quot;The docks seem gloomy today, especially for them.&quot; width=&quot;100%&quot;/&gt;
 The fisher shakes their head and sighs, joining the other sulking fishers. You try, but no other words will rouse the fishers. It seems you will need to find help elsewhere.
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedDocks to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="104" name="W3 Pastured Correct Speech" tags="" position="1295,4623" size="100,100">&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;if $SvenDead&gt;&gt;
-		&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;else&gt;&gt;
 		/* Sven is alive */
-		&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.PNG&quot; alt=&quot;Sven stands in front of you, holding a chicken.&quot; width=&quot;100%&quot;/&gt;
+		&lt;img src=&quot;images/Week2/CharsBacks/ChickenSvenPastures.webp&quot; alt=&quot;Sven stands in front of you, holding a chicken.&quot; width=&quot;100%&quot;/&gt;
 		&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   		&lt;&lt;audio Pasture play loop&gt;&gt;
   		&lt;&lt;audio Pasture fadein&gt;&gt;
@@ -1415,21 +1415,21 @@ You sit down with the goatherds and talk with them. You tell them how much the c
 [[Sven loved all his goats|W3 Pastures Correct Answer]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $PasturesAttempted to true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="105" name="W3 Pastured Wrong Speech" tags="" position="1126,4623" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="105" name="W3 Pastured Wrong Speech" tags="" position="1126,4623" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
 You try and speak to the goatherds, but not a single one pays attention. Your speech does not stir them, and they talk amongst themselves.
 
 [[Encourage them with a heartwarming speech|W3 Pastured Correct Speech]]
 [[Persuade them with talk of glory|W3 Pastured Wrong Speech]]
 [[Invigorate them with a rousing speech|W3 Pastured Wrong Speech]]
 [[Return to Town|W3 Town Map]]
-</tw-passagedata><tw-passagedata pid="106" name="W3 Pastures Wrong Answer" tags="" position="1206,4794" size="100,100">&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="106" name="W3 Pastures Wrong Answer" tags="" position="1206,4794" size="100,100">&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
 &quot;No… if you truly knew Sven you would know he didn’t have a favourite. Clurice was right about you, it’s your fault he’s dead.&quot;
 The goatherds once more scatter, isolating themselves from one another. They give you no heed, and force you to return to the town empty handed. You’ll need help from someone else…
 
 [[Return to Town|W3 Town Map]]
 &lt;&lt;set $AttemptedPastures to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="107" name="W3 Pastures Correct Answer" tags="" position="1395,4798" size="100,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Field.PNG&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Field.webp&quot; alt=&quot;The pastures have a melancholy feel to them.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio Pasture play loop&gt;&gt;
 	&lt;&lt;audio Pasture fadein&gt;&gt;
@@ -1441,20 +1441,20 @@ You watch the goatherd smile in fondness at the memories of Sven. The others slo
 &lt;&lt;set $ConvincedPastures to true&gt;&gt;
 &lt;&lt;set $AttemptedPastures to true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="108" name="W3 Speak to Clurice" tags="" position="2448,4757" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week3/CluriceCultist.PNG&quot; alt=&quot;Clurice stands before you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week3/CluriceCultist.webp&quot; alt=&quot;Clurice stands before you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 You attempt to approach Clurice, but are met with a wall of her clergy. She stares at you from behind them with her icy cold eyes.
 
 [[Leave Clurice|W3 Edifice]]
 </tw-passagedata><tw-passagedata pid="109" name="W3 Speak to Toldjr" tags="" position="2645,4750" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week3/ToldjrCultist.PNG&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Week3/ToldjrCultist.webp&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 You attempt to speak to Toldjr, but he is distant and unresponsive. He continues to construct the edifice piece by piece as though something was moving his limbs for him.
 
 [[Leave Toldjr|W3 Edifice]]
-</tw-passagedata><tw-passagedata pid="110" name="W3 Destroy Edifice" tags="" position="2848,4758" size="100,100">&lt;img src=&quot;images/Week3/Backs/Edifice.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+</tw-passagedata><tw-passagedata pid="110" name="W3 Destroy Edifice" tags="" position="2848,4758" size="100,100">&lt;img src=&quot;images/Week3/Backs/Edifice.webp&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
 You take a hold of your axe and a torch from your home as you approach the Edifice.
 &lt;&lt;if $ConvincedBarracks&gt;&gt;\
 	Warriors flock from all parts of the town, their weapons brandished and ready to serve you.&lt;&lt;set $AlliesCount += 1&gt;&gt;
@@ -1471,15 +1471,15 @@ You stand alone before the Edifice. You will need to make your stand by yourself
 
 [[You charge toward the edifice|W3 Edifice Battle]]
 &lt;&lt;else&gt;&gt;\
-[[You charge toward the edifice with your allies charging beside you|W3 Edifice Battle]]. 
+[[You charge toward the edifice with your allies charging beside you|W3 Edifice Battle]].
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="111" name="W3 Edifice Battle" tags="" position="2848,4908" size="100,100">&lt;&lt;if $AlliesCount &gt;= 2&gt;&gt;\
 	&lt;&lt;nobr&gt;&gt;
-		&lt;img src=&quot;images/Week3/Backs/Edifice.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;images/Week3/Backs/Edifice.webp&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
 	&lt;&lt;endnobr&gt;&gt;
 The clergy attempts to stop you, but your amassed forces are too great for them, and they are quickly overwhelmed. The craftsman are taken aside as the Edifice is torn down piece by piece. Toldjr stands with a face devoid of all thought as he is held back, watching the structure crumble. Clurice screams and curses, claiming that you will be the death of the whole village. When it is done you throw your torch onto its remains and watch as [[the Edifice turns to ashes.|W3 Edifice Battle P2]]
 &lt;&lt;elseif $AlliesCount == 1&gt;&gt;\
 	&lt;&lt;nobr&gt;&gt;
-		&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeHurt.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeHurt.webp&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
 		&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
   		&lt;&lt;audio Workshop play loop&gt;&gt;
   		&lt;&lt;audio Workshop fadein&gt;&gt;
@@ -1487,7 +1487,7 @@ The clergy attempts to stop you, but your amassed forces are too great for them,
 You and your allies clash with the clergy following Clurice. The two sides are evenly matched, engaging in an ongoing battle as both sides take heavy casualties. You begin to lose all hope when you see Toldjr and the builders holding their heads and crumpling to the ground before his eyes snap open. He yells something to the builders, but you can’t make it out. They wield their hammers and they charge into the fray. At first you fear you will be overwhelmed, until you notice Toldjr guiding the craftsmen to battle the clergy! Toldjr joins your side and helps you fight your way past the clergy and [[into the Edifice.|W3 Edifice Battle P2]]&lt;&lt;set $CluriceDead to true&gt;&gt;
 &lt;&lt;else&gt;&gt;\
 	&lt;&lt;nobr&gt;&gt;
-		&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
+		&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.webp&quot; alt=&quot;The huge spire towers above you.&quot; width=&quot;100%&quot; /&gt;
 	&lt;&lt;endnobr&gt;&gt;
 You charge alone. You are a powerful combatant, and these cultists have had no formal training in combat. You are overwhelmed by their numbers however, and struggle to fight past them. You witness Clurice and Toldjr entering the completed Edifice, and you barely manage to fight your way past the cultists to [[follow them into the structure.|W3 Edifice Battle P2]]&lt;&lt;set $CluriceDead to true&gt;&gt;&lt;&lt;set $ToldjrDead to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
@@ -1513,7 +1513,7 @@ You charge alone. You are a powerful combatant, and these cultists have had no f
 &lt;&lt;endnobr&gt;&gt;\
 &lt;&lt;if $DeadCount == 0&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Ending/GoodEndingNoDeathsSmall.PNG&quot; width=&quot;100%&quot; alt=&quot;Image&quot;/&gt;
+	&lt;img src=&quot;images/Ending/GoodEndingNoDeathsSmall.webp&quot; width=&quot;100%&quot; alt=&quot;Image&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   	&lt;&lt;audio TownMap play loop&gt;&gt;
   	&lt;&lt;audio TownMap fadein&gt;&gt;
@@ -1522,7 +1522,7 @@ Against all odds you have managed to keep the whole village alive. You led them 
 
 &lt;&lt;elseif $DeadCount == 1 or $DeadCount == 2&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Ending/OkayEndingAFewDieSmall.PNG&quot; width=&quot;100%&quot; alt=&quot;Image&quot;/&gt;
+	&lt;img src=&quot;images/Ending/OkayEndingAFewDieSmall.webp&quot; width=&quot;100%&quot; alt=&quot;Image&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   	&lt;&lt;audio PastureDead play loop&gt;&gt;
   	&lt;&lt;audio PastureDead fadein&gt;&gt;
@@ -1531,7 +1531,7 @@ Things in Gravscrag have been rough. It’s been a dangerous winter filled with 
 
 &lt;&lt;elseif $DeadCount == 3 or $DeadCount == 4&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Ending/NotGoodEndingMostDiesSmall.PNG&quot; width=&quot;100%&quot; alt=&quot;Image&quot;/&gt;
+	&lt;img src=&quot;images/Ending/NotGoodEndingMostDiesSmall.webp&quot; width=&quot;100%&quot; alt=&quot;Image&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
   	&lt;&lt;audio Edifice play loop&gt;&gt;
   	&lt;&lt;audio Edifice fadein&gt;&gt;
@@ -1549,12 +1549,12 @@ You awake on a boat. Its sails are aloft and its oars are sitting beside you. In
 [[Put down the torch|Game Conclusion P2]]
 [[Extinguish the torch]]
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="113" name="W2 Wait for Thordor" tags="" position="592,2973" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;img src=&quot;images/Village.PNG&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Village.webp&quot; alt=&quot;The village.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 &lt;&lt;endnobr&gt;&gt;
-You spend the day interacting with the people of you village, and before you know it, it is evening and you see the warriors boats coming into bay. 
+You spend the day interacting with the people of you village, and before you know it, it is evening and you see the warriors boats coming into bay.
 
 [[Greet Returning Thordor at the Docks|W2 Docks]] &lt;&lt;set $Time to 5&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Week1Transition" tags="" position="2355,2280" size="100,100">&lt;&lt;if $SvenDead is false&gt;&gt;\
-It’s unfortunate that the goats had to die, but their meat will be used in a grand feast. Sven doesn’t join in, and he seems sad, but the warriors are content with your decision. You arrive to your longhouse and find sleep rather easily, warmed by your feast and ready for whatever [[challenges the world throws your way....|Week 2 Dream Sequence]] 
+It’s unfortunate that the goats had to die, but their meat will be used in a grand feast. Sven doesn’t join in, and he seems sad, but the warriors are content with your decision. You arrive to your longhouse and find sleep rather easily, warmed by your feast and ready for whatever [[challenges the world throws your way....|Week 2 Dream Sequence]]
 &lt;&lt;else&gt;&gt;\
 Sven’s true joy in life was his goats. He loved them to death. Well, it looks like the death part wasn’t directed at them… Even with the goats slaughtered in revenge, it doesn’t change the fact that Sven has died. You struggle to sleep, the image of Sven, your friend, the kindest man you have ever met, [[stuck in your mind....|Week 2 Dream Sequence]]
 &lt;&lt;/if&gt;&gt;\
@@ -1562,7 +1562,7 @@ Sven’s true joy in life was his goats. He loved them to death. Well, it looks 
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio DocksDead loop volume 0.05 fadeoverto 5 1.00&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
-&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaClurice.PNG&quot; alt=&quot;Clurice has joined the crowd on the docks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+&lt;img src=&quot;images/Week2/CharsBacks/ThordorSeaSvikaTownSvikaClurice.webp&quot; alt=&quot;Clurice has joined the crowd on the docks.&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
 Clurice: “Ah chief, I got a troubling vision, and it seems true…”
          “We should hold them until we are sure which is real.”
 Thordor: “Aye, I agree… And I’ll cut off the head of whichever is a fake!”
@@ -1577,7 +1577,7 @@ You help wash away the blood covering Svika before you return to your longhouse.
 You are still shaking after the gory mess you witnessed… Svika and Thordor have departed the mortal world, and what was left of them was placed on the Knaøtver and sailed into the sea before set alight with a flaming arrow. You can hardly sleep, you still see the image of that terrifying creature whenever you [[close your eyes.....|W3 Dream Sequence]]
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="117" name="W3 Dream Sequence" tags="" position="2173,3916" size="200,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/ThirdDream.PNG&quot; alt=&quot;There is a wolf, with the talons of a bird and the tail of a fish and the wings of a bird. It howls to the sky. Around it dance mere shadows of people, suspended by their strings by the hands of the puppeteer. Their mouths hang open in their torment as they place bricks of stone into the arms of the giant hands that bring them their own doom.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Week3/ThirdDream.webp&quot; alt=&quot;There is a wolf, with the talons of a bird and the tail of a fish and the wings of a bird. It howls to the sky. Around it dance mere shadows of people, suspended by their strings by the hands of the puppeteer. Their mouths hang open in their torment as they place bricks of stone into the arms of the giant hands that bring them their own doom.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio Edifice loop play&gt;&gt;
 	&lt;&lt;audio Edifice fadein&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
@@ -1596,7 +1596,7 @@ You are still shaking after the gory mess you witnessed… Svika and Thordor hav
 &lt;&lt;set $Day to 0&gt;&gt;
 &lt;&lt;set $Time to 1&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="W3 Edifice Battle P2" tags="" position="2839,5071" size="100,100">&lt;&lt;if $AlliesCount &gt;= 2&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/Backs/CluriceToldjrTemple.PNG&quot; alt=&quot;Clurice and Toldjr are standing in the Temple. They are quite exhausted.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Week3/Backs/CluriceToldjrTemple.webp&quot; alt=&quot;Clurice and Toldjr are standing in the Temple. They are quite exhausted.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio TownMap play loop&gt;&gt;
 	&lt;&lt;audio TownMap fadein&gt;&gt;
@@ -1606,7 +1606,7 @@ Toldjr eventually regained his mind, but he had no memory of building the Edific
 \
 &lt;&lt;elseif $AlliesCount == 1&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/CluriceDeath.PNG&quot; alt=&quot;Just Clurice&#39;s antlers, hood, and knife.&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week3/CluriceDeath.webp&quot; alt=&quot;Just Clurice&#39;s antlers, hood, and knife.&quot; width=&quot;100%&quot; /&gt;
 &lt;&lt;endnobr&gt;&gt;
 Within the Edifice you see a boiling cauldron, filled with a misty green liquid. Across from you is Clurice, holding a cup of the liquid.
 Clurice: You will not stop me, chief! I will be the saviour of Gravscrag.
@@ -1615,7 +1615,7 @@ The Edifice crumbles to ash behind you, burying Clurice with it. The clergy have
 \
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Week3/CluriceTransform.PNG&quot; alt=&quot;Clurice standing on the altar.&quot; width=&quot;100%&quot; /&gt;
+	&lt;img src=&quot;images/Week3/CluriceTransform.webp&quot; alt=&quot;Clurice standing on the altar.&quot; width=&quot;100%&quot; /&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio FirstDream play loop&gt;&gt;
 	&lt;&lt;audio FirstDream fadein&gt;&gt;
@@ -1627,7 +1627,7 @@ A boiling cauldron sits in the center of the Edifice. Clurice positions Toldjr b
 </tw-passagedata><tw-passagedata pid="119" name="W3 Edifice Battle P3" tags="" position="2834,5221" size="100,100">&lt;&lt;if $AlliesCount == 1&gt;&gt;\
 &lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week3/ToldjrSpellBroken.PNG&quot; alt=&quot;Toldjr.&quot; width=&quot;35%&quot;/&gt;
+	&lt;img src=&quot;images/Week3/ToldjrSpellBroken.webp&quot; alt=&quot;Toldjr.&quot; width=&quot;35%&quot;/&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Toldjr eventually opens up and explains that he felt like a prisoner in his own body. He was toiling away against his will, exhausted, he just wished to sleep. When he saw you coming, something in him let him break through and help. Clurice may be gone, but Toldjr still lives. With his help you remove what remained of the edifice. [[Time moves on, and eventually Clurice is replaced...|Game Conclusion]]
@@ -1635,13 +1635,13 @@ Toldjr eventually opens up and explains that he felt like a prisoner in his own 
 &lt;&lt;else&gt;&gt;\
 You quickly escape the Edifice before it collapses as flames rip and sunder its structure, leaving it a pile of ashes burying the body of Toldjr.
 The village eventually sifts through the ashes and gives Toldjr a proper burial. The remains of the edifice are swept away by the wind, and the loss of both Clurice and Toldjr is mourned by the village as a whole. You don’t have the heart to tell anyone what happened to Clurice. [[Soon, the only remnant of the edifice are in your memories...|Game Conclusion]]
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="120" name="Intro Burning Boat" tags="" position="731,206" size="100,100">&lt;img src=&quot;images/Intro/IntroChiefbbq.PNG&quot; alt=&quot;A single boat floats out in the bay. It is burning. The plume of fire and smoke casts a reflection across the water.&quot; width=&quot;100%&quot;/&gt; 
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="120" name="Intro Burning Boat" tags="" position="731,206" size="100,100">&lt;img src=&quot;images/Intro/IntroChiefbbq.webp&quot; alt=&quot;A single boat floats out in the bay. It is burning. The plume of fire and smoke casts a reflection across the water.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;audio FirstDream fadeoverto 1 0.3&gt;&gt;\
 @@.center;
 Smoke trails up to the halls of the valiant dead as flames billow before the clouds. You watch the final voyage and know the mantle will fall to you... [[what fate will it bring?|Intro Temple]]
 @@
 </tw-passagedata><tw-passagedata pid="121" name="Intro Temple" tags="" position="725,365" size="100,100">&lt;&lt;nobr&gt;&gt;
-	&lt;img src=&quot;images/Together.PNG&quot; alt=&quot;Your village leaders Sven, Svika, Clurice, Toldjr, and Thordor stand before you.&quot; width=&quot;100%&quot;/&gt;
+	&lt;img src=&quot;images/Together.webp&quot; alt=&quot;Your village leaders Sven, Svika, Clurice, Toldjr, and Thordor stand before you.&quot; width=&quot;100%&quot;/&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
 	&lt;&lt;audio Temple play loop&gt;&gt;
 	&lt;&lt;audio Temple volume 0.05&gt;&gt;
@@ -1653,12 +1653,12 @@ Svika: “You always had a way with the people.”
 Sven: “And you’ve always been a good friend.”
 Clurice: “It is time.”
 [[Perform the Ceremony|Intro Ceremony]]
-&lt;&lt;audio Temple fadeoverto 7 1&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Intro Ceremony" tags="" position="725,515" size="100,100">&lt;img src=&quot;images/TempleClurice.PNG&quot; alt=&quot;Clurice stands before you.&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;audio Temple fadeoverto 7 1&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Intro Ceremony" tags="" position="725,515" size="100,100">&lt;img src=&quot;images/TempleClurice.webp&quot; alt=&quot;Clurice stands before you.&quot; width=&quot;100%&quot;/&gt;
 Clurice: “By the gods. By Odin’s wise eye and Thor’s mighty hammer, ye shall be our chief. To be protected by the divine, and to see the world as it truly be, ye shall lead us.”
 “Welcome to the fold, chief. It is an honour to serve you.”
 “Please, speak with the community leaders.”
 [[Go to the Celebration|Intro Party]]
-</tw-passagedata><tw-passagedata pid="123" name="Intro Party" tags="" position="725,665" size="100,100">&lt;img src=&quot;images/Together.PNG&quot; alt=&quot;Your village leaders Sven, Svika, Clurice, Toldjr, and Thordor stand before you.&quot; width=&quot;100%&quot;/&gt;
+</tw-passagedata><tw-passagedata pid="123" name="Intro Party" tags="" position="725,665" size="100,100">&lt;img src=&quot;images/Together.webp&quot; alt=&quot;Your village leaders Sven, Svika, Clurice, Toldjr, and Thordor stand before you.&quot; width=&quot;100%&quot;/&gt;
 &lt;&lt;if $TalkedSven is false&gt;&gt;\
 [[Speak with Sven|Intro Sven]]
 &lt;&lt;/if&gt;&gt;\
@@ -1678,7 +1678,7 @@ Clurice: “By the gods. By Odin’s wise eye and Thor’s mighty hammer, ye sha
 The night is getting late. You are getting tired, and decide to [[return to your bed.|AfterPartySleep]] /* (Once other options Exhausted, leads into dream sequence) */
 &lt;&lt;/if&gt;&gt;\
 </tw-passagedata><tw-passagedata pid="124" name="Intro Clurice" tags="" position="311,810" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Clurice.PNG&quot; alt=&quot;Clurice is standing before you. The antlers coming out of her hood tower over you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Clurice.webp&quot; alt=&quot;Clurice is standing before you. The antlers coming out of her hood tower over you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Clurice smiles and opens her arms.
@@ -1686,7 +1686,7 @@ Clurice smiles and opens her arms.
 “Your father before you came here often. He asked how the gods speak to mortals. I, of course, am their mouthpiece.”
 
 [[What happened to my father?|Intro Clurice P2]]</tw-passagedata><tw-passagedata pid="125" name="Intro Sven" tags="" position="486,810" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Sven.PNG&quot; alt=&quot;Sven is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Sven.webp&quot; alt=&quot;Sven is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Sven holds forth a goat with both hands.
@@ -1697,7 +1697,7 @@ Sven holds forth a goat with both hands.
 
 [[Why did you bring a goat to the ceremony?|Intro Sven P2]]
 </tw-passagedata><tw-passagedata pid="126" name="Intro Svika" tags="" position="660,810" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;It&#39;s Svika.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;It&#39;s Svika.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Svika stands with hands on her hips, watching as people dance to festive music.
@@ -1707,7 +1707,7 @@ Svika stands with hands on her hips, watching as people dance to festive music.
 “I’m Svika. I am the best fisher this side of the sea. You can find me down by the docks where I teach the young ones to fish.”
 
 [[Are there a lot of fish nearby?|Intro Svika P2]]</tw-passagedata><tw-passagedata pid="127" name="Intro Thordor" tags="" position="835,804" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Thordor.PNG&quot; alt=&quot;Thordor is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Thordor.webp&quot; alt=&quot;Thordor is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Thordor dances with the rest of the heartened souls. He laughs hearty and deep as he enjoys your ceremony.
@@ -1716,7 +1716,7 @@ Thordor dances with the rest of the heartened souls. He laughs hearty and deep a
 “I lead our fighters, chief. Together there ain’t no raider we can’t fight back.”
 
 [[Have there been any raids lately?|Intro Thordor P2]]</tw-passagedata><tw-passagedata pid="128" name="Intro Toldjr" tags="" position="996,807" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Toldjr.PNG&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Toldjr.webp&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Toldjr tinkers with a few tools while he sits.
@@ -1726,7 +1726,7 @@ Toldjr tinkers with a few tools while he sits.
 “I have a knack with tools, so let me know if there is anything I can help you with.”
 
 [[What kind of things do you make?|Intro Toldjr P2]]</tw-passagedata><tw-passagedata pid="129" name="Intro Clurice P2" tags="" position="296,970" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Clurice.PNG&quot; alt=&quot;Clurice is standing before you. The antlers coming out of her hood tower over you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Clurice.webp&quot; alt=&quot;Clurice is standing before you. The antlers coming out of her hood tower over you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Clurice: “Don’t you know?”
@@ -1739,7 +1739,7 @@ Clurice: “Don’t you know?”
 &lt;&lt;set $TalkedClurice to true&gt;&gt;
 &lt;&lt;set $TalkedCount += 1&gt;&gt;
 </tw-passagedata><tw-passagedata pid="130" name="Intro Sven P2" tags="" position="491,975" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Sven.PNG&quot; alt=&quot;Sven is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Sven.webp&quot; alt=&quot;Sven is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Sven: “Well, she’s a very pretty goat!”
@@ -1748,7 +1748,7 @@ Sven: “Well, she’s a very pretty goat!”
 [[Return to the celebration|Intro Party]]
 &lt;&lt;set $TalkedSven to true&gt;&gt;
 &lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Intro Svika P2" tags="" position="650,985" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;It&#39;s Svika.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;It&#39;s Svika.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Svika: “In our waters? Plenty. We drag them out of the sea every day, chief.”
@@ -1757,7 +1757,7 @@ Svika: “In our waters? Plenty. We drag them out of the sea every day, chief.�
 [[Return to the celebration|Intro Party]]
 &lt;&lt;set $TalkedSvika to true&gt;&gt;
 &lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Intro Thordor P2" tags="" position="853,984" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Thordor.PNG&quot; alt=&quot;Thordor is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Thordor.webp&quot; alt=&quot;Thordor is standing in front of you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Thordor: “Come to think of it… Not for some time.”
@@ -1770,14 +1770,14 @@ Thordor: “Come to think of it… Not for some time.”
 [[Return to the celebration|Intro Party]]
 &lt;&lt;set $TalkedThordor to true&gt;&gt;
 &lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="Intro Toldjr P2" tags="" position="1013,982" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Toldjr.PNG&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;images/Toldjr.webp&quot; alt=&quot;Toldjr stands before you.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;endnobr&gt;&gt;
 Toldjr: “Everything from longhouses, to ships, to cages, chief. If there is anything you need made, we’re your people.”
 
 [[Return to the celebration|Intro Party]]
 &lt;&lt;set $TalkedToldjr to true&gt;&gt;
-&lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Debugger" tags="" position="1118,37" size="100,100">&lt;img src=&quot;images/Intro/Title.PNG&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
+&lt;&lt;set $TalkedCount += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Debugger" tags="" position="1118,37" size="100,100">&lt;img src=&quot;images/Intro/Title.webp&quot; alt=&quot;Gravscrag&quot; width=&quot;100%&quot;/&gt;
 @@.center;
 Jump to Chapter
 [[Start of Chapter 1|SvenWeekDream]]
@@ -1820,8 +1820,8 @@ Kill characters
 [[Return to Chapter Select|Debugger]]
 </tw-passagedata><tw-passagedata pid="140" name="W2 Don&#39;t Pick Svika Yet" tags="" position="855,3734" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;div class=&quot;center&quot;&gt;
-	&lt;img src=&quot;images/Week2/FinalSeaSvika.PNG&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
-	&lt;img src=&quot;images/Svika.PNG&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Week2/FinalSeaSvika.webp&quot; alt=&quot;The ragged Svika looks like she hasn&#39;t been at a hearth in weeks.&quot; width=&quot;35%&quot; /&gt;
+	&lt;img src=&quot;images/Svika.webp&quot; alt=&quot;The other Svika is looking like she has been sitting at a hearth for weeks.&quot; width=&quot;35%&quot; /&gt;
 &lt;/div&gt;
 &lt;&lt;nobr&gt;&gt;
 	&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;
@@ -1839,35 +1839,35 @@ You decide you don’t have enough information to make your decision yet. You [[
 [[.............|Epilogue]]</tw-passagedata><tw-passagedata pid="144" name="Epilogue" tags="" position="1808,5969" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;div class=&quot;center&quot;&gt;
   	&lt;&lt;if $SvenDead is false&gt;&gt;
-  		&lt;img src=&quot;images/Sven.PNG&quot; width=&quot;33%&quot; alt=&quot;Sven. &quot;/&gt;
+  		&lt;img src=&quot;images/Sven.webp&quot; width=&quot;33%&quot; alt=&quot;Sven. &quot;/&gt;
 	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;if $SvikaDead is false&gt;&gt;
-		&lt;img src=&quot;images/Svika.PNG&quot; width=&quot;33%&quot; alt=&quot;Svika. &quot;/&gt;
+		&lt;img src=&quot;images/Svika.webp&quot; width=&quot;33%&quot; alt=&quot;Svika. &quot;/&gt;
 	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;if $CluriceDead is false&gt;&gt;
-		&lt;img src=&quot;images/Week3/CluriceSpellBroken.PNG&quot; width=&quot;33%&quot; alt=&quot;Clurice. &quot;/&gt;
+		&lt;img src=&quot;images/Week3/CluriceSpellBroken.webp&quot; width=&quot;33%&quot; alt=&quot;Clurice. &quot;/&gt;
 	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;if $ThordorDead is false&gt;&gt;
-		&lt;img src=&quot;images/Thordor.PNG&quot; width=&quot;33%&quot; alt=&quot;Thordor. &quot;/&gt;
+		&lt;img src=&quot;images/Thordor.webp&quot; width=&quot;33%&quot; alt=&quot;Thordor. &quot;/&gt;
 	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;if $ToldjrDead is false&gt;&gt;
-		&lt;img src=&quot;images/Week3/ToldjrSpellBroken.PNG&quot; width=&quot;33%&quot; alt=&quot;Toldjr.&quot; /&gt;
+		&lt;img src=&quot;images/Week3/ToldjrSpellBroken.webp&quot; width=&quot;33%&quot; alt=&quot;Toldjr.&quot; /&gt;
 	&lt;&lt;/if&gt;&gt;
   &lt;/div&gt;
   &lt;&lt;if $DeadCount &gt;= 5&gt;&gt;
-  	&lt;img src=&quot;images/Ending/BadEndingEveryoneDiesSmall.PNG&quot; alt=&quot;You should be glad you can&#39;t see this image lol&quot; width=&quot;100%&quot;/&gt;
+  	&lt;img src=&quot;images/Ending/BadEndingEveryoneDiesSmall.webp&quot; alt=&quot;You should be glad you can&#39;t see this image lol&quot; width=&quot;100%&quot;/&gt;
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;
 \
 &lt;&lt;if $DeadCount == 0&gt;&gt;\
 That sure was an odd Gormánuður, but at least everything is back to normal! Back to work. Long live the chief!
-	
+
 &lt;&lt;elseif $DeadCount &lt; 5&gt;&gt;\
-It has been a rough, cold, month, and your village has made its losses along the way, but at least these people are still by your side… 
+It has been a rough, cold, month, and your village has made its losses along the way, but at least these people are still by your side…
 
 &lt;&lt;elseif $DeadCount &gt;= 5&gt;&gt;
 It’s not your fault. This is how things are meant to be. It happens wherever I go. You are a fool if you thought you were any different. It is better to accept the inevitability of death… Goodbye, mortal.
-	
+
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $SvenDead is false&gt;&gt;\
 Sven returns to the fields, doing his best to herd and raise chickens. Soon they become his new favourite animal.
@@ -1905,7 +1905,7 @@ Clurice’s experience shook her faith. She prayed to the gods but found no answ
 [[Return to Chapter Select|Debugger]]
 
 </tw-passagedata><tw-passagedata pid="146" name="AfterPartySleep" tags="" position="733,1120" size="100,100">You ate a lot at the celebration. It doesn&#39;t take you long to find your bed. Before you can ponder the mysterious death of your father, you drift [[deep into sleep...|SvenWeekDream]]
-&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="W3 Destroy Edifice Check" tags="" position="2838,4520" size="100,100">&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.PNG&quot; alt=&quot;Clurice and Toldjr stand in front of a huge tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
+&lt;&lt;audio &quot;:playing&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="W3 Destroy Edifice Check" tags="" position="2838,4520" size="100,100">&lt;img src=&quot;images/Week3/Backs/CluriceToldjrEdificeNotes.webp&quot; alt=&quot;Clurice and Toldjr stand in front of a huge tower. Clurice&#39;s eyes look sunken. Toldjr is covered in parchments and looks like he hasn&#39;t slept in days.&quot; width=&quot;100%&quot; /&gt;
 As you look upon the edifice being built by the craftsmen, and the clergy singing to an unknown god, you take pause. Should you attack now, or should you return to town and rally more people? There will be no turning back after this.
 
 [[Wait!|W3 Edifice]]
